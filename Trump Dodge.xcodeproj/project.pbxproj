@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
+		6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */; };
+		6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9731CDBF69100EAE7A8 /* GameScene.m */; };
+		6EBCC9761CDBF69100EAE7A8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC9751CDBF69100EAE7A8 /* GameScene.sks */; };
+		6EBCC9791CDBF69100EAE7A8 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */; };
+		6EBCC97C1CDBF69100EAE7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */; };
+		6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */; };
+		6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */; };
+		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
+		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EBCC9881CDBF69100EAE7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EBCC9611CDBF69100EAE7A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EBCC9681CDBF69100EAE7A8;
+			remoteInfo = "Trump Dodge";
+		};
+		6EBCC9931CDBF69100EAE7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EBCC9611CDBF69100EAE7A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EBCC9681CDBF69100EAE7A8;
+			remoteInfo = "Trump Dodge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBCC96D1CDBF69100EAE7A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6EBCC9721CDBF69100EAE7A8 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		6EBCC9731CDBF69100EAE7A8 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		6EBCC9751CDBF69100EAE7A8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6EBCC9771CDBF69100EAE7A8 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		6EBCC97B1CDBF69100EAE7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6EBCC9801CDBF69100EAE7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6EBCC9821CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EBCC9871CDBF69100EAE7A8 /* Trump DodgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trump DodgeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeTests.m; sourceTree = "<group>"; };
+		6EBCC98D1CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trump DodgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
+		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EBCC9661CDBF69100EAE7A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC9841CDBF69100EAE7A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC98F1CDBF69100EAE7A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EBCC9601CDBF69100EAE7A8 = {
+			isa = PBXGroup;
+			children = (
+				6EBCC96B1CDBF69100EAE7A8 /* Trump Dodge */,
+				6EBCC98A1CDBF69100EAE7A8 /* Trump DodgeTests */,
+				6EBCC9951CDBF69100EAE7A8 /* Trump DodgeUITests */,
+				6EBCC96A1CDBF69100EAE7A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EBCC96A1CDBF69100EAE7A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */,
+				6EBCC9871CDBF69100EAE7A8 /* Trump DodgeTests.xctest */,
+				6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EBCC96B1CDBF69100EAE7A8 /* Trump Dodge */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */,
+				6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */,
+				6EBCC9721CDBF69100EAE7A8 /* GameScene.h */,
+				6EBCC9731CDBF69100EAE7A8 /* GameScene.m */,
+				6EBCC9751CDBF69100EAE7A8 /* GameScene.sks */,
+				6EBCC9771CDBF69100EAE7A8 /* GameViewController.h */,
+				6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */,
+				6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */,
+				6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */,
+				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
+				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
+				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
+			);
+			path = "Trump Dodge";
+			sourceTree = "<group>";
+		};
+		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCC96D1CDBF69100EAE7A8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EBCC98A1CDBF69100EAE7A8 /* Trump DodgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */,
+				6EBCC98D1CDBF69100EAE7A8 /* Info.plist */,
+			);
+			path = "Trump DodgeTests";
+			sourceTree = "<group>";
+		};
+		6EBCC9951CDBF69100EAE7A8 /* Trump DodgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */,
+				6EBCC9981CDBF69100EAE7A8 /* Info.plist */,
+			);
+			path = "Trump DodgeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EBCC9681CDBF69100EAE7A8 /* Trump Dodge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EBCC99B1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump Dodge" */;
+			buildPhases = (
+				6EBCC9651CDBF69100EAE7A8 /* Sources */,
+				6EBCC9661CDBF69100EAE7A8 /* Frameworks */,
+				6EBCC9671CDBF69100EAE7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trump Dodge";
+			productName = "Trump Dodge";
+			productReference = 6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EBCC9861CDBF69100EAE7A8 /* Trump DodgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EBCC99E1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeTests" */;
+			buildPhases = (
+				6EBCC9831CDBF69100EAE7A8 /* Sources */,
+				6EBCC9841CDBF69100EAE7A8 /* Frameworks */,
+				6EBCC9851CDBF69100EAE7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EBCC9891CDBF69100EAE7A8 /* PBXTargetDependency */,
+			);
+			name = "Trump DodgeTests";
+			productName = "Trump DodgeTests";
+			productReference = 6EBCC9871CDBF69100EAE7A8 /* Trump DodgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6EBCC9911CDBF69100EAE7A8 /* Trump DodgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EBCC9A11CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeUITests" */;
+			buildPhases = (
+				6EBCC98E1CDBF69100EAE7A8 /* Sources */,
+				6EBCC98F1CDBF69100EAE7A8 /* Frameworks */,
+				6EBCC9901CDBF69100EAE7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EBCC9941CDBF69100EAE7A8 /* PBXTargetDependency */,
+			);
+			name = "Trump DodgeUITests";
+			productName = "Trump DodgeUITests";
+			productReference = 6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EBCC9611CDBF69100EAE7A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Cyrus Behroozi";
+				TargetAttributes = {
+					6EBCC9681CDBF69100EAE7A8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					6EBCC9861CDBF69100EAE7A8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6EBCC9681CDBF69100EAE7A8;
+					};
+					6EBCC9911CDBF69100EAE7A8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6EBCC9681CDBF69100EAE7A8;
+					};
+				};
+			};
+			buildConfigurationList = 6EBCC9641CDBF69100EAE7A8 /* Build configuration list for PBXProject "Trump Dodge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6EBCC9601CDBF69100EAE7A8;
+			productRefGroup = 6EBCC96A1CDBF69100EAE7A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EBCC9681CDBF69100EAE7A8 /* Trump Dodge */,
+				6EBCC9861CDBF69100EAE7A8 /* Trump DodgeTests */,
+				6EBCC9911CDBF69100EAE7A8 /* Trump DodgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EBCC9671CDBF69100EAE7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBCC9761CDBF69100EAE7A8 /* GameScene.sks in Resources */,
+				6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */,
+				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
+				6EBCC97C1CDBF69100EAE7A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC9851CDBF69100EAE7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC9901CDBF69100EAE7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EBCC9651CDBF69100EAE7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBCC9791CDBF69100EAE7A8 /* GameViewController.m in Sources */,
+				6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */,
+				6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */,
+				6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC9831CDBF69100EAE7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBCC98E1CDBF69100EAE7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EBCC9891CDBF69100EAE7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EBCC9681CDBF69100EAE7A8 /* Trump Dodge */;
+			targetProxy = 6EBCC9881CDBF69100EAE7A8 /* PBXContainerItemProxy */;
+		};
+		6EBCC9941CDBF69100EAE7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EBCC9681CDBF69100EAE7A8 /* Trump Dodge */;
+			targetProxy = 6EBCC9931CDBF69100EAE7A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EBCC97B1CDBF69100EAE7A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EBCC9801CDBF69100EAE7A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EBCC9991CDBF69100EAE7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EBCC99A1CDBF69100EAE7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EBCC99C1CDBF69100EAE7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6EBCC99D1CDBF69100EAE7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6EBCC99F1CDBF69100EAE7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Trump DodgeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-DodgeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trump Dodge.app/Trump Dodge";
+			};
+			name = Debug;
+		};
+		6EBCC9A01CDBF69100EAE7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Trump DodgeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-DodgeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trump Dodge.app/Trump Dodge";
+			};
+			name = Release;
+		};
+		6EBCC9A21CDBF69100EAE7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Trump DodgeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-DodgeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Trump Dodge";
+			};
+			name = Debug;
+		};
+		6EBCC9A31CDBF69100EAE7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Trump DodgeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-DodgeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Trump Dodge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EBCC9641CDBF69100EAE7A8 /* Build configuration list for PBXProject "Trump Dodge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBCC9991CDBF69100EAE7A8 /* Debug */,
+				6EBCC99A1CDBF69100EAE7A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EBCC99B1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump Dodge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBCC99C1CDBF69100EAE7A8 /* Debug */,
+				6EBCC99D1CDBF69100EAE7A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6EBCC99E1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBCC99F1CDBF69100EAE7A8 /* Debug */,
+				6EBCC9A01CDBF69100EAE7A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6EBCC9A11CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBCC9A21CDBF69100EAE7A8 /* Debug */,
+				6EBCC9A31CDBF69100EAE7A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EBCC9611CDBF69100EAE7A8 /* Project object */;
+}
