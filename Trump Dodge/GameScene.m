@@ -1629,6 +1629,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
   
+  /*
+  
   if(isSausage==FALSE){
     
     
@@ -1662,6 +1664,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   }else{
     [self addbloodSplat:deadPos];
   }
+   
+  */
   [pause setAlpha:0];
   gameOverDelay = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
   
@@ -1797,7 +1801,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:fishBone];
   [fishBone runAction:fadeOut];
   
-  [self addExplosion:fish.position];
+ // [self addExplosion:fish.position]; TODO implement effect for powerup
   score+=175;
   
   if(score<1000){
@@ -1819,7 +1823,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   [powerUp removeActionForKey:@"pulseFade"];
   CGPoint pos = powerUp.position;
-  [self addBomb:pos];
+  //[self addBomb:pos]; TODO implement effect for fish
   [powerUp removeFromParent];
   [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
@@ -2359,6 +2363,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   updateCollideBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColideBool) userInfo:nil repeats:NO];
   CGPoint deadPos = hero.position;
   
+  /*
   
   if(isSausage==FALSE){
     
@@ -2394,7 +2399,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }else{
     [self addbloodSplat:deadPos];
   }
-  
+*/
 }
 
 -(void)updateColideBool{
