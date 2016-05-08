@@ -119,6 +119,7 @@
 		6E1651A01CDBFC7400004D3D /* whiteSheepFix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */; };
 		6E1651A11CDBFC7400004D3D /* whiteTurkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
+		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
 		6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */; };
 		6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9731CDBF69100EAE7A8 /* GameScene.m */; };
@@ -261,6 +262,7 @@
 		6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteSheepFix@2x.png"; sourceTree = "<group>"; };
 		6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteTurkey@2x.png"; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
+		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC96D1CDBF69100EAE7A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E1650C71CDBFC7400004D3D /* aPenguin@2x.png */,
 				6E1650C81CDBFC7400004D3D /* Axe1@2x.png */,
+				6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */,
 				6E1650C91CDBFC7400004D3D /* bacon.png */,
 				6E1650CA1CDBFC7400004D3D /* beaver@2x.png */,
 				6E1650CB1CDBFC7400004D3D /* bee@2x.png */,
@@ -661,6 +664,7 @@
 				6E1651981CDBFC7400004D3D /* whiteGiraffeFix@2x.png in Resources */,
 				6E16516F1CDBFC7400004D3D /* largeGoldPenguin.png in Resources */,
 				6E1651551CDBFC7400004D3D /* featherBrown@2x.png in Resources */,
+				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,
 				6E16513A1CDBFC7400004D3D /* bee@2x.png in Resources */,
 				6E1651861CDBFC7400004D3D /* pig@2x.png in Resources */,
 				6E1651851CDBFC7400004D3D /* penguin@2x.png in Resources */,
