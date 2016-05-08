@@ -205,9 +205,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   splatSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
   //[splatSound setVolume:0.1]; to adjust volume
   
-  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
-  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+//  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
+//  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
   
   NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
@@ -216,62 +216,57 @@ static inline CGVector radiansToVector(CGFloat radians){
   [backgroundMusicGentle play];
   [backgroundMusicGentle setVolume:0.4];
   
-  NSString *path5 = [NSString stringWithFormat:@"%@/intenseSong.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl5 = [NSURL fileURLWithPath:path5];
-  backgroundMusicIntense = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl5 error:nil];
-  [backgroundMusicIntense setNumberOfLoops:-1];
-  [backgroundMusicIntense setVolume:1];
+//  NSString *path5 = [NSString stringWithFormat:@"%@/intenseSong.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl5 = [NSURL fileURLWithPath:path5];
+//  backgroundMusicIntense = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl5 error:nil];
+//  [backgroundMusicIntense setNumberOfLoops:-1];
+//  [backgroundMusicIntense setVolume:1];
   
-  NSString *path7 = [NSString stringWithFormat:@"%@/pop.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
-  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
+//  NSString *path7 = [NSString stringWithFormat:@"%@/pop.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
+//  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
   
-  
-  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl10 = [NSURL fileURLWithPath:path10];
-  pigSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl10 error:nil];
-  [pigSound setVolume:1.2];
-  
-  
-  NSString *path11 = [NSString stringWithFormat:@"%@/sheepSound.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl11 = [NSURL fileURLWithPath:path11];
-  sheepSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl11 error:nil];
-  [sheepSound setVolume:1.2];
-  
-  NSString *path12 = [NSString stringWithFormat:@"%@/splash.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl12 = [NSURL fileURLWithPath:path12];
-  splashSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl12 error:nil];
-  [splashSound setVolume:1.2];
-  
-  NSString *path15 = [NSString stringWithFormat:@"%@/elephantSound.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl15 = [NSURL fileURLWithPath:path15];
-  elephantSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl15 error:nil];
-  [elephantSound setVolume:1.2];
-  
-  NSString *path16 = [NSString stringWithFormat:@"%@/goldClink.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl16 = [NSURL fileURLWithPath:path16];
-  goldClink = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl16 error:nil];
-  [goldClink setVolume:2];
-  
-  NSString *path17 = [NSString stringWithFormat:@"%@/beeSound.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl17 = [NSURL fileURLWithPath:path17];
-  beeSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl17 error:nil];
-  [beeSound setVolume:2];
-  
-  NSString *path20 = [NSString stringWithFormat:@"%@/mooseSound.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl20 = [NSURL fileURLWithPath:path20];
-  mooseSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl20 error:nil];
-  [mooseSound setVolume:2];
-  
-  NSString *path21 = [NSString stringWithFormat:@"%@/wood.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl21 = [NSURL fileURLWithPath:path21];
-  woodSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl21 error:nil];
-  [woodSound setVolume:1.5];
-  
-  NSString *path22 = [NSString stringWithFormat:@"%@/leaves.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl22 = [NSURL fileURLWithPath:path22];
-  leaveSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl22 error:nil];
-  [leaveSound setVolume:3];
+//  
+//  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl10 = [NSURL fileURLWithPath:path10];
+//  pigSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl10 error:nil];
+//  [pigSound setVolume:1.2];
+//  
+//  
+//  NSString *path11 = [NSString stringWithFormat:@"%@/sheepSound.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl11 = [NSURL fileURLWithPath:path11];
+////  sheepSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl11 error:nil];
+////  [sheepSound setVolume:1.2];
+//  
+//  NSString *path12 = [NSString stringWithFormat:@"%@/splash.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl12 = [NSURL fileURLWithPath:path12];
+//  splashSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl12 error:nil];
+////  [splashSound setVolume:1.2];
+//  
+//  NSString *path15 = [NSString stringWithFormat:@"%@/elephantSound.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl15 = [NSURL fileURLWithPath:path15];
+//  elephantSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl15 error:nil];
+//  [elephantSound setVolume:1.2];
+//  NSString *path16 = [NSString stringWithFormat:@"%@/goldClink.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl16 = [NSURL fileURLWithPath:path16];
+//  goldClink = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl16 error:nil];
+//  [goldClink setVolume:2];
+//  NSString *path17 = [NSString stringWithFormat:@"%@/beeSound.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl17 = [NSURL fileURLWithPath:path17];
+//  beeSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl17 error:nil];
+//  [beeSound setVolume:2];
+//  NSString *path20 = [NSString stringWithFormat:@"%@/mooseSound.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl20 = [NSURL fileURLWithPath:path20];
+//  mooseSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl20 error:nil];
+//  [mooseSound setVolume:2];
+//  NSString *path21 = [NSString stringWithFormat:@"%@/wood.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl21 = [NSURL fileURLWithPath:path21];
+//  woodSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl21 error:nil];
+//  [woodSound setVolume:1.5];
+//  NSString *path22 = [NSString stringWithFormat:@"%@/leaves.mp3", [[NSBundle mainBundle] resourcePath]];
+//  NSURL *soundUrl22 = [NSURL fileURLWithPath:path22];
+//  leaveSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl22 error:nil];
+//  [leaveSound setVolume:3];
   
   
   
@@ -980,12 +975,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   bulletNode.physicsBody.velocity = CGVectorMake(0, 0);
   gunTestingPoint.physicsBody.velocity = CGVectorMake(0, 0);
   
-  if(!isMute){
-    if(genteMusicIsPlaying==FALSE){
-      [backgroundMusicIntense pause];
-    }
-    [backgroundMusicGentle play];
-  }
+//  if(!isMute){
+//    if(genteMusicIsPlaying==FALSE){
+//      [backgroundMusicIntense pause];
+//    }
+//    [backgroundMusicGentle play];
+//  }
+  
   isPaused = TRUE;
   restartBut.frame = CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.5, self.view.frame.size.width*0.44, 75);
   menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5, self.view.frame.size.width*0.44-10, 75);
@@ -1021,10 +1017,10 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)resumeGame{
   if(!isMute){
-    if(genteMusicIsPlaying==FALSE){
-      [backgroundMusicIntense play];
-      [backgroundMusicGentle pause];
-    }
+    //if(genteMusicIsPlaying==FALSE){
+//      [backgroundMusicIntense play];
+//      [backgroundMusicGentle pause];
+    //}
   }
   CGVector rotationVector;
   rotationVector = radiansToVector(gun.zRotation);
@@ -1066,11 +1062,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   angelPenguin.alpha = 0;
   gunIsOnScreen = FALSE;
   if(!isMute){
-    genteMusicIsPlaying = TRUE;
-    if(!genteMusicIsPlaying){
+    //genteMusicIsPlaying = TRUE;
+    //if(!genteMusicIsPlaying){
       [backgroundMusicGentle play];
-      [backgroundMusicIntense stop];
-    }
+      //[backgroundMusicIntense stop];
+    //}
   }
   // [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
   tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to get your %@ back next round!", characterName];
@@ -1239,14 +1235,14 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //fish spawn function
   if(!(clockTime==0)&&(clockTime%100==0)&&(musicTransitionBool==TRUE)){
-    if(!isMute){
-      genteMusicIsPlaying = FALSE;
-      [backgroundMusicGentle stop];
-      [backgroundMusicIntense play];
-      musicTransitionBool=FALSE;
-    }
-    updateMusicTransitionBoolTimer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(updateMusicTranstionBool) userInfo:nil repeats:NO];
-    
+//    if(!isMute){
+//      genteMusicIsPlaying = FALSE;
+//      [backgroundMusicGentle stop];
+//      [backgroundMusicIntense play];
+//      musicTransitionBool=FALSE;
+//    }
+//    updateMusicTransitionBoolTimer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(updateMusicTranstionBool) userInfo:nil repeats:NO];
+//    
     
   }
   if(!(clockTime==0)&&(clockTime%14==0)&&(fishSpawnBool==TRUE)){
@@ -1718,13 +1714,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
-  if(genteMusicIsPlaying==FALSE){
-    if(!isMute){
-      [backgroundMusicIntense stop];
-      [backgroundMusicGentle play];
-      // NSLog(@"intense music stopped");
-    }
-  }
+//  if(genteMusicIsPlaying==FALSE){
+//    if(!isMute){
+//      [backgroundMusicIntense stop];
+//      [backgroundMusicGentle play];
+//      // NSLog(@"intense music stopped");
+//    }
+//  }
   genteMusicIsPlaying = TRUE;
   angelPenguin.alpha = 0;
   lives = 0;
@@ -1868,10 +1864,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   if ([notification.name isEqualToString:@"pauseMusic"] && (soundEnabled==TRUE)) {
-    if(!isMute){
-      [backgroundMusicIntense pause];
+//    if(!isMute){
+//      [backgroundMusicIntense pause];
       [backgroundMusicGentle pause];
-    }
+//    }
     
   }
   
@@ -1902,19 +1898,19 @@ static inline CGVector radiansToVector(CGFloat radians){
   if(soundEnabled==TRUE){
     isMute = TRUE;
     soundEnabled=FALSE;
-    if(genteMusicIsPlaying){
+    //if(genteMusicIsPlaying){
       [backgroundMusicGentle pause];
-    }else{
-      [backgroundMusicIntense pause];
-    }
+    //}else{
+    //  [backgroundMusicIntense pause];
+    //}
   }else{
     isMute = FALSE;
     soundEnabled=TRUE;
-    if(genteMusicIsPlaying){
+   // if(genteMusicIsPlaying){
       [backgroundMusicGentle play];
-    }else{
-      [backgroundMusicIntense play];
-    }
+   // }else{
+    //  [backgroundMusicIntense play];
+   // }
   }
 }
 
