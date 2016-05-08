@@ -633,7 +633,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //tauntLabel
   tauntLabel = [[UILabel alloc]init];
-  tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to get your %@ back!", characterName];
+  tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to play as Trump!"];
   tauntLabel.textColor = [UIColor yellowColor];
   tauntLabel.font = [UIFont systemFontOfSize:20];
   [tauntLabel sizeToFit];
