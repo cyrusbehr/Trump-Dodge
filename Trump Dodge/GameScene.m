@@ -552,7 +552,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"knife",@"cartoonAxe",@"hammer",@"cleaver1",@"mallet",@"sword",@"scythe",@"bomb", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"taco",@"taco",@"taco",@"taco",@"taco",@"taco",@"taco",@"taco", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -684,7 +684,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //testing
   
-  characterName = @"penguin";
+  characterName = @"trumpFace";
   hero = [SKSpriteNode spriteNodeWithImageNamed:characterName];
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
   hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
@@ -2120,88 +2120,88 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
 }
-
--(void)selectSheep{
-  characterName = @"sheep";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
-
--(void)selectOwl{
-  characterName = @"owl";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
-
--(void)selectPenguin{
-  characterName = @"penguin";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectHippo{
-  characterName = @"hippo";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
-
--(void)selectgoat{
-  characterName = @"goat";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
-
--(void)selectPig{
-  characterName = @"pig";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-  
-  
-}
-
--(void)selectGoldPenguin{
-  characterName = @"gold penguin";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectGiraffe{
-  characterName = @"giraffe";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectBeaver{
-  characterName = @"beaver";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectElephant{
-  characterName = @"elephant";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectBee{
-  characterName = @"bee";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
--(void)selectMoose{
-  characterName = @"moose";
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-}
-
-
+//
+//-(void)selectSheep{
+//  characterName = @"sheep";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//
+//-(void)selectOwl{
+//  characterName = @"owl";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//
+//-(void)selectPenguin{
+//  characterName = @"trumpFace";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectHippo{
+//  characterName = @"hippo";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//
+//-(void)selectgoat{
+//  characterName = @"goat";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//
+//-(void)selectPig{
+//  characterName = @"pig";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//  
+//  
+//}
+//
+//-(void)selectGoldPenguin{
+//  characterName = @"gold penguin";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectGiraffe{
+//  characterName = @"giraffe";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectBeaver{
+//  characterName = @"beaver";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectElephant{
+//  characterName = @"elephant";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectBee{
+//  characterName = @"bee";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//-(void)selectMoose{
+//  characterName = @"moose";
+//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
+//  [characterSelected sizeToFit];
+//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
+//}
+//
+//
 
 -(void)updateMusicTranstionBool{
   musicTransitionBool = TRUE;
