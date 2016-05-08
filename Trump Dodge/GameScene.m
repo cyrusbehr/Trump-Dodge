@@ -105,7 +105,6 @@ BOOL canGetFirstLife = TRUE;
   SKSpriteNode *fish;
   UILabel *bestScore;
   UIButton *shareButton;
-  UIButton *removeAddsButton;
   NSTimer *mainTimer;
   UILabel *mainTimerLabel;
   SKAction *rotate;
@@ -335,13 +334,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   menuBut.titleLabel.font = [UIFont systemFontOfSize:25];
   [menuBut addTarget:self action:@selector(helpPage) forControlEvents:UIControlEventTouchUpInside];
   [menuBut setExclusiveTouch:YES];
-  removeAddsButton = [[UIButton alloc] init];
-  [removeAddsButton setBackgroundImage:[UIImage imageNamed:@"organe"] forState:UIControlStateNormal];
-  [removeAddsButton setTitle:@"Change Character" forState:UIControlStateNormal];
-  [removeAddsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-  removeAddsButton.titleLabel.font = [UIFont systemFontOfSize:25];
-  [removeAddsButton addTarget:self action:@selector(changeCharacterPressed) forControlEvents:UIControlEventTouchUpInside];
-  [removeAddsButton setExclusiveTouch:YES];
   
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
@@ -533,7 +525,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self.view addSubview:pauseScreen];
   [self.view addSubview:menuBut ];
   [self.view addSubview:restartBut ];
-  [self.view addSubview:removeAddsButton ];
   [self.view addSubview:shareButton];
   [self.view addSubview:backButton];
   [self.view addSubview:sheepButton];
@@ -555,7 +546,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   [shareButton setAlpha:0];
-  [removeAddsButton setAlpha:0];
   [pauseScreen setAlpha:0];
   [restartBut setAlpha:0];
   [menuBut setAlpha:0];
@@ -1056,7 +1046,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   gunSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(spawnGun) userInfo:nil repeats:YES];
   
   [shareButton setAlpha:0];
-  [removeAddsButton setAlpha:0];
   [menuBut setAlpha:0];
   [restartBut setAlpha:0];
   mainTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(addToScore) userInfo:nil repeats:YES];
@@ -1129,7 +1118,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   if(gameOverBool==TRUE){
     [mainLayer addChild:hero];
     gameOverBool=FALSE;
-    [removeAddsButton setAlpha:0];
     [shareButton setAlpha:0];
     [bestScore setAlpha:0];
     
@@ -1140,7 +1128,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   // NSLog(@"game restarted");
   [pauseScreen setAlpha:0];
-  [removeAddsButton setAlpha:0];
   [shareButton setAlpha:0];
   [resume setAlpha:0];
   [menuBut setAlpha:0];
@@ -1762,24 +1749,20 @@ static inline CGVector radiansToVector(CGFloat radians){
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-260, self.view.frame.size.width*0.9, 75);
     menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-80, self.view.frame.size.width*0.44, 75);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-80, self.view.frame.size.width*0.44, 75);
-    removeAddsButton.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-170, self.view.frame.size.width*0.9, 75);
   }else if ((int)[[UIScreen mainScreen] bounds].size.width > 600){
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-240, self.view.frame.size.width*0.9, 75);
     menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-60, self.view.frame.size.width*0.44, 75);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-60, self.view.frame.size.width*0.44, 75);
-    removeAddsButton.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-150, self.view.frame.size.width*0.9, 75);
   }else{
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-195, self.view.frame.size.width*0.9, 65);
     menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-55, self.view.frame.size.width*0.44, 50);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-55, self.view.frame.size.width*0.44, 50);
-    removeAddsButton.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-120, self.view.frame.size.width*0.9, 55);
     
   }
   
   [pause setAlpha:0];
   [bestScore setAlpha:1];
   gameOverBool = TRUE;
-  [removeAddsButton setAlpha:1];
   [pauseScreen setAlpha:0.75];
   [menuBut setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   [restartBut setAlpha:1];
@@ -1940,61 +1923,60 @@ static inline CGVector radiansToVector(CGFloat radians){
   [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
 }
 
--(void)changeCharacterPressed{
-  moreButton.alpha = 1;
-  [removeAddsButton setAlpha:0];
-  [restartBut setAlpha:0];
-  [shareButton setAlpha:0];
-  [menuBut setAlpha:0];
-  [backButton setAlpha:1];
-  [sheepButton setAlpha:1];
-  [penguinButton setAlpha:1];
-  [goatButton setAlpha:1];
-  [hippoButton setAlpha:1];
-  [owlButton setAlpha:1];
-  [pigButton setAlpha:1];
-  characterSelected.alpha = 1;
-  characterTitle.alpha = 1;
-  
-  
-  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
-    [goatButton setFrame:CGRectMake(0, 0, 50, 52)];
-    [goatButton setCenter:CGPointMake(self.view.frame.size.width*0.57142, self.view.frame.size.height*0.5)];
-    [penguinButton setFrame:CGRectMake(0, 0, 50, 50)];
-    [penguinButton setCenter:CGPointMake(self.view.frame.size.width*0.142857, self.view.frame.size.height*0.5)];
-    [sheepButton setFrame:CGRectMake(0, 0, 50, 50)];
-    [sheepButton setCenter:CGPointMake(self.view.frame.size.width*0.28571, self.view.frame.size.height*0.5)];
-    [owlButton setFrame:CGRectMake(0, 0, 50, 50)];
-    [owlButton setCenter:CGPointMake(self.view.frame.size.width*0.714285, self.view.frame.size.height*0.5)];
-    [hippoButton setFrame:CGRectMake(0, 0, 50, 50)];
-    [hippoButton setCenter:CGPointMake(self.view.frame.size.width*0.85714, self.view.frame.size.height*0.5)];
-    [pigButton setFrame:CGRectMake(0, 0, 50, 50)];
-    [pigButton setCenter:CGPointMake(self.view.frame.size.width*0.438571, self.view.frame.size.height*0.5)];
-    
-  }
-  
-  if(highScore >= 5500){
-    hippoButton.enabled = TRUE;
-    [hippoButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-    // characterTitle.alpha = 0;
-  }
-  if (highScore >= 5000){
-    owlButton.enabled = TRUE;
-    [owlButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-  }
-  if (highScore >=4000){
-    goatButton.enabled = TRUE;
-    [goatButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-  }
-  if (highScore>=2000){
-    sheepButton.enabled = TRUE;
-    [sheepButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-  }
-  if (highScore>=3000){
-    pigButton.enabled = TRUE;
-    [pigButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-  }
-}
+//-(void)changeCharacterPressed{
+//  moreButton.alpha = 1;
+//  [restartBut setAlpha:0];
+//  [shareButton setAlpha:0];
+//  [menuBut setAlpha:0];
+//  [backButton setAlpha:1];
+//  [sheepButton setAlpha:1];
+//  [penguinButton setAlpha:1];
+//  [goatButton setAlpha:1];
+//  [hippoButton setAlpha:1];
+//  [owlButton setAlpha:1];
+//  [pigButton setAlpha:1];
+//  characterSelected.alpha = 1;
+//  characterTitle.alpha = 1;
+//  
+//  
+//  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
+//    [goatButton setFrame:CGRectMake(0, 0, 50, 52)];
+//    [goatButton setCenter:CGPointMake(self.view.frame.size.width*0.57142, self.view.frame.size.height*0.5)];
+//    [penguinButton setFrame:CGRectMake(0, 0, 50, 50)];
+//    [penguinButton setCenter:CGPointMake(self.view.frame.size.width*0.142857, self.view.frame.size.height*0.5)];
+//    [sheepButton setFrame:CGRectMake(0, 0, 50, 50)];
+//    [sheepButton setCenter:CGPointMake(self.view.frame.size.width*0.28571, self.view.frame.size.height*0.5)];
+//    [owlButton setFrame:CGRectMake(0, 0, 50, 50)];
+//    [owlButton setCenter:CGPointMake(self.view.frame.size.width*0.714285, self.view.frame.size.height*0.5)];
+//    [hippoButton setFrame:CGRectMake(0, 0, 50, 50)];
+//    [hippoButton setCenter:CGPointMake(self.view.frame.size.width*0.85714, self.view.frame.size.height*0.5)];
+//    [pigButton setFrame:CGRectMake(0, 0, 50, 50)];
+//    [pigButton setCenter:CGPointMake(self.view.frame.size.width*0.438571, self.view.frame.size.height*0.5)];
+//    
+//  }
+//  
+//  if(highScore >= 5500){
+//    hippoButton.enabled = TRUE;
+//    [hippoButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+//    // characterTitle.alpha = 0;
+//  }
+//  if (highScore >= 5000){
+//    owlButton.enabled = TRUE;
+//    [owlButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+//  }
+//  if (highScore >=4000){
+//    goatButton.enabled = TRUE;
+//    [goatButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+//  }
+//  if (highScore>=2000){
+//    sheepButton.enabled = TRUE;
+//    [sheepButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+//  }
+//  if (highScore>=3000){
+//    pigButton.enabled = TRUE;
+//    [pigButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+//  }
+//}
 
 -(void)moreButtonAction{
   penguinButton.alpha = 0;
@@ -2065,7 +2047,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)goBack{
   moreButton.alpha = 0;
-  [removeAddsButton setAlpha:1];
   [restartBut setAlpha:1];
   [shareButton setAlpha:1];
   [menuBut setAlpha:1];
@@ -2364,43 +2345,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   updateCollideBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColideBool) userInfo:nil repeats:NO];
   CGPoint deadPos = hero.position;
   
-  /*
-  
-  if(isSausage==FALSE){
-    
-    
-    
-    if([characterName isEqualToString:@"penguin"]){
-      [self addFeathers:deadPos];
-    }else if([characterName isEqualToString:@"pig"]){
-      [self addBacon:deadPos];
-    }else if ([characterName isEqualToString:@"sheep"]){
-      [self addSheepAnimation:deadPos];
-    }else if([characterName isEqualToString:@"goat"]){
-      [self addGoatAnimation: deadPos];
-    }else if([characterName isEqualToString:@"owl"]){
-      [self addOwlAnimation:deadPos];
-    }else if ([characterName isEqualToString:@"hippo"]){
-      [self addHippoAnimation:deadPos];
-    }else if([characterName isEqualToString:@"bee"]){
-      [self addBeeAnimation:deadPos];
-    }else if ([characterName isEqualToString:@"moose"]){
-      [self addMooseAnimation:deadPos];
-    }else if ([characterName isEqualToString:@"giraffe"]){
-      [self addGiraffeAnimation:deadPos];
-      
-    }else if ([characterName isEqualToString:@"elephant"]){
-      [self addElephantAnimation:deadPos];
-    }else if ([characterName isEqualToString:@"beaver"]){
-      [self addBeaverAnimation:deadPos];
-    }else{
-      [self addGoldPenguinAnimation:deadPos];
-    }
-    
-  }else{
-    [self addbloodSplat:deadPos];
-  }
-*/
+
 }
 
 -(void)updateColideBool{
