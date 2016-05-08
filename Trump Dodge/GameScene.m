@@ -342,6 +342,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   removeAddsButton.titleLabel.font = [UIFont systemFontOfSize:25];
   [removeAddsButton addTarget:self action:@selector(changeCharacterPressed) forControlEvents:UIControlEventTouchUpInside];
   [removeAddsButton setExclusiveTouch:YES];
+  
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
   [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
