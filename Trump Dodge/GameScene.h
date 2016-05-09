@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
+#import "Joystick.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 {

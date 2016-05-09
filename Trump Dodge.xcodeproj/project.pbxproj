@@ -128,6 +128,7 @@
 		6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */; };
 		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
+		82881EF91CE012B000CFCE99 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 82881EF81CE012B000CFCE99 /* Joystick.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +279,8 @@
 		6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trump DodgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82881EF81CE012B000CFCE99 /* Joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Joystick.m; path = "../../../../Downloads/SpriteKit-Joystick-master/Joystick.m"; sourceTree = "<group>"; };
+		82881EFA1CE012BC00CFCE99 /* Joystick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Joystick.h; path = "../../../../Downloads/SpriteKit-Joystick-master/Joystick.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +338,8 @@
 				6EBCC9751CDBF69100EAE7A8 /* GameScene.sks */,
 				6EBCC9771CDBF69100EAE7A8 /* GameViewController.h */,
 				6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */,
+				82881EF81CE012B000CFCE99 /* Joystick.m */,
+				82881EFA1CE012BC00CFCE99 /* Joystick.h */,
 				6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */,
 				6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
@@ -723,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82881EF91CE012B000CFCE99 /* Joystick.m in Sources */,
 				6EBCC9791CDBF69100EAE7A8 /* GameViewController.m in Sources */,
 				6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */,
 				6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */,

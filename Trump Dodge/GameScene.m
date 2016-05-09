@@ -17,6 +17,7 @@
 #import "GameViewController.h"
 #import "AppDelegate.h"
 
+
 @import Foundation;
 
 static const uint32_t heroCategory     =  0x1 << 0;
@@ -166,6 +167,7 @@ BOOL canGetFirstLife = TRUE;
   NSTimer *updateCollideBoolTimer;
   AVAudioPlayer *woodSound;
   AVAudioPlayer *leaveSound;
+    Joystick *joystick;
 }
 
 
