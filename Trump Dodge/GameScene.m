@@ -209,7 +209,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 //  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
 //  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
   
-  NSString *path4 = [NSString stringWithFormat:@"%@/menuSonga.mp3", [[NSBundle mainBundle] resourcePath]];//TODO menuSong
+  NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
   backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
   [backgroundMusicGentle setNumberOfLoops:-1];
