@@ -1,7 +1,4 @@
 
-//  Created by Cyrus Behroozi on 2015-05-26.
-//  Copyright (c) 2015 Cyrus Behroozi. All rights reserved.
-//
 
 
 //TODO: create start powerup which has a SKemiiter generating starts and makes player invinsible
