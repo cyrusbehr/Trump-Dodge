@@ -552,7 +552,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"taco",@"burrito",@"maracas",@"poncho", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"donkey",@"sombrero",@"taco",@"burrito",@"maracas",@"poncho",@"moustache", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -716,7 +716,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //fish node
   
-  fish = [SKSpriteNode spriteNodeWithImageNamed:@"oFIsh"];
+  fish = [SKSpriteNode spriteNodeWithImageNamed:@"money"];
   fish.physicsBody = [SKPhysicsBody bodyWithTexture:fish.texture size:fish.texture.size];
   fish.physicsBody.dynamic=YES;
   fish.physicsBody.friction=NO;
