@@ -209,7 +209,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 //  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
 //  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
   
-  NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSString *path4 = [NSString stringWithFormat:@"%@/menuSonga.mp3", [[NSBundle mainBundle] resourcePath]];//TODO menuSong
   NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
   backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
   [backgroundMusicGentle setNumberOfLoops:-1];
@@ -552,7 +552,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"taco",@"taco",@"taco",@"taco",@"taco",@"taco",@"taco",@"taco", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"taco",@"burrito", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
