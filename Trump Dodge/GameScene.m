@@ -33,7 +33,7 @@ int dy;
 int clockTime;
 double initialdelayTime = 0.7;//
 double delayTimeMin = 0.2;
-double delayTime = 0.7;//start at 0.9
+double delayTime = 0.9;//start at 0.9
 int speedTime = 70;//70 start
 double timeConstant = 0.0035;//Absolute min time for travel (increase to slow down)(0.0045)
 int rotMax = 100;
@@ -552,7 +552,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"donkey",@"sombrero",@"taco",@"burrito",@"maracas",@"poncho",@"moustache", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"donkey",@"sombrero",@"taco",@"burrito",@"maracas",@"poncho",@"moustache",@"chanclas", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -727,12 +727,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   fish.physicsBody.usesPreciseCollisionDetection = YES;
   
   //fishBone and blood splatter
-  fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"Bonefish"];
+  fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"coins"];
   fadeOut = [SKAction fadeOutWithDuration:3];
   bloodSplatter= [SKSpriteNode spriteNodeWithImageNamed:@"bloodSplat"];
   
   //powerUp node
-  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"powerup"];
+  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brickwall"];
   powerUp.physicsBody = [SKPhysicsBody bodyWithTexture:powerUp.texture size:powerUp.texture.size];
   powerUp.physicsBody.dynamic=YES;
   powerUp.physicsBody.friction=NO;
@@ -1251,7 +1251,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     CGPoint fishPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100, [self getRanNum:(self.frame.size.height)]*0.55+190);
     fish.position = fishPosition;
     double angle = (double)[self getRanNum:100]/100;
-    fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"Bonefish"];
+    fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"coins"];
     fish.zRotation = (M_PI)*angle;
     fishBone.zRotation =(M_PI)*angle;
     [mainLayer addChild:fish];
@@ -1261,7 +1261,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //14
   }
   
-  if(!(score==0)&&(score>10)&&(canGetFirstLife==TRUE)){
+  if(!(score==0)&&(score>1000)&&(canGetFirstLife==TRUE)){
     //change this to 3000 or 4000
     lives++;
     canGetFirstLife=FALSE;
@@ -1678,7 +1678,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -2349,11 +2349,11 @@ static inline CGVector radiansToVector(CGFloat radians){
 }
 
 -(void)showExtraLife{
-  plus1lifeButton.alpha = 1000;
+  plus1lifeButton.alpha = 1;
   SKAction *angelPenguinAction;
   if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
     angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.8) duration:3.5]]];
+                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.83) duration:3.5]]];
     
   }else{
     angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
