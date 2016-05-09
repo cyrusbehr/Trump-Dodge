@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
-		6E1651361CDBFC7400004D3D /* aPenguin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C71CDBFC7400004D3D /* aPenguin@2x.png */; };
 		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E1651381CDBFC7400004D3D /* bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C91CDBFC7400004D3D /* bacon.png */; };
 		6E1651391CDBFC7400004D3D /* beaver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650CA1CDBFC7400004D3D /* beaver@2x.png */; };
@@ -139,6 +138,10 @@
 		6E55D1401CE012E600E7A983 /* sombrero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D13E1CE012E600E7A983 /* sombrero@2x.png */; };
 		6E55D1431CE013AE00E7A983 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1411CE013AE00E7A983 /* money.png */; };
 		6E55D1441CE013AE00E7A983 /* money@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1421CE013AE00E7A983 /* money@2x.png */; };
+		6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1491CE0170700E7A983 /* TrumpwithWings.png */; };
+		6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */; };
+		6E55D14F1CE0185100E7A983 /* TrumpwithWings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */; };
+		6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
 		6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */; };
 		6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9731CDBF69100EAE7A8 /* GameScene.m */; };
@@ -170,7 +173,6 @@
 
 /* Begin PBXFileReference section */
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
-		6E1650C71CDBFC7400004D3D /* aPenguin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aPenguin@2x.png"; sourceTree = "<group>"; };
 		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650C91CDBFC7400004D3D /* bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacon.png; sourceTree = "<group>"; };
 		6E1650CA1CDBFC7400004D3D /* beaver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beaver@2x.png"; sourceTree = "<group>"; };
@@ -301,6 +303,10 @@
 		6E55D13E1CE012E600E7A983 /* sombrero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sombrero@2x.png"; sourceTree = "<group>"; };
 		6E55D1411CE013AE00E7A983 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
 		6E55D1421CE013AE00E7A983 /* money@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money@2x.png"; sourceTree = "<group>"; };
+		6E55D1491CE0170700E7A983 /* TrumpwithWings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrumpwithWings.png; sourceTree = "<group>"; };
+		6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrumpwithWings@2x.png"; sourceTree = "<group>"; };
+		6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrumpwithWings.png; sourceTree = "<group>"; };
+		6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrumpwithWings@2x.png"; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC96D1CDBF69100EAE7A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -390,14 +396,17 @@
 			isa = PBXGroup;
 			children = (
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
-				6E1650C71CDBFC7400004D3D /* aPenguin@2x.png */,
 				6E55D13D1CE012E600E7A983 /* sombrero.png */,
 				6E55D13E1CE012E600E7A983 /* sombrero@2x.png */,
 				6E55D1411CE013AE00E7A983 /* money.png */,
+				6E55D1491CE0170700E7A983 /* TrumpwithWings.png */,
+				6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */,
 				6E55D1421CE013AE00E7A983 /* money@2x.png */,
 				6E55D1391CE0127700E7A983 /* donkey.png */,
 				6E55D13A1CE0127700E7A983 /* donkey@2x.png */,
 				6E1650C81CDBFC7400004D3D /* Axe1@2x.png */,
+				6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */,
+				6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */,
 				6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */,
 				6E55D1211CE00E5200E7A983 /* burrito.png */,
 				6E55D1351CE0124600E7A983 /* moustache.png */,
@@ -671,18 +680,19 @@
 				6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */,
 				6E1651A01CDBFC7400004D3D /* whiteSheepFix@2x.png in Resources */,
 				6E1651671CDBFC7400004D3D /* knife@2x.png in Resources */,
+				6E55D14F1CE0185100E7A983 /* TrumpwithWings.png in Resources */,
 				6E1651751CDBFC7400004D3D /* largeSheep.png in Resources */,
 				6E55D13C1CE0127700E7A983 /* donkey@2x.png in Resources */,
 				6E16517C1CDBFC7400004D3D /* mouse.png in Resources */,
 				6E1651501CDBFC7400004D3D /* Default.png in Resources */,
 				6E1651351CDBFC7400004D3D /* antlers.png in Resources */,
 				6E1651391CDBFC7400004D3D /* beaver@2x.png in Resources */,
-				6E1651361CDBFC7400004D3D /* aPenguin@2x.png in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D10A1CE0021A00E7A983 /* taco.png in Resources */,
 				6E1651811CDBFC7400004D3D /* organe.png in Resources */,
 				6E55D13F1CE012E600E7A983 /* sombrero.png in Resources */,
 				6E1651511CDBFC7400004D3D /* Default@2x.png in Resources */,
+				6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E16515D1CDBFC7400004D3D /* gold penguin@2x.png in Resources */,
 				6E1651571CDBFC7400004D3D /* flame.png in Resources */,
 				6E55D1401CE012E600E7A983 /* sombrero@2x.png in Resources */,
@@ -713,6 +723,7 @@
 				6E55D13B1CE0127700E7A983 /* donkey.png in Resources */,
 				6E1651961CDBFC7400004D3D /* whiteElephant1@2x.png in Resources */,
 				6E1651931CDBFC7400004D3D /* whiteBee@2x.png in Resources */,
+				6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E16514E1CDBFC7400004D3D /* Default-736h@3x.png in Resources */,
 				6E16516D1CDBFC7400004D3D /* largeGoat.png in Resources */,
 				6E55D1371CE0124600E7A983 /* moustache.png in Resources */,
@@ -770,6 +781,7 @@
 				6E16513B1CDBFC7400004D3D /* beeHiveFix.png in Resources */,
 				6E55D1341CE011EA00E7A983 /* poncho@2x.png in Resources */,
 				6E1651951CDBFC7400004D3D /* whiteElephant.png in Resources */,
+				6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */,
 				6E55D1381CE0124600E7A983 /* moustache@2x.png in Resources */,
 				6E1651771CDBFC7400004D3D /* leaf.png in Resources */,
 				6E16517B1CDBFC7400004D3D /* moose@2x.png in Resources */,

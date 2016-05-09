@@ -706,7 +706,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:finger];
   
   
-  angelPenguin = [SKSpriteNode spriteNodeWithImageNamed:@"aaPenguin@2x"];
+  angelPenguin = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings@2x"];
   [mainLayer addChild:angelPenguin];
   //angelPenguin.xScale = 0.25;
   //angelPenguin.yScale = 0.25;
@@ -1261,7 +1261,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //14
   }
   
-  if(!(score==0)&&(score>3000)&&(canGetFirstLife==TRUE)){
+  if(!(score==0)&&(score>10)&&(canGetFirstLife==TRUE)){
     //change this to 3000 or 4000
     lives++;
     canGetFirstLife=FALSE;
@@ -2349,15 +2349,15 @@ static inline CGVector radiansToVector(CGFloat radians){
 }
 
 -(void)showExtraLife{
-  plus1lifeButton.alpha = 1;
+  plus1lifeButton.alpha = 1000;
   SKAction *angelPenguinAction;
   if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
     angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.87) duration:3.5]]];
+                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.8) duration:3.5]]];
     
   }else{
     angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.8) duration:3.5]]];
+                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.75) duration:3.5]]];
   }
   [angelPenguin runAction:angelPenguinAction];
   plus1lifebuttonTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(fadePlus1LifeLabel) userInfo:nil repeats:NO];
