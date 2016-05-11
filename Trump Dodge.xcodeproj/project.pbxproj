@@ -170,6 +170,7 @@
 		6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */; };
 		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
+		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,6 +363,7 @@
 		6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trump DodgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +424,7 @@
 				6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */,
 				6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */,
 				6E0232261CE2FCF100472856 /* moneyExplosion.sks */,
+				6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
 				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
 				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
@@ -833,6 +836,7 @@
 				6E1651921CDBFC7400004D3D /* whiteBeaver@2x.png in Resources */,
 				6E16514D1CDBFC7400004D3D /* Default-667h@2x.png in Resources */,
 				6E55D1231CE00E5200E7A983 /* burrito.png in Resources */,
+				6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */,
 				6E16514C1CDBFC7400004D3D /* Default-568h@2x.png in Resources */,
 				6E16514A1CDBFC7400004D3D /* clockPowerUp@2x.png in Resources */,
 				6EBCC97C1CDBF69100EAE7A8 /* Main.storyboard in Resources */,

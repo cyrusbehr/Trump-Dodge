@@ -1284,7 +1284,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //set to 30
   }
   //powerUp
-  if(!(clockTime==0)&&(clockTime%30==0)&&(powerUpTimeBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%20==0)&&(powerUpTimeBool==TRUE)){
     powerUpTimeBool=FALSE;
     CGPoint powerUpPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100,[self getRanNum:(self.frame.size.height)]*0.55+190);
     powerUp.position = powerUpPosition;
@@ -1802,7 +1802,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   [powerUp removeActionForKey:@"pulseFade"];
   CGPoint pos = powerUp.position;
-  //[self addBomb:pos]; TODO implement effect for fish
+  [self addBomb:pos];
   [powerUp removeFromParent];
   [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
