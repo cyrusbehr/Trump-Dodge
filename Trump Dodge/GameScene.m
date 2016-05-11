@@ -1521,7 +1521,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 }
 
 -(void)addExplosion: (CGPoint) position{
-  NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"ExplosionAnimation2" ofType:@"sks"];
+  NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"moneyExplosion" ofType:@"sks"];
   SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath];
   explosion.position = position;
   [mainLayer addChild:explosion];
@@ -1780,7 +1780,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:fishBone];
   [fishBone runAction:fadeOut];
   
- // [self addExplosion:fish.position]; TODO implement effect for powerup
+  [self addExplosion:fish.position];
   score+=175;
   
   if(score<1000){

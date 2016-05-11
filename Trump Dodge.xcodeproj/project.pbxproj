@@ -20,6 +20,7 @@
 		6E0232211CE2F6A700472856 /* burritoTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232201CE2F6A700472856 /* burritoTest.png */; };
 		6E0232231CE2F79700472856 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232221CE2F79700472856 /* explosion.mp3 */; };
 		6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232241CE2FB8D00472856 /* cash.mp3 */; };
+		6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232261CE2FCF100472856 /* moneyExplosion.sks */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
 		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E1651381CDBFC7400004D3D /* bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C91CDBFC7400004D3D /* bacon.png */; };
@@ -202,6 +203,7 @@
 		6E0232201CE2F6A700472856 /* burritoTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burritoTest.png; sourceTree = "<group>"; };
 		6E0232221CE2F79700472856 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		6E0232241CE2FB8D00472856 /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
+		6E0232261CE2FCF100472856 /* moneyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = moneyExplosion.sks; path = ../moneyExplosion.sks; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
 		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650C91CDBFC7400004D3D /* bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacon.png; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */,
 				6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */,
 				6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */,
+				6E0232261CE2FCF100472856 /* moneyExplosion.sks */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
 				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
 				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
@@ -725,6 +728,7 @@
 				6E1651441CDBFC7400004D3D /* bullet@2x.png in Resources */,
 				6E16517F1CDBFC7400004D3D /* MusicNoteWhite.png in Resources */,
 				6E16516A1CDBFC7400004D3D /* largeBee.png in Resources */,
+				6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */,
 				6E1651971CDBFC7400004D3D /* whiteGiraffe@2x.png in Resources */,
 				6E16519F1CDBFC7400004D3D /* whitePigFix@2x.png in Resources */,
 				6E16515C1CDBFC7400004D3D /* goatWhite.png in Resources */,
