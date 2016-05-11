@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E02320D1CE2EEE400472856 /* desert_day.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02320C1CE2EEE400472856 /* desert_day.png */; };
+		6E02320F1CE2EF5300472856 /* desert_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02320E1CE2EF5300472856 /* desert_night.png */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
 		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E1651381CDBFC7400004D3D /* bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C91CDBFC7400004D3D /* bacon.png */; };
@@ -176,6 +178,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E02320C1CE2EEE400472856 /* desert_day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_day.png; sourceTree = "<group>"; };
+		6E02320E1CE2EF5300472856 /* desert_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_night.png; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
 		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650C91CDBFC7400004D3D /* bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacon.png; sourceTree = "<group>"; };
@@ -405,8 +409,10 @@
 			children = (
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E55D13D1CE012E600E7A983 /* sombrero.png */,
+				6E02320C1CE2EEE400472856 /* desert_day.png */,
 				6E55D13E1CE012E600E7A983 /* sombrero@2x.png */,
 				6E55D1411CE013AE00E7A983 /* money.png */,
+				6E02320E1CE2EF5300472856 /* desert_night.png */,
 				6E55D1491CE0170700E7A983 /* TrumpwithWings.png */,
 				6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */,
 				6E55D1591CE01BAD00E7A983 /* coins.png */,
@@ -733,6 +739,7 @@
 				6E16518F1CDBFC7400004D3D /* turkey@2x.png in Resources */,
 				6E1651831CDBFC7400004D3D /* pauseButton.png in Resources */,
 				6E55D11C1CE0073500E7A983 /* trumpFace@2x.png in Resources */,
+				6E02320F1CE2EF5300472856 /* desert_night.png in Resources */,
 				6E1651591CDBFC7400004D3D /* geryFish.png in Resources */,
 				6E55D13B1CE0127700E7A983 /* donkey.png in Resources */,
 				6E1651961CDBFC7400004D3D /* whiteElephant1@2x.png in Resources */,
@@ -754,6 +761,7 @@
 				6E55D10C1CE0023700E7A983 /* taco@2x.png in Resources */,
 				6E1651981CDBFC7400004D3D /* whiteGiraffeFix@2x.png in Resources */,
 				6E16516F1CDBFC7400004D3D /* largeGoldPenguin.png in Resources */,
+				6E02320D1CE2EEE400472856 /* desert_day.png in Resources */,
 				6E55D1441CE013AE00E7A983 /* money@2x.png in Resources */,
 				6E1651551CDBFC7400004D3D /* featherBrown@2x.png in Resources */,
 				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,

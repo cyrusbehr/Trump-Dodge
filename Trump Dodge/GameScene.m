@@ -605,7 +605,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   //background initilization
-  SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"sampleBackground"];
+  SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"desert_night"]; //desert_day
   background.zPosition = -1.0;
   background.position = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height*0.5);
   background.xScale =((self.frame.size.width / background.size.width));
