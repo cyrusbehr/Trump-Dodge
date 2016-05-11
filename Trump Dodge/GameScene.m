@@ -199,9 +199,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   splatSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
   //[splatSound setVolume:0.1]; to adjust volume
   
-//  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
-//  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
+  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+  [explosionSound setVolume:1.5];
   
   NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
@@ -216,9 +217,10 @@ static inline CGVector radiansToVector(CGFloat radians){
 //  [backgroundMusicIntense setNumberOfLoops:-1];
 //  [backgroundMusicIntense setVolume:1];
   
-//  NSString *path7 = [NSString stringWithFormat:@"%@/pop.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
-//  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
+  NSString *path7 = [NSString stringWithFormat:@"%@/cash.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
+  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
+  [popSound setVolume:1.5];
   
 //  
 //  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -546,7 +548,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"donkey",@"sombrero",@"taco",@"burrito",@"maracas",@"poncho",@"moustache",@"chanclas", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"poncho",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -602,7 +604,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   //background initilization
-  SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"sampleBackground"];
+  SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"desert_night"]; //desert_day
   background.zPosition = -1.0;
   background.position = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height*0.5);
   background.xScale =((self.frame.size.width / background.size.width));
@@ -726,7 +728,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   bloodSplatter= [SKSpriteNode spriteNodeWithImageNamed:@"bloodSplat"];
   
   //powerUp node
-  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brickwall"];
+  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brick wall"];
   powerUp.physicsBody = [SKPhysicsBody bodyWithTexture:powerUp.texture size:powerUp.texture.size];
   powerUp.physicsBody.dynamic=YES;
   powerUp.physicsBody.friction=NO;
@@ -1279,7 +1281,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //set to 30
   }
   //powerUp
-  if(!(clockTime==0)&&(clockTime%30==0)&&(powerUpTimeBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%20==0)&&(powerUpTimeBool==TRUE)){
     powerUpTimeBool=FALSE;
     CGPoint powerUpPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100,[self getRanNum:(self.frame.size.height)]*0.55+190);
     powerUp.position = powerUpPosition;
@@ -1516,7 +1518,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 }
 
 -(void)addExplosion: (CGPoint) position{
-  NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"ExplosionAnimation2" ofType:@"sks"];
+  NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"moneyExplosion" ofType:@"sks"];
   SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath];
   explosion.position = position;
   [mainLayer addChild:explosion];
@@ -1775,7 +1777,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:fishBone];
   [fishBone runAction:fadeOut];
   
- // [self addExplosion:fish.position]; TODO implement effect for powerup
+  [self addExplosion:fish.position];
   score+=175;
   
   if(score<1000){
@@ -1797,7 +1799,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   [powerUp removeActionForKey:@"pulseFade"];
   CGPoint pos = powerUp.position;
-  //[self addBomb:pos]; TODO implement effect for fish
+  [self addBomb:pos];
   [powerUp removeFromParent];
   [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
