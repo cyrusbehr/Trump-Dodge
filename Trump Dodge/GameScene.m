@@ -549,7 +549,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burrito",@"maracas",@"poncho",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"poncho",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -729,7 +729,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   bloodSplatter= [SKSpriteNode spriteNodeWithImageNamed:@"bloodSplat"];
   
   //powerUp node
-  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brickwall"];
+  powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brick wall"];
   powerUp.physicsBody = [SKPhysicsBody bodyWithTexture:powerUp.texture size:powerUp.texture.size];
   powerUp.physicsBody.dynamic=YES;
   powerUp.physicsBody.friction=NO;

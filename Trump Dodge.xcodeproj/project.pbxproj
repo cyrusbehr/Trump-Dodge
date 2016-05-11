@@ -15,6 +15,9 @@
 		6E0232181CE2F31100472856 /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232161CE2F31100472856 /* cactus.png */; };
 		6E0232191CE2F31100472856 /* cactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232171CE2F31100472856 /* cactus@2x.png */; };
 		6E02321B1CE2F31F00472856 /* mexicanScaled.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321A1CE2F31F00472856 /* mexicanScaled.png */; };
+		6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321C1CE2F59600472856 /* burritTest@2x.png */; };
+		6E02321F1CE2F68200472856 /* burritoTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321E1CE2F68200472856 /* burritoTest@2x.png */; };
+		6E0232211CE2F6A700472856 /* burritoTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232201CE2F6A700472856 /* burritoTest.png */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
 		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E1651381CDBFC7400004D3D /* bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C91CDBFC7400004D3D /* bacon.png */; };
@@ -192,6 +195,9 @@
 		6E0232161CE2F31100472856 /* cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactus.png; sourceTree = "<group>"; };
 		6E0232171CE2F31100472856 /* cactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cactus@2x.png"; sourceTree = "<group>"; };
 		6E02321A1CE2F31F00472856 /* mexicanScaled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mexicanScaled.png; sourceTree = "<group>"; };
+		6E02321C1CE2F59600472856 /* burritTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritTest@2x.png"; sourceTree = "<group>"; };
+		6E02321E1CE2F68200472856 /* burritoTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritoTest@2x.png"; sourceTree = "<group>"; };
+		6E0232201CE2F6A700472856 /* burritoTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burritoTest.png; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
 		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650C91CDBFC7400004D3D /* bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacon.png; sourceTree = "<group>"; };
@@ -422,14 +428,17 @@
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E55D13D1CE012E600E7A983 /* sombrero.png */,
 				6E02320C1CE2EEE400472856 /* desert_day.png */,
+				6E0232201CE2F6A700472856 /* burritoTest.png */,
 				6E02321A1CE2F31F00472856 /* mexicanScaled.png */,
 				6E55D13E1CE012E600E7A983 /* sombrero@2x.png */,
 				6E0232101CE2F1A400472856 /* brick wall.png */,
 				6E0232161CE2F31100472856 /* cactus.png */,
 				6E0232171CE2F31100472856 /* cactus@2x.png */,
 				6E0232111CE2F1A400472856 /* brick wall@2x.png */,
+				6E02321E1CE2F68200472856 /* burritoTest@2x.png */,
 				6E0232141CE2F2A400472856 /* mexicanScaled@2x.png */,
 				6E55D1411CE013AE00E7A983 /* money.png */,
+				6E02321C1CE2F59600472856 /* burritTest@2x.png */,
 				6E02320E1CE2EF5300472856 /* desert_night.png */,
 				6E55D1491CE0170700E7A983 /* TrumpwithWings.png */,
 				6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */,
@@ -770,6 +779,7 @@
 				6E55D1371CE0124600E7A983 /* moustache.png in Resources */,
 				6E1651701CDBFC7400004D3D /* largeHippo.png in Resources */,
 				6E1651791CDBFC7400004D3D /* log.png in Resources */,
+				6E02321F1CE2F68200472856 /* burritoTest@2x.png in Resources */,
 				6E16513D1CDBFC7400004D3D /* bloodDrop.png in Resources */,
 				6E1651A11CDBFC7400004D3D /* whiteTurkey@2x.png in Resources */,
 				6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */,
@@ -819,6 +829,8 @@
 				6E55D1331CE011EA00E7A983 /* poncho.png in Resources */,
 				6E1651471CDBFC7400004D3D /* cartoonFire.png in Resources */,
 				6E16519E1CDBFC7400004D3D /* whiteOwlFix3@2x.png in Resources */,
+				6E0232211CE2F6A700472856 /* burritoTest.png in Resources */,
+				6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */,
 				6E1651711CDBFC7400004D3D /* largeMoose.png in Resources */,
 				6E1651991CDBFC7400004D3D /* whiteGoatFix@2x.png in Resources */,
 				6E16515B1CDBFC7400004D3D /* goat@2x.png in Resources */,
