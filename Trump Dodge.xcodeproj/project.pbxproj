@@ -18,6 +18,8 @@
 		6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321C1CE2F59600472856 /* burritTest@2x.png */; };
 		6E02321F1CE2F68200472856 /* burritoTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321E1CE2F68200472856 /* burritoTest@2x.png */; };
 		6E0232211CE2F6A700472856 /* burritoTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232201CE2F6A700472856 /* burritoTest.png */; };
+		6E0232231CE2F79700472856 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232221CE2F79700472856 /* explosion.mp3 */; };
+		6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232241CE2FB8D00472856 /* cash.mp3 */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
 		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E1651381CDBFC7400004D3D /* bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C91CDBFC7400004D3D /* bacon.png */; };
@@ -198,6 +200,8 @@
 		6E02321C1CE2F59600472856 /* burritTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritTest@2x.png"; sourceTree = "<group>"; };
 		6E02321E1CE2F68200472856 /* burritoTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritoTest@2x.png"; sourceTree = "<group>"; };
 		6E0232201CE2F6A700472856 /* burritoTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burritoTest.png; sourceTree = "<group>"; };
+		6E0232221CE2F79700472856 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		6E0232241CE2FB8D00472856 /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
 		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650C91CDBFC7400004D3D /* bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacon.png; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 				6E02321E1CE2F68200472856 /* burritoTest@2x.png */,
 				6E0232141CE2F2A400472856 /* mexicanScaled@2x.png */,
 				6E55D1411CE013AE00E7A983 /* money.png */,
+				6E0232221CE2F79700472856 /* explosion.mp3 */,
 				6E02321C1CE2F59600472856 /* burritTest@2x.png */,
 				6E02320E1CE2EF5300472856 /* desert_night.png */,
 				6E55D1491CE0170700E7A983 /* TrumpwithWings.png */,
@@ -446,6 +451,7 @@
 				6E55D15A1CE01BAD00E7A983 /* coins@2x.png */,
 				6E55D1421CE013AE00E7A983 /* money@2x.png */,
 				6E55D1511CE019CE00E7A983 /* chanclas.png */,
+				6E0232241CE2FB8D00472856 /* cash.mp3 */,
 				6E55D1521CE019CE00E7A983 /* chanclas@2x.png */,
 				6E55D1391CE0127700E7A983 /* donkey.png */,
 				6E55D13A1CE0127700E7A983 /* donkey@2x.png */,
@@ -755,6 +761,7 @@
 				6E1651641CDBFC7400004D3D /* hippo@2x.png in Resources */,
 				6E1651881CDBFC7400004D3D /* sampleBackground.png in Resources */,
 				6E1651661CDBFC7400004D3D /* InformationPageUpdate@2x.png in Resources */,
+				6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */,
 				6E1651731CDBFC7400004D3D /* largePenguin.png in Resources */,
 				6E16518D1CDBFC7400004D3D /* sword@2x.png in Resources */,
 				6E1651871CDBFC7400004D3D /* powerup@2x.png in Resources */,
@@ -776,6 +783,7 @@
 				6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E16514E1CDBFC7400004D3D /* Default-736h@3x.png in Resources */,
 				6E16516D1CDBFC7400004D3D /* largeGoat.png in Resources */,
+				6E0232231CE2F79700472856 /* explosion.mp3 in Resources */,
 				6E55D1371CE0124600E7A983 /* moustache.png in Resources */,
 				6E1651701CDBFC7400004D3D /* largeHippo.png in Resources */,
 				6E1651791CDBFC7400004D3D /* log.png in Resources */,

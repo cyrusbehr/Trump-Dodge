@@ -202,9 +202,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   splatSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
   //[splatSound setVolume:0.1]; to adjust volume
   
-//  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
-//  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+  NSString *path3 = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
+  explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+  [explosionSound setVolume:1.5];
   
   NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
@@ -219,9 +220,10 @@ static inline CGVector radiansToVector(CGFloat radians){
 //  [backgroundMusicIntense setNumberOfLoops:-1];
 //  [backgroundMusicIntense setVolume:1];
   
-//  NSString *path7 = [NSString stringWithFormat:@"%@/pop.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
-//  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
+  NSString *path7 = [NSString stringWithFormat:@"%@/cash.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
+  popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
+  [popSound setVolume:1.5];
   
 //  
 //  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];

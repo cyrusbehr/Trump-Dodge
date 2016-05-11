@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trump Dodge/GameScene.m"
-            timestampString = "484439793.787027"
+            timestampString = "484637685.95251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1618"
-            endingLineNumber = "1618"
+            startingLineNumber = "1620"
+            endingLineNumber = "1620"
             landmarkName = "-didCollideWithMonster"
             landmarkType = "5">
          </BreakpointContent>
