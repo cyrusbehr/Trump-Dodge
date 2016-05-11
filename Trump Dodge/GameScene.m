@@ -742,7 +742,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   //title label
   
   gameTitleLabel = [[UILabel alloc]init];
-  gameTitleLabel.text = [NSString stringWithFormat:@"Penga Dodge"];
+  gameTitleLabel.text = [NSString stringWithFormat:@"Trumpa Dodge"];
   gameTitleLabel.textColor = [UIColor whiteColor];
   gameTitleLabel.font = [UIFont systemFontOfSize:55];
   [gameTitleLabel setShadowColor:[UIColor blackColor]];
