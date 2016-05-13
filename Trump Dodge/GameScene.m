@@ -23,7 +23,7 @@ static const uint32_t enemyCategory    =  0x1 << 1;
 static const uint32_t fishCategory    =  0x1 << 2;
 static const uint32_t powerUpCategory=  0x1 << 3;
 static const uint32_t noCategory =      0X1 <<4;
-
+static const uint32_t ponchoCategory = 0x1 <<5;
 
 int dx;
 int dy;
@@ -1704,6 +1704,11 @@ static inline CGVector radiansToVector(CGFloat radians){
     }
   }
   
+  if((firstBody.categoryBitMask & heroCategory) != 0 && (secondBody.categoryBitMask & ponchoCategory) !=0 ){
+    NSLog(@"collided with poncho");
+    
+  }
+  
   if((firstBody.categoryBitMask & heroCategory) != 0 && (secondBody.categoryBitMask & fishCategory) !=0 && (fishDelayTimeBool == TRUE)){
     [self removeFish];
     fishBone.position = fish.position;
@@ -2241,10 +2246,14 @@ static inline CGVector radiansToVector(CGFloat radians){
   poncho.physicsBody = [SKPhysicsBody bodyWithTexture:gun.texture size:(gun.texture.size)];
   poncho.physicsBody.dynamic = YES;
   poncho.physicsBody.friction=NO;
-  poncho.physicsBody.categoryBitMask = enemyCategory; //TODO change this to poncho Category
+  poncho.physicsBody.categoryBitMask = ponchoCategory;
   poncho.physicsBody.contactTestBitMask = heroCategory;
   poncho.physicsBody.collisionBitMask = 0;
   poncho.name = @"poncho";
+  double rotAngle = (double)[self getRanNum:rotMax]/100;
+  rotate = [SKAction rotateByAngle:(M_PI)*rotAngle duration:1];
+  [poncho runAction:[SKAction repeatActionForever:rotate]];
+  
   
   int sideNum = [self getRanNum:10];
   int directionDeg;
