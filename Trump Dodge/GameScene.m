@@ -1075,7 +1075,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   bestScore.textColor = [UIColor whiteColor];
   
   //change this to 200
-  if(score<200){
+  if(score<-1){
     isSausage = TRUE;
     hero.texture = [SKTexture textureWithImageNamed:@"theSaus"];
     hero.size = hero.texture.size;
@@ -1326,7 +1326,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   
-  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"FeatherAnimation1" ofType:@"sks"];
+  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"toupeAnnimation" ofType:@"sks"];
   //NSLog(@"added feathers");
   SKEmitterNode *explosion2 = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath2];
   explosion2.position = position;
@@ -1611,7 +1611,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTimer invalidate];
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
-  
+  [self addFeathers:deadPos];
   /*
   
   if(isSausage==FALSE){
@@ -1677,7 +1677,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      //[self didCollideWithMonster];
+      [self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
