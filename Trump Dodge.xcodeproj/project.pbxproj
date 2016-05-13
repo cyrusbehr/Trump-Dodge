@@ -173,6 +173,7 @@
 		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
 		6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */; };
+		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
 /* End PBXBuildFile section */
 
@@ -369,6 +370,7 @@
 		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = toupeAnnimation.sks; sourceTree = "<group>"; };
+		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -432,6 +434,7 @@
 				6E0232261CE2FCF100472856 /* moneyExplosion.sks */,
 				6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */,
 				6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */,
+				6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
 				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
 				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
@@ -828,6 +831,7 @@
 				6E1651851CDBFC7400004D3D /* penguin@2x.png in Resources */,
 				6E16519D1CDBFC7400004D3D /* whiteMusicNote@2x.png in Resources */,
 				6E1651401CDBFC7400004D3D /* bomb@2x.png in Resources */,
+				6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */,
 				6E55D10E1CE0025500E7A983 /* taco@3x.png in Resources */,
 				6E16513F1CDBFC7400004D3D /* blue.png in Resources */,
 				6E1651541CDBFC7400004D3D /* feather.png in Resources */,

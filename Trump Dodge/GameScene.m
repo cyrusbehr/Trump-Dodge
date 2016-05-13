@@ -1343,7 +1343,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     [pigSound play];
   }
   
-  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"BaconAnimation" ofType:@"sks"];
+  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"ExplosionAnimation2" ofType:@"sks"];
   SKEmitterNode *explosion2 = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath2];
   explosion2.position = position;
   [mainLayer addChild:explosion2];
@@ -1612,6 +1612,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
   [self addFeathers:deadPos];
+  [self addBacon:deadPos];
+  
   /*
   
   if(isSausage==FALSE){
