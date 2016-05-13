@@ -43,6 +43,7 @@ int initialrotMax = 100;
 int lives = 0;
 
 BOOL gunIsOnScreen;
+BOOL ponchoIsOnScreen;
 BOOL musicTransitionBool = TRUE;
 BOOL hasBegan = FALSE;
 BOOL pauseGame = FALSE;
@@ -164,6 +165,10 @@ BOOL canGetFirstLife = TRUE;
   NSTimer *updateCollideBoolTimer;
   AVAudioPlayer *woodSound;
   AVAudioPlayer *leaveSound;
+  SKSpriteNode *poncho;
+  NSTimer* ponchoTimer;
+  
+  
 }
 
 
@@ -551,7 +556,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"poncho",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -913,6 +918,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   gunSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(spawnGun) userInfo:nil repeats:YES];
   
+  ponchoTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnPonch) userInfo:nil repeats:YES];
+  
   [start.layer removeAllAnimations];
   
   [start setAlpha:0.0];
@@ -995,6 +1002,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTimer invalidate];
   [mainTimer invalidate];
   [gunSpawnTimer invalidate];
+  [ponchoTimer invalidate];
   
   mainLayer.speed = 0;
   
@@ -1039,6 +1047,7 @@ static inline CGVector radiansToVector(CGFloat radians){
                                              repeats:YES];
   
   gunSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(spawnGun) userInfo:nil repeats:YES];
+  ponchoTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnPonch) userInfo:nil repeats:YES];
   
   [shareButton setAlpha:0];
   [menuBut setAlpha:0];
@@ -1051,6 +1060,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)stopTimer{
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
+  [ponchoTimer invalidate];
   
 }//stopeTimer-----------------------------------------------------------------------------------------------------------
 
@@ -1141,8 +1151,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer enumerateChildNodesWithName:@"gunTestingPoint" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
-  
-  
+  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
   [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
@@ -1189,6 +1200,13 @@ static inline CGVector radiansToVector(CGFloat radians){
       gunIsOnScreen = FALSE;
     }
   }];
+  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
+    if ((node.position.x > self.frame.size.width+200)||(node.position.x<-200) || (node.position.y > self.frame.size.height+200)||(node.position.y<-200)) {
+      [node removeFromParent];
+      ponchoIsOnScreen = FALSE;
+    }
+  }];
+  
   [mainLayer enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
     if ((node.position.x > self.frame.size.width*2)||(node.position.x<-700) || (node.position.y > self.frame.size.height*2)||(node.position.y<-700)) {
       [node removeFromParent];
@@ -1611,6 +1629,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTimer invalidate];
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
+  [ponchoTimer invalidate];
   [self addFeathers:deadPos];
   [self addBacon:deadPos];
   
@@ -1818,7 +1837,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
+  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
+  
   gunIsOnScreen = FALSE;
+  ponchoIsOnScreen = FALSE;
   
   //NSLog(@"did collide with powerup method was run!");
   
@@ -2212,7 +2236,63 @@ static inline CGVector radiansToVector(CGFloat radians){
   return [self getRanNum:2];
 }
 
+-(void)spawnPonch{
+  poncho = [SKSpriteNode spriteNodeWithImageNamed:@"poncho"];
+  poncho.physicsBody = [SKPhysicsBody bodyWithTexture:gun.texture size:(gun.texture.size)];
+  poncho.physicsBody.dynamic = YES;
+  poncho.physicsBody.friction=NO;
+  poncho.physicsBody.categoryBitMask = enemyCategory; //TODO change this to poncho Category
+  poncho.physicsBody.contactTestBitMask = heroCategory;
+  poncho.physicsBody.collisionBitMask = 0;
+  poncho.name = @"poncho";
+  
+  int sideNum = [self getRanNum:10];
+  int directionDeg;
+  ponchoIsOnScreen = TRUE;
+  
+  
+  //deals with the placement of enemies
+  if(sideNum<3){
+    poncho.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+20);
+    directionDeg = [self getRanNum:180]+180;
+    
+  }else if(sideNum<6){
+    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -10);
+    directionDeg = [self getRanNum:180];
+   
+  }else if(sideNum==6){
+    poncho.position = CGPointMake(self.frame.size.width+15, [self getRanNum:self.frame.size.height]);
+    directionDeg = [self getRanNum:180]+90;
+    
+    
+    
+  }else if (sideNum ==7){
+    poncho.position = CGPointMake(-15, [self getRanNum:self.frame.size.height]);
+    directionDeg = [self getRanNum:180]+270;
+   
+    
+  }else if(sideNum ==8){
+    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+10);
+    directionDeg = [self getRanNum:180]+180;
+ 
+    
+  }else{
+    poncho.position = CGPointMake(self.frame.size.width*0.5, -10);
+    directionDeg = (70+[self getRanNum:40]);
+    
+    
+  }
+  
+  CGVector ponchoDirection = degreesToVector(directionDeg);
+  
+  [mainLayer addChild:poncho];
 
+  
+  SKAction *movePoncho =  [SKAction moveBy:ponchoDirection duration:0.007];//0.007
+  [poncho runAction:[SKAction repeatActionForever:movePoncho]];
+
+  
+}
 
 
 -(void)spawnGun{
