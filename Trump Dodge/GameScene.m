@@ -2243,12 +2243,13 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)spawnPonch{
   poncho = [SKSpriteNode spriteNodeWithImageNamed:@"poncho"];
-  poncho.physicsBody = [SKPhysicsBody bodyWithTexture:gun.texture size:(gun.texture.size)];
+  poncho.physicsBody = [SKPhysicsBody bodyWithTexture:poncho.texture size:(poncho.texture.size)];
   poncho.physicsBody.dynamic = YES;
   poncho.physicsBody.friction=NO;
   poncho.physicsBody.categoryBitMask = ponchoCategory;
   poncho.physicsBody.contactTestBitMask = heroCategory;
   poncho.physicsBody.collisionBitMask = 0;
+  //poncho.physicsBody.usesPreciseCollisionDetection = YES;
   poncho.name = @"poncho";
   double rotAngle = (double)[self getRanNum:rotMax]/100;
   rotate = [SKAction rotateByAngle:(M_PI)*rotAngle duration:1];
