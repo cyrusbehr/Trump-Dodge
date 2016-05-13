@@ -4,11 +4,6 @@
 //
 
 
-//TODO: create start powerup which has a SKemiiter generating starts and makes player invinsible
-//and plays music and allows player to kill enemies by touching them and rewards points for each killed enemy
-
-//TODO: Make game harder!
-
 
 #import "GameScene.h"
 #import <UIKit/UIKit.h>
@@ -1705,7 +1700,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   if((firstBody.categoryBitMask & heroCategory) != 0 && (secondBody.categoryBitMask & ponchoCategory) !=0 ){
-    NSLog(@"collided with poncho");
+    
+    [self didCollideWithPoncho];
     
   }
   
@@ -1797,6 +1793,14 @@ static inline CGVector radiansToVector(CGFloat radians){
   [fish removeFromParent];
   
 }//removeFist-----------------------------------------------------------------------------------------------------------
+
+-(void)didCollideWithPoncho {
+  [poncho removeFromParent];
+  
+  //TODO need to fix this!
+  hero = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings"]; //TODO change this picture to new picture
+  //TODO undo trump changes when game restarts
+}
 
 -(void)didCollideWithFish{
   if (soundEnabled==TRUE) {
