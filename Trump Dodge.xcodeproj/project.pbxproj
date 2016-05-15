@@ -28,6 +28,8 @@
 		6E0D28091CE93780003A13F5 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D28081CE93780003A13F5 /* Joystick.m */; };
 		6E0D280B1CE93792003A13F5 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280A1CE93792003A13F5 /* joystick.png */; };
 		6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280C1CE937A0003A13F5 /* dpad.png */; };
+		6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280E1CE93B52003A13F5 /* Dying.mp3 */; };
+		6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */; };
 		6E14DE321CE578BB009C81CF /* trumpToupe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */; };
 		6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE311CE578BB009C81CF /* trumpToupe.png */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
@@ -224,6 +226,8 @@
 		6E0D28081CE93780003A13F5 /* Joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joystick.m; sourceTree = "<group>"; };
 		6E0D280A1CE93792003A13F5 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
 		6E0D280C1CE937A0003A13F5 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
+		6E0D280E1CE93B52003A13F5 /* Dying.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dying.mp3; sourceTree = "<group>"; };
+		6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mexicanNew@2x.png"; sourceTree = "<group>"; };
 		6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpToupe@2x.png"; sourceTree = "<group>"; };
 		6E14DE311CE578BB009C81CF /* trumpToupe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpToupe.png; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
@@ -465,7 +469,9 @@
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
 				6E0D280A1CE93792003A13F5 /* joystick.png */,
+				6E0D280E1CE93B52003A13F5 /* Dying.mp3 */,
 				6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */,
+				6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */,
 				6EAAEB321CE8100500070F36 /* trumpPoncho.png */,
 				6E55D13D1CE012E600E7A983 /* sombrero.png */,
 				6E02320C1CE2EEE400472856 /* desert_day.png */,
@@ -752,6 +758,7 @@
 				6E16516E1CDBFC7400004D3D /* largeGoatFix.png in Resources */,
 				6E16515F1CDBFC7400004D3D /* gun.png in Resources */,
 				6EBCC9761CDBF69100EAE7A8 /* GameScene.sks in Resources */,
+				6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */,
 				6E1651411CDBFC7400004D3D /* bombPowerUp@2x.png in Resources */,
 				6E1651801CDBFC7400004D3D /* oFIsh@2x.png in Resources */,
 				6E1651941CDBFC7400004D3D /* whiteBeeFixTest3@2x.png in Resources */,
@@ -813,6 +820,7 @@
 				6E1651741CDBFC7400004D3D /* largePig.png in Resources */,
 				6E1651461CDBFC7400004D3D /* cartoonAxe@2x.png in Resources */,
 				6E16518C1CDBFC7400004D3D /* spark.png in Resources */,
+				6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */,
 				6EAAEB341CE8100500070F36 /* trumpPoncho.png in Resources */,
 				6E1651911CDBFC7400004D3D /* waterDrop.png in Resources */,
 				6E1651761CDBFC7400004D3D /* LargeTurkey.png in Resources */,

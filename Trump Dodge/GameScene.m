@@ -147,7 +147,6 @@ BOOL canGetFirstLife = TRUE;
   NSString *characterName;
   UIButton *backButton;
   SKAction *instructionAnimation;
-  SKNode *finger;
   UIButton *moreButton;
   UIButton *lessButton;
   SKSpriteNode *bulletNode;
@@ -196,13 +195,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   
 
   [self playQuote];
-  [self JoystickInit];
-
   
-  NSString *path = [NSString stringWithFormat:@"%@/poof.mp3", [[NSBundle mainBundle] resourcePath]];
+  [self JoystickInit];
+  
+  NSString *path = [NSString stringWithFormat:@"%@/dying.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
   poofSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-  poofSound.volume = 1.2;
+  poofSound.volume = 1.5;
   
   NSString *path2 = [NSString stringWithFormat:@"%@/splat.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
@@ -371,7 +370,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"moustache",@"chanclas",@"mexicanScaled@2x",@"cactus", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"moustache",@"chanclas",@"mexicanNew",@"cactus", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -517,14 +516,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:hero];
   
   
-  
-  finger = [SKSpriteNode spriteNodeWithImageNamed:@"finger"];
-  finger.position = CGPointMake(self.frame.size.width*0.5+150, self.frame.size.height*0.5-150);
-  finger.xScale = 0.3;
-  finger.yScale = 0.3;
-  [mainLayer addChild:finger];
-  
-  
   angelPenguin = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings@2x"];
   [mainLayer addChild:angelPenguin];
   //angelPenguin.xScale = 0.25;
@@ -579,23 +570,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   [self.view addSubview:soundButton];
   
-  
-  instructionAnimation = [SKAction sequence:@[    [SKAction moveTo:CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5) duration:0], [SKAction fadeAlphaTo:1 duration:0.5],
-                                                  [SKAction moveTo:CGPointMake(self.frame.size.width*0.25, self.frame.size.height*0.6) duration:3],
-                                                  [SKAction waitForDuration:0.5], [SKAction fadeAlphaTo:0 duration:(0.5)]
-                                                  ]];
-  SKAction *repeat = [SKAction repeatActionForever:instructionAnimation];
-  [hero runAction:repeat];
-  
-  SKAction *fingerAction = [SKAction sequence:@[   [SKAction moveTo:CGPointMake(self.frame.size.width*0.5+150, self.frame.size.height*0.5-150) duration:0],[SKAction fadeAlphaTo:1 duration:0.5],
-                                                   [SKAction moveTo:CGPointMake(self.frame.size.width*0.25+150, self.frame.size.height*0.6-150) duration:3],
-                                                   [SKAction waitForDuration:0.5], [SKAction fadeAlphaTo:0 duration:(0.5)]
-                                                   ]];
-  SKAction *repeat2 = [SKAction repeatActionForever:fingerAction];
-  [finger runAction:repeat2];
-  
-   
-    
   
   
 }//didMoveToView-----------------------------------------------------------------------------------------------------------
@@ -704,8 +678,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   //NSLog(@"start game");
   [hero removeAllActions];
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
-  [finger removeAllActions];
-  [finger removeFromParent];
   hero.alpha = 1;
   
   
@@ -2329,13 +2301,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
   [backgroundMusicGentle setNumberOfLoops:-1];
   [backgroundMusicGentle play];
-  [backgroundMusicGentle setVolume:0]; //volume is 0.4
+  [backgroundMusicGentle setVolume:0];
   fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseVolumeLevel) userInfo:nil repeats:YES];
   
 }
 
 -(void)increaseVolumeLevel{
-  if(backgroundMusicGentle.volume < 0.4){
+  if(backgroundMusicGentle.volume < 0.3){
     [backgroundMusicGentle setVolume: backgroundMusicGentle.volume+0.01];
   }else{
     [fadeTimer invalidate];
