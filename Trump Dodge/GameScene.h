@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
+#import "Joystick.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 {

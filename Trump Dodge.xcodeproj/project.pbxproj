@@ -171,6 +171,10 @@
 		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
+		82C5D7BF1CE8FC28001F1861 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5D7BE1CE8FC28001F1861 /* Joystick.m */; };
+		82D04B621CE7D34B00F56CA9 /* SpriteKit-Joystick-master 2 in Resources */ = {isa = PBXBuildFile; fileRef = 82D04B611CE7D34B00F56CA9 /* SpriteKit-Joystick-master 2 */; };
+		82D04B661CE7D87600F56CA9 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D04B641CE7D87600F56CA9 /* joystick.png */; };
+		82D04B691CE7DA1700F56CA9 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D04B681CE7DA1700F56CA9 /* dpad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,6 +368,11 @@
 		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
+		82C5D7BE1CE8FC28001F1861 /* Joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Joystick.m; path = "../../Downloads/SpriteKit-Joystick-master 2/Joystick.m"; sourceTree = "<group>"; };
+		82D04B611CE7D34B00F56CA9 /* SpriteKit-Joystick-master 2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SpriteKit-Joystick-master 2"; path = "../../Downloads/SpriteKit-Joystick-master 2"; sourceTree = "<group>"; };
+		82D04B631CE7D77300F56CA9 /* Joystick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Joystick.h; path = "../../Downloads/SpriteKit-Joystick-master 2/Joystick.h"; sourceTree = "<group>"; };
+		82D04B641CE7D87600F56CA9 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = joystick.png; path = "../../Downloads/SpriteKit-Joystick-master 2/joystick.png"; sourceTree = "<group>"; };
+		82D04B681CE7DA1700F56CA9 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dpad.png; path = "../../Downloads/SpriteKit-Joystick-master 2/dpad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,7 +435,10 @@
 				6E0232261CE2FCF100472856 /* moneyExplosion.sks */,
 				6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
+				82D04B631CE7D77300F56CA9 /* Joystick.h */,
+				82C5D7BE1CE8FC28001F1861 /* Joystick.m */,
 				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
+				82D04B611CE7D34B00F56CA9 /* SpriteKit-Joystick-master 2 */,
 				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
 			);
 			path = "Trump Dodge";
@@ -435,6 +447,8 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				82D04B641CE7D87600F56CA9 /* joystick.png */,
+				82D04B681CE7DA1700F56CA9 /* dpad.png */,
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E55D13D1CE012E600E7A983 /* sombrero.png */,
 				6E02320C1CE2EEE400472856 /* desert_day.png */,
@@ -729,6 +743,7 @@
 				6E16517A1CDBFC7400004D3D /* mallet@2x.png in Resources */,
 				6E1651691CDBFC7400004D3D /* largeBeaver.png in Resources */,
 				6E1651441CDBFC7400004D3D /* bullet@2x.png in Resources */,
+				82D04B661CE7D87600F56CA9 /* joystick.png in Resources */,
 				6E16517F1CDBFC7400004D3D /* MusicNoteWhite.png in Resources */,
 				6E16516A1CDBFC7400004D3D /* largeBee.png in Resources */,
 				6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */,
@@ -805,6 +820,7 @@
 				6E16519B1CDBFC7400004D3D /* whiteHippoFix@2x.png in Resources */,
 				6E55D10C1CE0023700E7A983 /* taco@2x.png in Resources */,
 				6E1651981CDBFC7400004D3D /* whiteGiraffeFix@2x.png in Resources */,
+				82D04B621CE7D34B00F56CA9 /* SpriteKit-Joystick-master 2 in Resources */,
 				6E0232131CE2F1A400472856 /* brick wall@2x.png in Resources */,
 				6E16516F1CDBFC7400004D3D /* largeGoldPenguin.png in Resources */,
 				6E02320D1CE2EEE400472856 /* desert_day.png in Resources */,
@@ -821,6 +837,7 @@
 				6E55D10E1CE0025500E7A983 /* taco@3x.png in Resources */,
 				6E16513F1CDBFC7400004D3D /* blue.png in Resources */,
 				6E1651541CDBFC7400004D3D /* feather.png in Resources */,
+				82D04B691CE7DA1700F56CA9 /* dpad.png in Resources */,
 				6E55D12B1CE0104600E7A983 /* maracas.png in Resources */,
 				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
 				6E55D1241CE00E5200E7A983 /* burrito@2x.png in Resources */,
@@ -896,6 +913,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C5D7BF1CE8FC28001F1861 /* Joystick.m in Sources */,
 				6EBCC9791CDBF69100EAE7A8 /* GameViewController.m in Sources */,
 				6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */,
 				6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */,

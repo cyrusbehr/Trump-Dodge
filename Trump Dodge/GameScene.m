@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "GameViewController.h"
 #import "AppDelegate.h"
+#import "Joystick.h"
+#import <QuartzCore/QuartzCore.h>
 
 @import Foundation;
 
@@ -161,6 +163,8 @@ BOOL canGetFirstLife = TRUE;
   NSTimer *updateCollideBoolTimer;
   AVAudioPlayer *woodSound;
   AVAudioPlayer *leaveSound;
+    Joystick *joystick;
+    CADisplayLink *velocityTick;
 }
 
 
@@ -187,7 +191,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //sound initialization
   
-  
+    [self JoystickInit];
   
   NSString *path = [NSString stringWithFormat:@"%@/poof.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
@@ -2371,4 +2375,69 @@ static inline CGVector radiansToVector(CGFloat radians){
   [UIView commitAnimations];
   
 }
+
+// Joystick Code
+//
+
+-(void)JoystickInit{
+    
+SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
+SKSpriteNode *jsBackdrop = [SKSpriteNode spriteNodeWithImageNamed:@"dpad"];
+joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
+    joystick.position = CGPointMake((self.size.width - jsBackdrop.size.width * 0.5-self.size.width*0.1),(jsBackdrop.size.height * 0.5+self.size.width*.1));
+[self addChild:joystick];
+}
+
+
+
+-(id)init
+{
+    if (self = [super init])
+        {
+            velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
+            [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+        }
+    return self;
+}
+
+
+        
+        -(void)joystickMovement
+    {
+        if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
+        {
+            hero.position = CGPointMake(hero.position.x + .1 *joystick.velocity.x, hero.position.y + .1 * joystick.velocity.y);
+        }
+    }
+
+
+//-(Joystick *)newJoystickNode {
+//    SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
+//    SKSpriteNode *jsBackdrop = [SKSpriteNode spriteNodeWithImageNamed:@"dpad"];
+//    joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
+//    joystick.position = CGPointMake(jsThumb.size.width, jsThumb.size.width);
+//    joystick.name = @"playerJoystick";
+//    //[joystick setScale:0.8];
+//    return joystick;
+//}
+//
+//-(void)joystickMovement
+//{
+//    joystick = (Joystick*)[self childNodeWithName:@"playerJoystick"];
+//    SKSpriteNode *player = (SKSpriteNode*)[self childNodeWithName:@"hero"];
+//    if ((joystick.velocity.x != 0 || joystick.velocity.y != 0) && (self.speed == 1))
+//    {
+//        player.position = CGPointMake(player.position.x + .1 *joystick.velocity.x, player.position.y + .1 * joystick.velocity.y);
+//    }
+//}
+//
+//
+//-(id)initWithSize:(CGSize)size {
+//    if (self = [super initWithSize:size]) {
+//        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
+//        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+//    }
+//    return self;
+//}
+
 @end
