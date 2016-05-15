@@ -777,28 +777,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   
    
     
-  [self joystickMovement];
+  
   
 }//didMoveToView-----------------------------------------------------------------------------------------------------------
 
--(id)init
-{
-    if (self = [super init])
-    {
-        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
-        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    return self;
-}
-
-
--(void)joystickMovement
-{
-    if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
-    {
-        hero.position = CGPointMake(hero.position.x + .1 *joystick.velocity.x, hero.position.y + .1 * joystick.velocity.y);
-    }
-}
 
 //-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
 //  
@@ -956,7 +938,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   if(hero.position.x<-3){
     hero.position = CGPointMake(0, hero.position.y);
   }
-  
+    
+    [self joystickMovement];
   
   if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
     if(hero.position.y<self.frame.size.height*0.04){
@@ -2405,42 +2388,30 @@ static inline CGVector radiansToVector(CGFloat radians){
 SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
 SKSpriteNode *jsBackdrop = [SKSpriteNode spriteNodeWithImageNamed:@"dpad"];
 joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
-    joystick.position = CGPointMake((self.size.width - jsBackdrop.size.width * 0.5-self.size.width*0.1),(jsBackdrop.size.height * 0.5+self.size.width*.1));
+    joystick.position = CGPointMake((self.size.width - jsBackdrop.size.width * 0.5-self.size.width*0.1),(jsBackdrop.size.height * 0.5+self.size.height*.2));
 [self addChild:joystick];
+    [joystick setScale:1.5];
+}
+
+-(id)init
+{
+    if (self = [super init])
+    {
+        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
+        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return self;
 }
 
 
+-(void)joystickMovement
+{
+    if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
+    {
+        hero.position = CGPointMake(hero.position.x + .25 *joystick.velocity.x, hero.position.y + .25 * joystick.velocity.y);
+    }
+}
 
 
-
-
-//-(Joystick *)newJoystickNode {
-//    SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
-//    SKSpriteNode *jsBackdrop = [SKSpriteNode spriteNodeWithImageNamed:@"dpad"];
-//    joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
-//    joystick.position = CGPointMake(jsThumb.size.width, jsThumb.size.width);
-//    joystick.name = @"playerJoystick";
-//    //[joystick setScale:0.8];
-//    return joystick;
-//}
-//
-//-(void)joystickMovement
-//{
-//    joystick = (Joystick*)[self childNodeWithName:@"playerJoystick"];
-//    SKSpriteNode *player = (SKSpriteNode*)[self childNodeWithName:@"hero"];
-//    if ((joystick.velocity.x != 0 || joystick.velocity.y != 0) && (self.speed == 1))
-//    {
-//        player.position = CGPointMake(player.position.x + .1 *joystick.velocity.x, player.position.y + .1 * joystick.velocity.y);
-//    }
-//}
-//
-//
-//-(id)initWithSize:(CGSize)size {
-//    if (self = [super initWithSize:size]) {
-//        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
-//        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-//    }
-//    return self;
-//}
 
 @end
