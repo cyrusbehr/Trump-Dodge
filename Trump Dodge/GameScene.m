@@ -1798,7 +1798,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
   [hero removeFromParent];
-  hero = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings"];
+  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"]; //TODO put image here
   hero.position = heroPos;
   hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
   hero.physicsBody.dynamic=YES;
@@ -1809,12 +1809,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   hero.physicsBody.collisionBitMask = 0;
   hero.physicsBody.usesPreciseCollisionDetection = YES;
   [mainLayer addChild:hero];
-  
-  
-  //TODO need to fix this!
-  //hero = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings"]; //TODO change this picture to new picture
-  //hero.texture = [SKTexture textureWithImage:@"TrumpwithWings"];
-  //TODO undo trump changes when game restarts
+
 }
 
 -(void)didCollideWithFish{
