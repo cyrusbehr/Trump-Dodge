@@ -89,7 +89,7 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *elephantSound;
   AVAudioPlayer *popSound;
   AVAudioPlayer *backgroundMusicGentle;
-  AVAudioPlayer *backgroundMusicIntense;
+  AVAudioPlayer *quoteAudioPlayer;
   AVAudioPlayer *explosionSound;
   AVAudioPlayer *splatSound;
   AVAudioPlayer *poofSound;
@@ -110,6 +110,7 @@ BOOL canGetFirstLife = TRUE;
   CGVector enemyDirection;
   NSTimer *enemyTime;
   NSMutableArray *enemyList;
+  NSMutableArray *quoteList;
   CABasicAnimation *theAnimation;
   SKAction *move;
   UIButton *resume;
@@ -190,6 +191,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //sound initialization
   
+  [self playQuote];
   
   
   NSString *path = [NSString stringWithFormat:@"%@/poof.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -214,61 +216,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   [backgroundMusicGentle play];
   [backgroundMusicGentle setVolume:0.4];
   
-//  NSString *path5 = [NSString stringWithFormat:@"%@/intenseSong.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl5 = [NSURL fileURLWithPath:path5];
-//  backgroundMusicIntense = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl5 error:nil];
-//  [backgroundMusicIntense setNumberOfLoops:-1];
-//  [backgroundMusicIntense setVolume:1];
+ 
   
   NSString *path7 = [NSString stringWithFormat:@"%@/cash.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
   popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
   [popSound setVolume:1.5];
-  
-//  
-//  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl10 = [NSURL fileURLWithPath:path10];
-//  pigSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl10 error:nil];
-//  [pigSound setVolume:1.2];
-//  
-//  
-//  NSString *path11 = [NSString stringWithFormat:@"%@/sheepSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl11 = [NSURL fileURLWithPath:path11];
-////  sheepSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl11 error:nil];
-////  [sheepSound setVolume:1.2];
-//  
-//  NSString *path12 = [NSString stringWithFormat:@"%@/splash.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl12 = [NSURL fileURLWithPath:path12];
-//  splashSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl12 error:nil];
-////  [splashSound setVolume:1.2];
-//  
-//  NSString *path15 = [NSString stringWithFormat:@"%@/elephantSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl15 = [NSURL fileURLWithPath:path15];
-//  elephantSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl15 error:nil];
-//  [elephantSound setVolume:1.2];
-//  NSString *path16 = [NSString stringWithFormat:@"%@/goldClink.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl16 = [NSURL fileURLWithPath:path16];
-//  goldClink = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl16 error:nil];
-//  [goldClink setVolume:2];
-//  NSString *path17 = [NSString stringWithFormat:@"%@/beeSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl17 = [NSURL fileURLWithPath:path17];
-//  beeSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl17 error:nil];
-//  [beeSound setVolume:2];
-//  NSString *path20 = [NSString stringWithFormat:@"%@/mooseSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl20 = [NSURL fileURLWithPath:path20];
-//  mooseSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl20 error:nil];
-//  [mooseSound setVolume:2];
-//  NSString *path21 = [NSString stringWithFormat:@"%@/wood.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl21 = [NSURL fileURLWithPath:path21];
-//  woodSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl21 error:nil];
-//  [woodSound setVolume:1.5];
-//  NSString *path22 = [NSString stringWithFormat:@"%@/leaves.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl22 = [NSURL fileURLWithPath:path22];
-//  leaveSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl22 error:nil];
-//  [leaveSound setVolume:3];
-  
-  
-  
+
   
   isSausage = FALSE;
   
@@ -1693,7 +1647,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -2478,6 +2432,20 @@ static inline CGVector radiansToVector(CGFloat radians){
   plus1lifeButton.transform = CGAffineTransformMakeScale(2,2);
   [plus1lifeButton setAlpha:0];
   [UIView commitAnimations];
+  
+}
+
+-(void)playQuote{
+  
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/explosion.mp3",@"%@/explosion.mp3", nil]; //TODO
+  int num = [self getRanNum:(int)[quoteList count]];
+  NSString *quoteName = [quoteList objectAtIndex:num];
+  NSString *quotePath = [NSString stringWithFormat:quoteName, [[NSBundle mainBundle] resourcePath]];
+  NSURL *quoteUrl = [NSURL fileURLWithPath:quotePath];
+  quoteAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:quoteUrl error:nil];
+  [quoteAudioPlayer setVolume:1];
+  [quoteAudioPlayer play];
+  
   
 }
 @end
