@@ -89,7 +89,7 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *elephantSound;
   AVAudioPlayer *popSound;
   AVAudioPlayer *backgroundMusicGentle;
-  AVAudioPlayer *backgroundMusicIntense;
+  AVAudioPlayer *quoteAudioPlayer;
   AVAudioPlayer *explosionSound;
   AVAudioPlayer *splatSound;
   AVAudioPlayer *poofSound;
@@ -110,6 +110,7 @@ BOOL canGetFirstLife = TRUE;
   CGVector enemyDirection;
   NSTimer *enemyTime;
   NSMutableArray *enemyList;
+  NSMutableArray *quoteList;
   CABasicAnimation *theAnimation;
   SKAction *move;
   UIButton *resume;
@@ -162,7 +163,9 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *leaveSound;
   SKSpriteNode *poncho;
   NSTimer* ponchoTimer;
-  
+  NSMutableArray *quoteTimeList;
+  NSTimer *startingMusicDelayTimer;
+  NSTimer *fadeTimer;
   
 }
 
@@ -190,6 +193,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //sound initialization
   
+  [self playQuote];
   
   
   NSString *path = [NSString stringWithFormat:@"%@/poof.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -207,68 +211,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   explosionSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
   [explosionSound setVolume:1.5];
   
-  NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
-  NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
-  backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
-  [backgroundMusicGentle setNumberOfLoops:-1];
-  [backgroundMusicGentle play];
-  [backgroundMusicGentle setVolume:0.4];
-  
-//  NSString *path5 = [NSString stringWithFormat:@"%@/intenseSong.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl5 = [NSURL fileURLWithPath:path5];
-//  backgroundMusicIntense = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl5 error:nil];
-//  [backgroundMusicIntense setNumberOfLoops:-1];
-//  [backgroundMusicIntense setVolume:1];
+ 
   
   NSString *path7 = [NSString stringWithFormat:@"%@/cash.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl7 = [NSURL fileURLWithPath:path7];
   popSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl7 error:nil];
   [popSound setVolume:1.5];
-  
-//  
-//  NSString *path10 = [NSString stringWithFormat:@"%@/pigSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl10 = [NSURL fileURLWithPath:path10];
-//  pigSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl10 error:nil];
-//  [pigSound setVolume:1.2];
-//  
-//  
-//  NSString *path11 = [NSString stringWithFormat:@"%@/sheepSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl11 = [NSURL fileURLWithPath:path11];
-////  sheepSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl11 error:nil];
-////  [sheepSound setVolume:1.2];
-//  
-//  NSString *path12 = [NSString stringWithFormat:@"%@/splash.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl12 = [NSURL fileURLWithPath:path12];
-//  splashSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl12 error:nil];
-////  [splashSound setVolume:1.2];
-//  
-//  NSString *path15 = [NSString stringWithFormat:@"%@/elephantSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl15 = [NSURL fileURLWithPath:path15];
-//  elephantSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl15 error:nil];
-//  [elephantSound setVolume:1.2];
-//  NSString *path16 = [NSString stringWithFormat:@"%@/goldClink.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl16 = [NSURL fileURLWithPath:path16];
-//  goldClink = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl16 error:nil];
-//  [goldClink setVolume:2];
-//  NSString *path17 = [NSString stringWithFormat:@"%@/beeSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl17 = [NSURL fileURLWithPath:path17];
-//  beeSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl17 error:nil];
-//  [beeSound setVolume:2];
-//  NSString *path20 = [NSString stringWithFormat:@"%@/mooseSound.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl20 = [NSURL fileURLWithPath:path20];
-//  mooseSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl20 error:nil];
-//  [mooseSound setVolume:2];
-//  NSString *path21 = [NSString stringWithFormat:@"%@/wood.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl21 = [NSURL fileURLWithPath:path21];
-//  woodSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl21 error:nil];
-//  [woodSound setVolume:1.5];
-//  NSString *path22 = [NSString stringWithFormat:@"%@/leaves.mp3", [[NSBundle mainBundle] resourcePath]];
-//  NSURL *soundUrl22 = [NSURL fileURLWithPath:path22];
-//  leaveSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl22 error:nil];
-//  [leaveSound setVolume:3];
-  
-  
-  
+
   
   isSausage = FALSE;
   
@@ -367,138 +316,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [lessButton setAlpha:0];
   [lessButton setExclusiveTouch:YES];
   
-  
-  //animal buttons
-  sheepButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 72)];
-  [sheepButton setTitle:@"2000" forState:UIControlStateNormal];
-  [sheepButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  sheepButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [sheepButton setBackgroundImage:[UIImage imageNamed:@"largeSheep"] forState:UIControlStateNormal];
-  [sheepButton setBackgroundImage:[UIImage imageNamed:@"whiteSheepFix@2x"] forState:UIControlStateDisabled];
-  [sheepButton addTarget:self action:@selector(selectSheep) forControlEvents:UIControlEventTouchUpInside];
-  [sheepButton setCenter:CGPointMake(self.view.frame.size.width*0.285714, self.view.frame.size.height*0.5)];
-  [sheepButton setAlpha:0];
-  sheepButton.enabled = FALSE;
-  
-  penguinButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
-  [penguinButton setBackgroundImage:[UIImage imageNamed:@"largePenguin"] forState:UIControlStateNormal];
-  [penguinButton addTarget:self action:@selector(selectPenguin) forControlEvents:UIControlEventTouchUpInside];
-  [penguinButton setCenter:CGPointMake(self.view.frame.size.width*0.142857, self.view.frame.size.height*0.5)];
-  [penguinButton setAlpha:0];
-  
-  mooseButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 75, 70)];
-  [mooseButton setTitle:@"6000" forState:UIControlStateNormal];
-  [mooseButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  mooseButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [mooseButton setBackgroundImage:[UIImage imageNamed:@"largeMoose"] forState:UIControlStateNormal];
-  [mooseButton setBackgroundImage:[UIImage imageNamed:@"whiteMooseFix6@2x"] forState:UIControlStateDisabled];
-  [mooseButton addTarget:self action:@selector(selectMoose) forControlEvents:UIControlEventTouchUpInside];
-  [mooseButton setCenter:CGPointMake(self.view.frame.size.width*0.142857, self.view.frame.size.height*0.5)];
-  [mooseButton setAlpha:0];
-  mooseButton.enabled = FALSE;
-  
-  goatButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 73)];
-  [goatButton setTitle:@"4000 " forState:UIControlStateNormal];
-  [goatButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  goatButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [goatButton setBackgroundImage:[UIImage imageNamed:@"largeGoatFix"] forState:UIControlStateNormal];
-  [goatButton setBackgroundImage:[UIImage imageNamed:@"whiteGoatFix@2x"] forState:UIControlStateDisabled];
-  [goatButton addTarget:self action:@selector(selectgoat) forControlEvents:UIControlEventTouchUpInside];
-  [goatButton setCenter:CGPointMake(self.view.frame.size.width*0.571428, self.view.frame.size.height*0.5)];
-  [goatButton setAlpha:0];
-  goatButton.enabled = FALSE;
-  
-  beeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 73)];
-  [beeButton setTitle:@"6500" forState:UIControlStateNormal];
-  [beeButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  beeButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [beeButton setBackgroundImage:[UIImage imageNamed:@"largeBee"] forState:UIControlStateNormal];
-  [beeButton setBackgroundImage:[UIImage imageNamed:@"whiteBee"] forState:UIControlStateDisabled];
-  [beeButton addTarget:self action:@selector(selectBee) forControlEvents:UIControlEventTouchUpInside];
-  [beeButton setCenter:CGPointMake(self.view.frame.size.width*0.285714, self.view.frame.size.height*0.5)];
-  [beeButton setAlpha:0];
-  beeButton.enabled = FALSE;
-  
-  
-  beaverButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 68, 75)];
-  [beaverButton setTitle:@" 7500" forState:UIControlStateNormal];
-  [beaverButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  beaverButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [beaverButton setBackgroundImage:[UIImage imageNamed:@"largeBeaver"] forState:UIControlStateNormal];
-  [beaverButton setBackgroundImage:[UIImage imageNamed:@"whiteBeaver"] forState:UIControlStateDisabled];
-  [beaverButton addTarget:self action:@selector(selectBeaver) forControlEvents:UIControlEventTouchUpInside];
-  [beaverButton setCenter:CGPointMake(self.view.frame.size.width*0.571428, self.view.frame.size.height*0.5)];
-  [beaverButton setAlpha:0];
-  beaverButton.enabled = FALSE;
-  
-  goldPenguinButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 68, 73)];
-  [goldPenguinButton setTitle:@"10000" forState:UIControlStateNormal];
-  [goldPenguinButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  goldPenguinButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [goldPenguinButton setBackgroundImage:[UIImage imageNamed:@"largeGoldPenguin"] forState:UIControlStateNormal];
-  [goldPenguinButton setBackgroundImage:[UIImage imageNamed:@"whiteGoldPenguin"] forState:UIControlStateDisabled];
-  [goldPenguinButton addTarget:self action:@selector(selectGoldPenguin) forControlEvents:UIControlEventTouchUpInside];
-  [goldPenguinButton setCenter:CGPointMake(self.view.frame.size.width*0.85714, self.view.frame.size.height*0.5)];
-  [goldPenguinButton setAlpha:0];
-  goldPenguinButton.enabled = FALSE;
-  
-  pigButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 68, 73)];
-  [pigButton setTitle:@"3000  " forState:UIControlStateNormal];
-  [pigButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  pigButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [pigButton setBackgroundImage:[UIImage imageNamed:@"largePig"] forState:UIControlStateNormal];
-  [pigButton setBackgroundImage:[UIImage imageNamed:@"whitePigFix@2x"] forState:UIControlStateDisabled];
-  [pigButton addTarget:self action:@selector(selectPig) forControlEvents:UIControlEventTouchUpInside];
-  [pigButton setCenter:CGPointMake(self.view.frame.size.width*0.43857, self.view.frame.size.height*0.5)];
-  [pigButton setAlpha:0];
-  pigButton.enabled = FALSE;
-  
-  
-  elephantButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
-  [elephantButton setTitle:@"7000" forState:UIControlStateNormal];
-  [elephantButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  elephantButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [elephantButton setBackgroundImage:[UIImage imageNamed:@"largeElephant"] forState:UIControlStateNormal];
-  [elephantButton setBackgroundImage:[UIImage imageNamed:@"whiteElephant1"] forState:UIControlStateDisabled];
-  [elephantButton addTarget:self action:@selector(selectElephant) forControlEvents:UIControlEventTouchUpInside];
-  [elephantButton setCenter:CGPointMake(self.view.frame.size.width*0.43857, self.view.frame.size.height*0.5)];
-  [elephantButton setAlpha:0];
-  elephantButton.enabled = FALSE;
-  
-  
-  owlButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 68.5)];
-  [owlButton setTitle:@"5000" forState:UIControlStateNormal];
-  [owlButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  owlButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [owlButton setBackgroundImage:[UIImage imageNamed:@"largeOwl"] forState:UIControlStateNormal];
-  [owlButton setBackgroundImage:[UIImage imageNamed:@"whiteOwlFix3@2x"] forState:UIControlStateDisabled];
-  [owlButton addTarget:self action:@selector(selectOwl) forControlEvents:UIControlEventTouchUpInside];
-  [owlButton setCenter:CGPointMake(self.view.frame.size.width*0.714285, self.view.frame.size.height*0.5)];
-  [owlButton setAlpha:0];
-  owlButton.enabled = FALSE;
-  
-  giraffeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 55, 86)];
-  [giraffeButton setTitle:@"8000" forState:UIControlStateNormal];
-  [giraffeButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  giraffeButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [giraffeButton setBackgroundImage:[UIImage imageNamed:@"largeGiraffe"] forState:UIControlStateNormal];
-  [giraffeButton setBackgroundImage:[UIImage imageNamed:@"whiteGiraffeFix@2x"] forState:UIControlStateDisabled];
-  [giraffeButton addTarget:self action:@selector(selectGiraffe) forControlEvents:UIControlEventTouchUpInside];
-  [giraffeButton setCenter:CGPointMake(self.view.frame.size.width*0.714285, self.view.frame.size.height*0.5)];
-  [giraffeButton setAlpha:0];
-  giraffeButton.enabled = FALSE;
-  
-  
-  hippoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 65, 75)];
-  [hippoButton setTitle:@"5500" forState:UIControlStateNormal];
-  [hippoButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  hippoButton.titleLabel.font = [UIFont systemFontOfSize:20];
-  [hippoButton setBackgroundImage:[UIImage imageNamed:@"largeHippo"] forState:UIControlStateNormal];
-  [hippoButton setBackgroundImage:[UIImage imageNamed:@"whiteHippoFix@2x"] forState:UIControlStateDisabled];
-  [hippoButton addTarget:self action:@selector(selectHippo) forControlEvents:UIControlEventTouchUpInside];
-  [hippoButton setCenter:CGPointMake(self.view.frame.size.width*0.85714, self.view.frame.size.height*0.5)];
-  [hippoButton setAlpha:0];
-  hippoButton.enabled = FALSE;
   
   characterSelected = [[UILabel alloc]init];
   characterSelected.textColor = [UIColor whiteColor];
@@ -1693,7 +1510,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -2480,4 +2297,42 @@ static inline CGVector radiansToVector(CGFloat radians){
   [UIView commitAnimations];
   
 }
+
+-(void)playQuote{
+  
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3", nil]; //TODO add mp3 file names here
+  int QuoteDelayList[2] = {2,3};//TODO populate with corresponding quote lengths
+  
+  int num = [self getRanNum:(int)[quoteList count]];
+  int quoteDelay = QuoteDelayList[num];
+  NSString *quoteName = [quoteList objectAtIndex:num];
+  NSString *quotePath = [NSString stringWithFormat:quoteName, [[NSBundle mainBundle] resourcePath]];
+  NSURL *quoteUrl = [NSURL fileURLWithPath:quotePath];
+  quoteAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:quoteUrl error:nil];
+  [quoteAudioPlayer setVolume:1.5];
+  [quoteAudioPlayer play];
+  startingMusicDelayTimer = [NSTimer scheduledTimerWithTimeInterval:quoteDelay target:self selector:@selector(playBackgroundMusic) userInfo:nil repeats:NO];
+  
+}
+
+-(void)playBackgroundMusic{
+  
+  NSString *path4 = [NSString stringWithFormat:@"%@/menuSong.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSURL *soundUrl4 = [NSURL fileURLWithPath:path4];
+  backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
+  [backgroundMusicGentle setNumberOfLoops:-1];
+  [backgroundMusicGentle play];
+  [backgroundMusicGentle setVolume:0]; //volume is 0.4
+  fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseVolumeLevel) userInfo:nil repeats:YES];
+  
+}
+
+-(void)increaseVolumeLevel{
+  if(backgroundMusicGentle.volume < 0.4){
+    [backgroundMusicGentle setVolume: backgroundMusicGentle.volume+0.01];
+  }else{
+    [fadeTimer invalidate];
+  }
+}
+
 @end
