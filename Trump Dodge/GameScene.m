@@ -165,7 +165,7 @@ BOOL canGetFirstLife = TRUE;
   NSTimer* ponchoTimer;
   NSMutableArray *quoteTimeList;
   NSTimer *startingMusicDelayTimer;
-  
+  NSTimer *fadeTimer;
   
 }
 
@@ -2300,8 +2300,8 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)playQuote{
   
-  quoteList = [NSMutableArray arrayWithObjects:@"%@/explosion.mp3",@"%@/explosion.mp3", nil]; //TODO add mp3 file names here
-  int QuoteDelayList[2] = {5,2};//TODO populate with corresponding quote lengths
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3", nil]; //TODO add mp3 file names here
+  int QuoteDelayList[2] = {2,3};//TODO populate with corresponding quote lengths
   
   int num = [self getRanNum:(int)[quoteList count]];
   int quoteDelay = QuoteDelayList[num];
@@ -2309,7 +2309,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   NSString *quotePath = [NSString stringWithFormat:quoteName, [[NSBundle mainBundle] resourcePath]];
   NSURL *quoteUrl = [NSURL fileURLWithPath:quotePath];
   quoteAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:quoteUrl error:nil];
-  [quoteAudioPlayer setVolume:1];
+  [quoteAudioPlayer setVolume:1.5];
   [quoteAudioPlayer play];
   startingMusicDelayTimer = [NSTimer scheduledTimerWithTimeInterval:quoteDelay target:self selector:@selector(playBackgroundMusic) userInfo:nil repeats:NO];
   
@@ -2322,7 +2322,17 @@ static inline CGVector radiansToVector(CGFloat radians){
   backgroundMusicGentle = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl4 error:nil];
   [backgroundMusicGentle setNumberOfLoops:-1];
   [backgroundMusicGentle play];
-  [backgroundMusicGentle setVolume:0.4];
+  [backgroundMusicGentle setVolume:0]; //volume is 0.4
+  fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseVolumeLevel) userInfo:nil repeats:YES];
   
 }
+
+-(void)increaseVolumeLevel{
+  if(backgroundMusicGentle.volume < 0.4){
+    [backgroundMusicGentle setVolume: backgroundMusicGentle.volume+0.01];
+  }else{
+    [fadeTimer invalidate];
+  }
+}
+
 @end
