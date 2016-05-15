@@ -775,37 +775,58 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *repeat2 = [SKAction repeatActionForever:fingerAction];
   [finger runAction:repeat2];
   
-  
+   
+    
+  [self joystickMovement];
   
 }//didMoveToView-----------------------------------------------------------------------------------------------------------
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-  
-  for (UITouch *touch in touches) {
-    if(mainLayer.speed>0){
-      CGPoint location = [touch locationInNode:self];
-      int deltax = location.x+dx;
-      int deltay = location.y+dy;
-      
-      
-      hero.position = CGPointMake(deltax,deltay);
-      
+-(id)init
+{
+    if (self = [super init])
+    {
+        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
+        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     }
-  }
-  
+    return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-  
-  for (UITouch *touch in touches) {
-    if(mainLayer.speed>0){
-      CGPoint location = [touch locationInNode:self];
-      dx=hero.position.x-location.x;
-      dy=hero.position.y-location.y;
-      
+
+-(void)joystickMovement
+{
+    if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
+    {
+        hero.position = CGPointMake(hero.position.x + .1 *joystick.velocity.x, hero.position.y + .1 * joystick.velocity.y);
     }
-  }
-}//touchesBegan-----------------------------------------------------------------------------------------------------------
+}
+
+//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+//  
+//  for (UITouch *touch in touches) {
+//    if(mainLayer.speed>0){
+//      CGPoint location = [touch locationInNode:self];
+//      int deltax = location.x+dx;
+//      int deltay = location.y+dy;
+//      
+//      
+//      hero.position = CGPointMake(deltax,deltay);
+//      
+//    }
+//  }
+//  
+//}
+//
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//  
+//  for (UITouch *touch in touches) {
+//    if(mainLayer.speed>0){
+//      CGPoint location = [touch locationInNode:self];
+//      dx=hero.position.x-location.x;
+//      dy=hero.position.y-location.y;
+//      
+//    }
+//  }
+//}//touchesBegan-----------------------------------------------------------------------------------------------------------
 
 -(int)getRanNum: (int) boundary{
   
@@ -2390,25 +2411,7 @@ joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
 
 
 
--(id)init
-{
-    if (self = [super init])
-        {
-            velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
-            [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-        }
-    return self;
-}
 
-
-        
-        -(void)joystickMovement
-    {
-        if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
-        {
-            hero.position = CGPointMake(hero.position.x + .1 *joystick.velocity.x, hero.position.y + .1 * joystick.velocity.y);
-        }
-    }
 
 
 //-(Joystick *)newJoystickNode {
