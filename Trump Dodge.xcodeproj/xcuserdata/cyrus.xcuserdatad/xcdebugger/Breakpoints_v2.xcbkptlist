@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1492"
             endingLineNumber = "1492"
-            landmarkName = "-didBeginContact:"
+            landmarkName = "-didCollideWithMonster"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

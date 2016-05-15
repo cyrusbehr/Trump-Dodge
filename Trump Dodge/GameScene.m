@@ -1,7 +1,4 @@
 
-//  Created by Cyrus Behroozi on 2015-05-26.
-//  Copyright (c) 2015 Cyrus Behroozi. All rights reserved.
-//
 
 
 
@@ -10,6 +7,8 @@
 #import <Foundation/Foundation.h>
 #import "GameViewController.h"
 #import "AppDelegate.h"
+#import "Joystick.h"
+#import <QuartzCore/QuartzCore.h>
 
 @import Foundation;
 
@@ -166,7 +165,9 @@ BOOL canGetFirstLife = TRUE;
   NSMutableArray *quoteTimeList;
   NSTimer *startingMusicDelayTimer;
   NSTimer *fadeTimer;
-  
+    Joystick *joystick;
+    CADisplayLink *velocityTick;
+
 }
 
 
@@ -193,8 +194,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //sound initialization
   
+
   [self playQuote];
-  
+  [self JoystickInit];
+
   
   NSString *path = [NSString stringWithFormat:@"%@/poof.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
@@ -591,37 +594,40 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *repeat2 = [SKAction repeatActionForever:fingerAction];
   [finger runAction:repeat2];
   
+   
+    
   
   
 }//didMoveToView-----------------------------------------------------------------------------------------------------------
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-  
-  for (UITouch *touch in touches) {
-    if(mainLayer.speed>0){
-      CGPoint location = [touch locationInNode:self];
-      int deltax = location.x+dx;
-      int deltay = location.y+dy;
-      
-      
-      hero.position = CGPointMake(deltax,deltay);
-      
-    }
-  }
-  
-}
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-  
-  for (UITouch *touch in touches) {
-    if(mainLayer.speed>0){
-      CGPoint location = [touch locationInNode:self];
-      dx=hero.position.x-location.x;
-      dy=hero.position.y-location.y;
-      
-    }
-  }
-}//touchesBegan-----------------------------------------------------------------------------------------------------------
+//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+//  
+//  for (UITouch *touch in touches) {
+//    if(mainLayer.speed>0){
+//      CGPoint location = [touch locationInNode:self];
+//      int deltax = location.x+dx;
+//      int deltay = location.y+dy;
+//      
+//      
+//      hero.position = CGPointMake(deltax,deltay);
+//      
+//    }
+//  }
+//  
+//}
+//
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//  
+//  for (UITouch *touch in touches) {
+//    if(mainLayer.speed>0){
+//      CGPoint location = [touch locationInNode:self];
+//      dx=hero.position.x-location.x;
+//      dy=hero.position.y-location.y;
+//      
+//    }
+//  }
+//}//touchesBegan-----------------------------------------------------------------------------------------------------------
 
 -(int)getRanNum: (int) boundary{
   
@@ -753,7 +759,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   if(hero.position.x<-3){
     hero.position = CGPointMake(0, hero.position.y);
   }
-  
+    
+    [self joystickMovement];
   
   if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
     if(hero.position.y<self.frame.size.height*0.04){
@@ -2334,5 +2341,41 @@ static inline CGVector radiansToVector(CGFloat radians){
     [fadeTimer invalidate];
   }
 }
+
+
+// Joystick Code
+//
+
+-(void)JoystickInit{
+    
+SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
+SKSpriteNode *jsBackdrop = [SKSpriteNode spriteNodeWithImageNamed:@"dpad"];
+joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
+    joystick.position = CGPointMake((self.size.width - jsBackdrop.size.width * 0.5-self.size.width*0.1),(jsBackdrop.size.height * 0.5+self.size.height*.2));
+[self addChild:joystick];
+    [joystick setScale:1.5];
+}
+
+-(id)init
+{
+    if (self = [super init])
+    {
+        velocityTick = [CADisplayLink displayLinkWithTarget:self selector:@selector(joystickMovement)];
+        [velocityTick addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return self;
+}
+
+
+-(void)joystickMovement
+{
+    if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
+    {
+        hero.position = CGPointMake(hero.position.x + .25 *joystick.velocity.x, hero.position.y + .25 * joystick.velocity.y);
+    }
+}
+
+
+
 
 @end
