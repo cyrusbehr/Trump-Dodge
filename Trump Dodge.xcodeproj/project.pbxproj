@@ -155,6 +155,7 @@
 		6E16519F1CDBFC7400004D3D /* whitePigFix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651301CDBFC7400004D3D /* whitePigFix@2x.png */; };
 		6E1651A01CDBFC7400004D3D /* whiteSheepFix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */; };
 		6E1651A11CDBFC7400004D3D /* whiteTurkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */; };
+		6E23DA3B1CE971EF00CF2F0E /* LaunchScreenFinal1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
 		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
 		6E55D10A1CE0021A00E7A983 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1091CE0021A00E7A983 /* taco.png */; };
@@ -368,6 +369,7 @@
 		6E1651301CDBFC7400004D3D /* whitePigFix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitePigFix@2x.png"; sourceTree = "<group>"; };
 		6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteSheepFix@2x.png"; sourceTree = "<group>"; };
 		6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteTurkey@2x.png"; sourceTree = "<group>"; };
+		6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinal1.png; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D1091CE0021A00E7A983 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */,
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E0D282E1CE95AFF003A13F5 /* blueBut.png */,
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
@@ -985,6 +988,7 @@
 				6E16518B1CDBFC7400004D3D /* sheep@2x.png in Resources */,
 				6E0D28021CE903F9003A13F5 /* moustache@2x.png in Resources */,
 				6E16515A1CDBFC7400004D3D /* giraffe@2x.png in Resources */,
+				6E23DA3B1CE971EF00CF2F0E /* LaunchScreenFinal1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1156,6 +1160,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
@@ -1170,6 +1175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
