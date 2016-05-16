@@ -30,6 +30,19 @@
 		6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280C1CE937A0003A13F5 /* dpad.png */; };
 		6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280E1CE93B52003A13F5 /* Dying.mp3 */; };
 		6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */; };
+		6E0D281F1CE94633003A13F5 /* trumpquote3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */; };
+		6E0D28201CE94633003A13F5 /* trumpquote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */; };
+		6E0D28211CE94633003A13F5 /* trumpquote5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */; };
+		6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */; };
+		6E0D28231CE94633003A13F5 /* trumpquote7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */; };
+		6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28171CE94633003A13F5 /* trumpquote8.mp3 */; };
+		6E0D28251CE94633003A13F5 /* trumpquote10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28181CE94633003A13F5 /* trumpquote10.mp3 */; };
+		6E0D28261CE94633003A13F5 /* trumpquote11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28191CE94633003A13F5 /* trumpquote11.mp3 */; };
+		6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281A1CE94633003A13F5 /* trumpquote12.mp3 */; };
+		6E0D28281CE94633003A13F5 /* trumpquote13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281B1CE94633003A13F5 /* trumpquote13.mp3 */; };
+		6E0D28291CE94633003A13F5 /* trumpquote14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281C1CE94633003A13F5 /* trumpquote14.mp3 */; };
+		6E0D282A1CE94633003A13F5 /* trumpquote15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281D1CE94633003A13F5 /* trumpquote15.mp3 */; };
+		6E0D282B1CE94633003A13F5 /* trumpquote16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */; };
 		6E14DE321CE578BB009C81CF /* trumpToupe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */; };
 		6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE311CE578BB009C81CF /* trumpToupe.png */; };
 		6E1651351CDBFC7400004D3D /* antlers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C61CDBFC7400004D3D /* antlers.png */; };
@@ -228,6 +241,19 @@
 		6E0D280C1CE937A0003A13F5 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		6E0D280E1CE93B52003A13F5 /* Dying.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dying.mp3; sourceTree = "<group>"; };
 		6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mexicanNew@2x.png"; sourceTree = "<group>"; };
+		6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote3.mp3; sourceTree = "<group>"; };
+		6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
+		6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote5.mp3; sourceTree = "<group>"; };
+		6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote6.mp3; sourceTree = "<group>"; };
+		6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote7.mp3; sourceTree = "<group>"; };
+		6E0D28171CE94633003A13F5 /* trumpquote8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote8.mp3; sourceTree = "<group>"; };
+		6E0D28181CE94633003A13F5 /* trumpquote10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote10.mp3; sourceTree = "<group>"; };
+		6E0D28191CE94633003A13F5 /* trumpquote11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote11.mp3; sourceTree = "<group>"; };
+		6E0D281A1CE94633003A13F5 /* trumpquote12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote12.mp3; sourceTree = "<group>"; };
+		6E0D281B1CE94633003A13F5 /* trumpquote13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote13.mp3; sourceTree = "<group>"; };
+		6E0D281C1CE94633003A13F5 /* trumpquote14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote14.mp3; sourceTree = "<group>"; };
+		6E0D281D1CE94633003A13F5 /* trumpquote15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote15.mp3; sourceTree = "<group>"; };
+		6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote16.mp3; sourceTree = "<group>"; };
 		6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpToupe@2x.png"; sourceTree = "<group>"; };
 		6E14DE311CE578BB009C81CF /* trumpToupe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpToupe.png; sourceTree = "<group>"; };
 		6E1650C61CDBFC7400004D3D /* antlers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = antlers.png; sourceTree = "<group>"; };
@@ -468,6 +494,19 @@
 			children = (
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
+				6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */,
+				6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */,
+				6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */,
+				6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */,
+				6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */,
+				6E0D28171CE94633003A13F5 /* trumpquote8.mp3 */,
+				6E0D28181CE94633003A13F5 /* trumpquote10.mp3 */,
+				6E0D28191CE94633003A13F5 /* trumpquote11.mp3 */,
+				6E0D281A1CE94633003A13F5 /* trumpquote12.mp3 */,
+				6E0D281B1CE94633003A13F5 /* trumpquote13.mp3 */,
+				6E0D281C1CE94633003A13F5 /* trumpquote14.mp3 */,
+				6E0D281D1CE94633003A13F5 /* trumpquote15.mp3 */,
+				6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */,
 				6E0D280A1CE93792003A13F5 /* joystick.png */,
 				6E0D280E1CE93B52003A13F5 /* Dying.mp3 */,
 				6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */,
@@ -786,8 +825,10 @@
 				6E55D13C1CE0127700E7A983 /* donkey@2x.png in Resources */,
 				6E16517C1CDBFC7400004D3D /* mouse.png in Resources */,
 				6E1651501CDBFC7400004D3D /* Default.png in Resources */,
+				6E0D28251CE94633003A13F5 /* trumpquote10.mp3 in Resources */,
 				6E1651351CDBFC7400004D3D /* antlers.png in Resources */,
 				6E1651391CDBFC7400004D3D /* beaver@2x.png in Resources */,
+				6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D10A1CE0021A00E7A983 /* taco.png in Resources */,
 				6E1651811CDBFC7400004D3D /* organe.png in Resources */,
@@ -798,11 +839,13 @@
 				6E1651571CDBFC7400004D3D /* flame.png in Resources */,
 				6E55D1401CE012E600E7A983 /* sombrero@2x.png in Resources */,
 				6E16516C1CDBFC7400004D3D /* largeGiraffe.png in Resources */,
+				6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */,
 				6E1651651CDBFC7400004D3D /* InformationPage@2x.png in Resources */,
 				6E1651561CDBFC7400004D3D /* finger@2x.png in Resources */,
 				6E0232151CE2F2A400472856 /* mexicanScaled@2x.png in Resources */,
 				6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */,
 				6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */,
+				6E0D28231CE94633003A13F5 /* trumpquote7.mp3 in Resources */,
 				6E1651891CDBFC7400004D3D /* scythe@2x.png in Resources */,
 				6E16519A1CDBFC7400004D3D /* whiteGoldPenguin@2x.png in Resources */,
 				6E1651531CDBFC7400004D3D /* elephant@2x.png in Resources */,
@@ -818,6 +861,7 @@
 				6E1651871CDBFC7400004D3D /* powerup@2x.png in Resources */,
 				6E0D28061CE92798003A13F5 /* trumpQuote2.mp3 in Resources */,
 				6E1651741CDBFC7400004D3D /* largePig.png in Resources */,
+				6E0D282B1CE94633003A13F5 /* trumpquote16.mp3 in Resources */,
 				6E1651461CDBFC7400004D3D /* cartoonAxe@2x.png in Resources */,
 				6E16518C1CDBFC7400004D3D /* spark.png in Resources */,
 				6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */,
@@ -827,6 +871,7 @@
 				6E55D1431CE013AE00E7A983 /* money.png in Resources */,
 				6E1651631CDBFC7400004D3D /* hammer@2x.png in Resources */,
 				6E16518F1CDBFC7400004D3D /* turkey@2x.png in Resources */,
+				6E0D28281CE94633003A13F5 /* trumpquote13.mp3 in Resources */,
 				6E1651831CDBFC7400004D3D /* pauseButton.png in Resources */,
 				6E55D11C1CE0073500E7A983 /* trumpFace@2x.png in Resources */,
 				6E02320F1CE2EF5300472856 /* desert_night.png in Resources */,
@@ -835,6 +880,7 @@
 				6E1651961CDBFC7400004D3D /* whiteElephant1@2x.png in Resources */,
 				6E1651931CDBFC7400004D3D /* whiteBee@2x.png in Resources */,
 				6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */,
+				6E0D281F1CE94633003A13F5 /* trumpquote3.mp3 in Resources */,
 				6E16514E1CDBFC7400004D3D /* Default-736h@3x.png in Resources */,
 				6E16516D1CDBFC7400004D3D /* largeGoat.png in Resources */,
 				6E0232231CE2F79700472856 /* explosion.mp3 in Resources */,
@@ -861,6 +907,7 @@
 				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,
 				6E55D12C1CE0104600E7A983 /* maracas@2x.png in Resources */,
 				6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */,
+				6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */,
 				6E16513A1CDBFC7400004D3D /* bee@2x.png in Resources */,
 				6E1651861CDBFC7400004D3D /* pig@2x.png in Resources */,
 				6E1651851CDBFC7400004D3D /* penguin@2x.png in Resources */,
@@ -872,11 +919,13 @@
 				6E1651541CDBFC7400004D3D /* feather.png in Resources */,
 				6E55D12B1CE0104600E7A983 /* maracas.png in Resources */,
 				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
+				6E0D28261CE94633003A13F5 /* trumpquote11.mp3 in Resources */,
 				6E55D1241CE00E5200E7A983 /* burrito@2x.png in Resources */,
 				6E1651581CDBFC7400004D3D /* fluff2.png in Resources */,
 				6E1651681CDBFC7400004D3D /* LambChop.png in Resources */,
 				6E1651431CDBFC7400004D3D /* Bonefish@2x.png in Resources */,
 				6E55D1131CE0052400E7A983 /* trumpFace.png in Resources */,
+				6E0D28201CE94633003A13F5 /* trumpquote4.mp3 in Resources */,
 				6E1651481CDBFC7400004D3D /* cleaver.png in Resources */,
 				6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */,
 				6E16514B1CDBFC7400004D3D /* Default-568h.png in Resources */,
@@ -884,12 +933,14 @@
 				6E55D1141CE0052400E7A983 /* trumpFace@2x.png in Resources */,
 				6E1651921CDBFC7400004D3D /* whiteBeaver@2x.png in Resources */,
 				6E16514D1CDBFC7400004D3D /* Default-667h@2x.png in Resources */,
+				6E0D28291CE94633003A13F5 /* trumpquote14.mp3 in Resources */,
 				6E55D1231CE00E5200E7A983 /* burrito.png in Resources */,
 				6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */,
 				6E16514C1CDBFC7400004D3D /* Default-568h@2x.png in Resources */,
 				6E16514A1CDBFC7400004D3D /* clockPowerUp@2x.png in Resources */,
 				6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */,
 				6EBCC97C1CDBF69100EAE7A8 /* Main.storyboard in Resources */,
+				6E0D28211CE94633003A13F5 /* trumpquote5.mp3 in Resources */,
 				6E1651821CDBFC7400004D3D /* owl@2x.png in Resources */,
 				6E16517D1CDBFC7400004D3D /* musicNote@2x.png in Resources */,
 				6E55D1331CE011EA00E7A983 /* poncho.png in Resources */,
@@ -910,6 +961,7 @@
 				6E1651771CDBFC7400004D3D /* leaf.png in Resources */,
 				6E16517B1CDBFC7400004D3D /* moose@2x.png in Resources */,
 				6E1651841CDBFC7400004D3D /* penguin.png in Resources */,
+				6E0D282A1CE94633003A13F5 /* trumpquote15.mp3 in Resources */,
 				6E0232121CE2F1A400472856 /* brick wall.png in Resources */,
 				6E1651901CDBFC7400004D3D /* turqois.png in Resources */,
 				6E1651521CDBFC7400004D3D /* double@2x.png in Resources */,

@@ -201,7 +201,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   NSString *path = [NSString stringWithFormat:@"%@/dying.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
   poofSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-  poofSound.volume = 1.5;
+  poofSound.volume = 2;
   
   NSString *path2 = [NSString stringWithFormat:@"%@/splat.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
@@ -442,7 +442,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   //start button
-  start  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*1.2)];
+  start  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*1.3)];
   [start setTitle:@"Tap Screen To Start" forState:(UIControlStateNormal)];
   [start setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [start addTarget:self action:@selector(startGame:) forControlEvents:UIControlEventTouchUpInside];
@@ -2279,8 +2279,8 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)playQuote{
   
-  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3", nil]; //TODO add mp3 file names here
-  int QuoteDelayList[2] = {2,3};//TODO populate with corresponding quote lengths
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpQuote3.mp3",@"%@/trumpQuote4.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote6.mp3",@"%@/trumpQuote7.mp3",@"%@/trumpQuote8.mp3",@"%@/trumpQuote10.mp3",@"%@/trumpQuote11.mp3",@"%@/trumpQuote12.mp3",@"%@/trumpQuote13.mp3",@"%@/trumpQuote14.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote16.mp3", nil]; //TODO add 9, 17, 18
+  int QuoteDelayList[15] = {2,3,4,3,2,3.5,2,4,5,2,5,5,2.5,2,2 };//TODO 9, 17, 18
   
   int num = [self getRanNum:(int)[quoteList count]];
   int quoteDelay = QuoteDelayList[num];
