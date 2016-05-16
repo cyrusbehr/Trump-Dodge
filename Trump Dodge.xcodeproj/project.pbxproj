@@ -105,6 +105,7 @@
 		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
 		6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDF7AAA1CE981E8003C336D /* moneyBag.png */; };
+		6EEDFEF21CE98D63008E63D1 /* confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDFEF11CE98D63008E63D1 /* confetti.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +234,7 @@
 		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
 		6EDF7AAA1CE981E8003C336D /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
+		6EEDFEF11CE98D63008E63D1 /* confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = confetti.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 				6E1651211CDBFC7400004D3D /* turqois.png */,
 				6E16512E1CDBFC7400004D3D /* whiteMusicNote@2x.png */,
 				6EBCC96D1CDBF69100EAE7A8 /* main.m */,
+				6EEDFEF11CE98D63008E63D1 /* confetti.sks */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				6E0D28051CE92798003A13F5 /* trumpQuote1.mp3 in Resources */,
 				6E0232131CE2F1A400472856 /* brick wall@2x.png in Resources */,
 				6E14DE321CE578BB009C81CF /* trumpToupe@2x.png in Resources */,
+				6EEDFEF21CE98D63008E63D1 /* confetti.sks in Resources */,
 				6E02320D1CE2EEE400472856 /* desert_day.png in Resources */,
 				6E55D1441CE013AE00E7A983 /* money@2x.png in Resources */,
 				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,

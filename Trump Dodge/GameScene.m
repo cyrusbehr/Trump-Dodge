@@ -128,7 +128,6 @@ BOOL canGetFirstLife = TRUE;
   UILabel *gameTitleLabel;
   SKSpriteNode *fishBone;
   SKAction *fadeOut;
-  SKSpriteNode *bloodSplatter;
   UILabel *tauntLabel;
   UIButton *soundButton;
   NSString *characterName;
@@ -465,7 +464,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"moneyBag"];
   fishBone.alpha = 0.9;
   fadeOut = [SKAction fadeOutWithDuration:3];
-  bloodSplatter= [SKSpriteNode spriteNodeWithImageNamed:@"bloodSplat"];
   
   //powerUp node
   powerUp = [SKSpriteNode spriteNodeWithImageNamed:@"brick wall"];
@@ -1039,7 +1037,17 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *removeExposion = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
   [explosion runAction:removeExposion];
 }//addBomb------------------------------------------------------------------------------------------
-
+-(void)addPonchoEffect: (CGPoint) position{
+  
+  NSString *ponchoEffectPath = [[NSBundle mainBundle] pathForResource:@"confetti" ofType:@"sks"];
+  SKEmitterNode *ponchoEffect = [NSKeyedUnarchiver unarchiveObjectWithFile:ponchoEffectPath];
+  ponchoEffect.position = position;
+  [mainLayer addChild:ponchoEffect];
+  
+  SKAction *removeExposion2 = [SKAction sequence:@[[SKAction waitForDuration:10],[SKAction removeFromParent]]];
+  [ponchoEffect runAction:removeExposion2];
+  
+}
 
 
 -(void)addFeathers: (CGPoint) position{
@@ -1198,7 +1206,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -1287,6 +1295,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//removeFist-----------------------------------------------------------------------------------------------------------
 
 -(void)didCollideWithPoncho {
+  [self addPonchoEffect:hero.position];
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
   [hero removeFromParent];
