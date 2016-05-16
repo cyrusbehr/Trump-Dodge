@@ -22,7 +22,7 @@ static const uint32_t ponchoCategory = 0x1 <<5;
 int dx;
 int dy;
 int clockTime;
-double initialdelayTime = 0.7;//
+double initialdelayTime = 0.9;//
 double delayTimeMin = 0.2;
 double delayTime = 0.9;//start at 0.9
 int speedTime = 70;//70 start
@@ -2108,7 +2108,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   NSString *quotePath = [NSString stringWithFormat:quoteName, [[NSBundle mainBundle] resourcePath]];
   NSURL *quoteUrl = [NSURL fileURLWithPath:quotePath];
   quoteAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:quoteUrl error:nil];
-  [quoteAudioPlayer setVolume:1.5];
+  [quoteAudioPlayer setVolume:2];
   [quoteAudioPlayer play];
   startingMusicDelayTimer = [NSTimer scheduledTimerWithTimeInterval:quoteDelay target:self selector:@selector(playBackgroundMusic) userInfo:nil repeats:NO];
   
