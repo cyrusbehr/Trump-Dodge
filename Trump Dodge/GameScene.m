@@ -2163,7 +2163,7 @@ joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
 {
     if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
     {
-        hero.position = CGPointMake(hero.position.x + .25 *joystick.velocity.x, hero.position.y + .25 * joystick.velocity.y);
+        hero.position = CGPointMake(hero.position.x + .15 *joystick.velocity.x, hero.position.y + .15 * joystick.velocity.y);
     }
 }
 
