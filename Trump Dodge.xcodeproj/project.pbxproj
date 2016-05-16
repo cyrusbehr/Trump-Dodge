@@ -200,6 +200,7 @@
 		6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */; };
 		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
+		6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDF7AAA1CE981E8003C336D /* moneyBag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +424,7 @@
 		6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = toupeAnnimation.sks; sourceTree = "<group>"; };
 		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
+		6EDF7AAA1CE981E8003C336D /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +500,7 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6EDF7AAA1CE981E8003C336D /* moneyBag.png */,
 				6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */,
 				6E1650C61CDBFC7400004D3D /* antlers.png */,
 				6E0D282E1CE95AFF003A13F5 /* blueBut.png */,
@@ -850,6 +853,7 @@
 				6E16516C1CDBFC7400004D3D /* largeGiraffe.png in Resources */,
 				6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */,
 				6E1651651CDBFC7400004D3D /* InformationPage@2x.png in Resources */,
+				6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */,
 				6E1651561CDBFC7400004D3D /* finger@2x.png in Resources */,
 				6E0232151CE2F2A400472856 /* mexicanScaled@2x.png in Resources */,
 				6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */,

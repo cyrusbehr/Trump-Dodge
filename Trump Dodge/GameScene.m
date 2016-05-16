@@ -521,7 +521,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   fish.physicsBody.usesPreciseCollisionDetection = YES;
   
   //fishBone and blood splatter
-  fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"coins"];
+  fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"moneyBag"];
+  fishBone.alpha = 0.9;
   fadeOut = [SKAction fadeOutWithDuration:3];
   bloodSplatter= [SKSpriteNode spriteNodeWithImageNamed:@"bloodSplat"];
   
@@ -1036,7 +1037,8 @@ static inline CGVector radiansToVector(CGFloat radians){
     CGPoint fishPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100, [self getRanNum:(self.frame.size.height)]*0.55+190);
     fish.position = fishPosition;
     double angle = (double)[self getRanNum:100]/100;
-    fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"coins"];
+    fishBone = [SKSpriteNode spriteNodeWithImageNamed:@"moneyBag"];
+    fishBone.alpha = 0.9;
     fish.zRotation = (M_PI)*angle;
     fishBone.zRotation =(M_PI)*angle;
     [mainLayer addChild:fish];
@@ -1466,7 +1468,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -2061,6 +2063,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   collideBool = FALSE;
   updateCollideBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColideBool) userInfo:nil repeats:NO];
   CGPoint deadPos = hero.position;
+  [self addFeathers:deadPos];
   
 
 }
