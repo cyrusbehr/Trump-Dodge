@@ -1044,8 +1044,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   ponchoEffect.position = position;
   [mainLayer addChild:ponchoEffect];
   
-  SKAction *removeExposion2 = [SKAction sequence:@[[SKAction waitForDuration:10],[SKAction removeFromParent]]];
-  [ponchoEffect runAction:removeExposion2];
+  SKAction *removePonchoEffect = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
+  [ponchoEffect runAction:removePonchoEffect];
   
 }
 
@@ -1296,6 +1296,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)didCollideWithPoncho {
   [self addPonchoEffect:hero.position];
+  [poofSound play];
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
   [hero removeFromParent];
