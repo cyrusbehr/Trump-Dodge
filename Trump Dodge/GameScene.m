@@ -196,7 +196,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   [self JoystickInit];
   
-  NSString *path = [NSString stringWithFormat:@"%@/dying.mp3", [[NSBundle mainBundle] resourcePath]];
+  NSString *path = [NSString stringWithFormat:@"%@/Dying.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
   poofSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
   poofSound.volume = 2;
@@ -2099,7 +2099,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)playQuote{
   
-  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpQuote3.mp3",@"%@/trumpQuote4.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote6.mp3",@"%@/trumpQuote7.mp3",@"%@/trumpQuote8.mp3",@"%@/trumpQuote10.mp3",@"%@/trumpQuote11.mp3",@"%@/trumpQuote12.mp3",@"%@/trumpQuote13.mp3",@"%@/trumpQuote14.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote16.mp3", nil];
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpquote3.mp3",@"%@/trumpquote4.mp3",@"%@/trumpquote5.mp3",@"%@/trumpquote6.mp3",@"%@/trumpquote7.mp3",@"%@/trumpquote8.mp3",@"%@/trumpquote10.mp3",@"%@/trumpquote11.mp3",@"%@/trumpquote12.mp3",@"%@/trumpquote13.mp3",@"%@/trumpquote14.mp3",@"%@/trumpquote5.mp3",@"%@/trumpquote16.mp3", nil];
   int QuoteDelayList[15] = {2,3,4,3,2,3.5,2,4,5,2,5,5,2.5,2,2 };
   
   int num = [self getRanNum:(int)[quoteList count]];

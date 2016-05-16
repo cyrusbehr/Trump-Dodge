@@ -31,7 +31,6 @@
 		6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280E1CE93B52003A13F5 /* Dying.mp3 */; };
 		6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */; };
 		6E0D281F1CE94633003A13F5 /* trumpquote3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */; };
-		6E0D28201CE94633003A13F5 /* trumpquote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */; };
 		6E0D28211CE94633003A13F5 /* trumpquote5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */; };
 		6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */; };
 		6E0D28231CE94633003A13F5 /* trumpquote7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */; };
@@ -156,6 +155,7 @@
 		6E1651A01CDBFC7400004D3D /* whiteSheepFix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */; };
 		6E1651A11CDBFC7400004D3D /* whiteTurkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */; };
 		6E23DA3B1CE971EF00CF2F0E /* LaunchScreenFinal1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */; };
+		6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
 		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
 		6E55D10A1CE0021A00E7A983 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1091CE0021A00E7A983 /* taco.png */; };
@@ -245,7 +245,6 @@
 		6E0D280E1CE93B52003A13F5 /* Dying.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dying.mp3; sourceTree = "<group>"; };
 		6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mexicanNew@2x.png"; sourceTree = "<group>"; };
 		6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote3.mp3; sourceTree = "<group>"; };
-		6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
 		6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote5.mp3; sourceTree = "<group>"; };
 		6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote6.mp3; sourceTree = "<group>"; };
 		6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote7.mp3; sourceTree = "<group>"; };
@@ -370,6 +369,7 @@
 		6E1651311CDBFC7400004D3D /* whiteSheepFix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteSheepFix@2x.png"; sourceTree = "<group>"; };
 		6E1651321CDBFC7400004D3D /* whiteTurkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteTurkey@2x.png"; sourceTree = "<group>"; };
 		6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinal1.png; sourceTree = "<group>"; };
+		6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D1091CE0021A00E7A983 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
@@ -504,8 +504,8 @@
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
 				6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */,
 				6E0D282C1CE958AF003A13F5 /* greenButton_burned.png */,
-				6E0D28131CE94633003A13F5 /* trumpquote4.mp3 */,
 				6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */,
+				6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */,
 				6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */,
 				6E0D28161CE94633003A13F5 /* trumpquote7.mp3 */,
 				6E0D28171CE94633003A13F5 /* trumpquote8.mp3 */,
@@ -936,7 +936,6 @@
 				6E1651681CDBFC7400004D3D /* LambChop.png in Resources */,
 				6E1651431CDBFC7400004D3D /* Bonefish@2x.png in Resources */,
 				6E55D1131CE0052400E7A983 /* trumpFace.png in Resources */,
-				6E0D28201CE94633003A13F5 /* trumpquote4.mp3 in Resources */,
 				6E1651481CDBFC7400004D3D /* cleaver.png in Resources */,
 				6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */,
 				6E16514B1CDBFC7400004D3D /* Default-568h.png in Resources */,
@@ -959,6 +958,7 @@
 				6E16519E1CDBFC7400004D3D /* whiteOwlFix3@2x.png in Resources */,
 				6E0232211CE2F6A700472856 /* burritoTest.png in Resources */,
 				6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */,
+				6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */,
 				6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */,
 				6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */,
 				6E1651711CDBFC7400004D3D /* largeMoose.png in Resources */,
@@ -1164,6 +1164,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1179,6 +1180,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
