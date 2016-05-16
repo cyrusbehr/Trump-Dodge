@@ -114,7 +114,6 @@ BOOL canGetFirstLife = TRUE;
   SKAction *move;
   UIButton *resume;
   UIView *pauseScreen;
-  UIButton *menuBut;
   UIButton *restartBut;
   NSTimer *delayForRotLab;
   UIButton *rotationLabel;
@@ -142,7 +141,6 @@ BOOL canGetFirstLife = TRUE;
   SKAction *fadeOut;
   SKSpriteNode *bloodSplatter;
   UILabel *tauntLabel;
-  UIButton *helpScreenImage;
   UIButton *soundButton;
   NSString *characterName;
   UIButton *backButton;
@@ -261,30 +259,18 @@ static inline CGVector radiansToVector(CGFloat radians){
   [pauseScreen setAlpha:0.75];
   [pauseScreen setBackgroundColor:[UIColor blackColor]];
   restartBut = [[UIButton alloc]init];
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
   [restartBut setTitle:@"Restart" forState:UIControlStateNormal];
   [restartBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   restartBut.titleLabel.font = [UIFont systemFontOfSize:25];
   [restartBut addTarget:self action:@selector(restartGame) forControlEvents:UIControlEventTouchUpInside];
-  helpScreenImage = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-32)];
-  [helpScreenImage addTarget:self action:@selector(helpPage) forControlEvents:UIControlEventTouchUpInside];
-  [helpScreenImage setBackgroundImage:[UIImage imageNamed:@"InformationPageUpdate@2x"] forState:UIControlStateNormal];
-  helpScreenImage.alpha = 0;
-  helpScreenImage.titleLabel.font = [UIFont systemFontOfSize:25];
-  [helpScreenImage addTarget:self action:@selector(removeHelpPage) forControlEvents:UIControlEventTouchUpInside];
-  helpScreenImage.enabled = TRUE;
-  menuBut = [[UIButton alloc]init];
-  [menuBut setTitle:@"Help" forState:UIControlStateNormal];
-  [menuBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-  menuBut.titleLabel.font = [UIFont systemFontOfSize:25];
-  [menuBut addTarget:self action:@selector(helpPage) forControlEvents:UIControlEventTouchUpInside];
-  [menuBut setExclusiveTouch:YES];
+ 
   
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
   [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   shareButton.titleLabel.font = [UIFont systemFontOfSize:25];
-  [shareButton setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
+  [shareButton setBackgroundImage:[UIImage imageNamed:@"greenButton_burned"] forState:UIControlStateNormal];
   [shareButton addTarget:self action:@selector(runShareGame:) forControlEvents:UIControlEventTouchUpInside];
   [shareButton setExclusiveTouch:YES];
   
@@ -292,7 +278,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [backButton setTitle:@"Back" forState:UIControlStateNormal];
   [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   backButton.titleLabel.font = [UIFont systemFontOfSize:30];
-  [backButton setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
+  [backButton setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
   [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
   [backButton setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.81)];
   [backButton setAlpha:0];
@@ -336,7 +322,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [characterTitle setAlpha:0];
   
   [self.view addSubview:pauseScreen];
-  [self.view addSubview:menuBut ];
   [self.view addSubview:restartBut ];
   [self.view addSubview:shareButton];
   [self.view addSubview:backButton];
@@ -361,7 +346,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setAlpha:0];
   [pauseScreen setAlpha:0];
   [restartBut setAlpha:0];
-  [menuBut setAlpha:0];
   [pause setAlpha:0];
   
   //initial physics
@@ -565,8 +549,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTitleLabel setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.center.y*0.5)];
   
   [self.view addSubview:gameTitleLabel];
-  
-  [self.view addSubview:helpScreenImage];
   
   [self.view addSubview:soundButton];
   
@@ -781,12 +763,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   isPaused = TRUE;
   restartBut.frame = CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.5, self.view.frame.size.width*0.44, 75);
-  menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5, self.view.frame.size.width*0.44-10, 75);
-  [menuBut setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   pauseGame = TRUE;
-  [menuBut setAlpha:1];
   [pauseScreen setAlpha:0.75];
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"greenButton_burned"] forState:UIControlStateNormal];
   [restartBut setExclusiveTouch:YES];
   
   [enemyTime invalidate];
@@ -798,7 +777,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   mainLayer.speed = 0;
   
   resume = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5-100, self.view.frame.size.width*0.9, 75)];
-  [resume setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
+  [resume setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
   [resume setTitle:@"Continue" forState:UIControlStateNormal];
   [resume setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [resume addTarget:self action:@selector(resumeGame) forControlEvents:UIControlEventTouchUpInside];
@@ -841,7 +820,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   ponchoTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnPonch) userInfo:nil repeats:YES];
   
   [shareButton setAlpha:0];
-  [menuBut setAlpha:0];
   [restartBut setAlpha:0];
   mainTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(addToScore) userInfo:nil repeats:YES];
   gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
@@ -926,7 +904,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [pauseScreen setAlpha:0];
   [shareButton setAlpha:0];
   [resume setAlpha:0];
-  [menuBut setAlpha:0];
   [restartBut setAlpha:0];
   [start setAlpha:1];
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
@@ -1530,7 +1507,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     clockTime+=3;
   }
   
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
 //  if(genteMusicIsPlaying==FALSE){
 //    if(!isMute){
 //      [backgroundMusicIntense stop];
@@ -1560,15 +1537,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   if ((int)[[UIScreen mainScreen] bounds].size.width > 700){
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-260, self.view.frame.size.width*0.9, 75);
-    menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-80, self.view.frame.size.width*0.44, 75);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-80, self.view.frame.size.width*0.44, 75);
   }else if ((int)[[UIScreen mainScreen] bounds].size.width > 600){
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-240, self.view.frame.size.width*0.9, 75);
-    menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-60, self.view.frame.size.width*0.44, 75);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-60, self.view.frame.size.width*0.44, 75);
   }else{
     restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-195, self.view.frame.size.width*0.9, 65);
-    menuBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-55, self.view.frame.size.width*0.44, 50);
     shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-55, self.view.frame.size.width*0.44, 50);
     
   }
@@ -1577,9 +1551,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [bestScore setAlpha:1];
   gameOverBool = TRUE;
   [pauseScreen setAlpha:0.75];
-  [menuBut setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   [restartBut setAlpha:1];
-  [menuBut setAlpha:1];
   [shareButton setAlpha:1];
   
   //NSLog(@"game over");
@@ -1717,23 +1689,8 @@ static inline CGVector radiansToVector(CGFloat radians){
     }
   }
 }
--(void)helpPage{
-  helpScreenImage.alpha = 1;
-  mainTimerLabel.alpha=0;
-  bestScore.alpha=0;
-  if(isPaused)
-    [resume setAlpha:0];
-}
--(void)removeHelpPage{
-  helpScreenImage.alpha = 0;
-  mainTimerLabel.alpha=1;
-  
-  if(!isPaused)
-    bestScore.alpha=1;
-  if(isPaused)
-    [resume setAlpha:1];
-  
-}
+
+
 -(void)toggleSound{
   if(soundEnabled==TRUE){
     isMute = TRUE;
@@ -1759,60 +1716,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
 }
 
-//-(void)changeCharacterPressed{
-//  moreButton.alpha = 1;
-//  [restartBut setAlpha:0];
-//  [shareButton setAlpha:0];
-//  [menuBut setAlpha:0];
-//  [backButton setAlpha:1];
-//  [sheepButton setAlpha:1];
-//  [penguinButton setAlpha:1];
-//  [goatButton setAlpha:1];
-//  [hippoButton setAlpha:1];
-//  [owlButton setAlpha:1];
-//  [pigButton setAlpha:1];
-//  characterSelected.alpha = 1;
-//  characterTitle.alpha = 1;
-//  
-//  
-//  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
-//    [goatButton setFrame:CGRectMake(0, 0, 50, 52)];
-//    [goatButton setCenter:CGPointMake(self.view.frame.size.width*0.57142, self.view.frame.size.height*0.5)];
-//    [penguinButton setFrame:CGRectMake(0, 0, 50, 50)];
-//    [penguinButton setCenter:CGPointMake(self.view.frame.size.width*0.142857, self.view.frame.size.height*0.5)];
-//    [sheepButton setFrame:CGRectMake(0, 0, 50, 50)];
-//    [sheepButton setCenter:CGPointMake(self.view.frame.size.width*0.28571, self.view.frame.size.height*0.5)];
-//    [owlButton setFrame:CGRectMake(0, 0, 50, 50)];
-//    [owlButton setCenter:CGPointMake(self.view.frame.size.width*0.714285, self.view.frame.size.height*0.5)];
-//    [hippoButton setFrame:CGRectMake(0, 0, 50, 50)];
-//    [hippoButton setCenter:CGPointMake(self.view.frame.size.width*0.85714, self.view.frame.size.height*0.5)];
-//    [pigButton setFrame:CGRectMake(0, 0, 50, 50)];
-//    [pigButton setCenter:CGPointMake(self.view.frame.size.width*0.438571, self.view.frame.size.height*0.5)];
-//    
-//  }
-//  
-//  if(highScore >= 5500){
-//    hippoButton.enabled = TRUE;
-//    [hippoButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-//    // characterTitle.alpha = 0;
-//  }
-//  if (highScore >= 5000){
-//    owlButton.enabled = TRUE;
-//    [owlButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-//  }
-//  if (highScore >=4000){
-//    goatButton.enabled = TRUE;
-//    [goatButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-//  }
-//  if (highScore>=2000){
-//    sheepButton.enabled = TRUE;
-//    [sheepButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-//  }
-//  if (highScore>=3000){
-//    pigButton.enabled = TRUE;
-//    [pigButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-//  }
-//}
 
 -(void)moreButtonAction{
   penguinButton.alpha = 0;
@@ -1885,7 +1788,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   moreButton.alpha = 0;
   [restartBut setAlpha:1];
   [shareButton setAlpha:1];
-  [menuBut setAlpha:1];
   [backButton setAlpha:0];
   [sheepButton setAlpha:0];
   [penguinButton setAlpha:0];
@@ -1960,88 +1862,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
 }
-//
-//-(void)selectSheep{
-//  characterName = @"sheep";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//
-//-(void)selectOwl{
-//  characterName = @"owl";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//
-//-(void)selectPenguin{
-//  characterName = @"trumpFace";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectHippo{
-//  characterName = @"hippo";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//
-//-(void)selectgoat{
-//  characterName = @"goat";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//
-//-(void)selectPig{
-//  characterName = @"pig";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//  
-//  
-//}
-//
-//-(void)selectGoldPenguin{
-//  characterName = @"gold penguin";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectGiraffe{
-//  characterName = @"giraffe";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectBeaver{
-//  characterName = @"beaver";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectElephant{
-//  characterName = @"elephant";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectBee{
-//  characterName = @"bee";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//-(void)selectMoose{
-//  characterName = @"moose";
-//  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-//  [characterSelected sizeToFit];
-//  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-//}
-//
-//
 
 -(void)updateMusicTranstionBool{
   musicTransitionBool = TRUE;
@@ -2279,8 +2099,8 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)playQuote{
   
-  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpQuote3.mp3",@"%@/trumpQuote4.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote6.mp3",@"%@/trumpQuote7.mp3",@"%@/trumpQuote8.mp3",@"%@/trumpQuote10.mp3",@"%@/trumpQuote11.mp3",@"%@/trumpQuote12.mp3",@"%@/trumpQuote13.mp3",@"%@/trumpQuote14.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote16.mp3", nil]; //TODO add 9, 17, 18
-  int QuoteDelayList[15] = {2,3,4,3,2,3.5,2,4,5,2,5,5,2.5,2,2 };//TODO 9, 17, 18
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpQuote3.mp3",@"%@/trumpQuote4.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote6.mp3",@"%@/trumpQuote7.mp3",@"%@/trumpQuote8.mp3",@"%@/trumpQuote10.mp3",@"%@/trumpQuote11.mp3",@"%@/trumpQuote12.mp3",@"%@/trumpQuote13.mp3",@"%@/trumpQuote14.mp3",@"%@/trumpQuote5.mp3",@"%@/trumpQuote16.mp3", nil];
+  int QuoteDelayList[15] = {2,3,4,3,2,3.5,2,4,5,2,5,5,2.5,2,2 };
   
   int num = [self getRanNum:(int)[quoteList count]];
   int quoteDelay = QuoteDelayList[num];
