@@ -244,7 +244,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [pauseScreen setAlpha:0.75];
   [pauseScreen setBackgroundColor:[UIColor blackColor]];
   restartBut = [[UIButton alloc]init];
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   [restartBut setTitle:@"Restart" forState:UIControlStateNormal];
   [restartBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   restartBut.titleLabel.font = [UIFont systemFontOfSize:25];
@@ -255,7 +255,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
   [shareButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   shareButton.titleLabel.font = [UIFont systemFontOfSize:25];
-  [shareButton setBackgroundImage:[UIImage imageNamed:@"greenButton_burned"] forState:UIControlStateNormal];
+  [shareButton setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   [shareButton addTarget:self action:@selector(runShareGame:) forControlEvents:UIControlEventTouchUpInside];
   [shareButton setExclusiveTouch:YES];
   
@@ -702,10 +702,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   //  }
   
   isPaused = TRUE;
-  restartBut.frame = CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.5, self.view.frame.size.width*0.44, 75);
+  restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5+25, self.view.frame.size.width*0.9, 75);
   pauseGame = TRUE;
   [pauseScreen setAlpha:0.75];
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"greenButton_burned"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   [restartBut setExclusiveTouch:YES];
   
   [enemyTime invalidate];
@@ -716,8 +716,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   mainLayer.speed = 0;
   
-  resume = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5-100, self.view.frame.size.width*0.9, 75)];
-  [resume setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
+  resume = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5-75, self.view.frame.size.width*0.9, 75)];
+  [resume setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   [resume setTitle:@"Continue" forState:UIControlStateNormal];
   [resume setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [resume addTarget:self action:@selector(resumeGame) forControlEvents:UIControlEventTouchUpInside];
@@ -1247,7 +1247,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     clockTime+=3;
   }
   
-  [restartBut setBackgroundImage:[UIImage imageNamed:@"blueBut"] forState:UIControlStateNormal];
+  [restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
   genteMusicIsPlaying = TRUE;
   angelPenguin.alpha = 0;
