@@ -1206,7 +1206,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      //[self didCollideWithMonster];
+      [self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -1266,18 +1266,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   [self saveScore];
   
-
-  if ((int)[[UIScreen mainScreen] bounds].size.width > 700){
-    restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-260, self.view.frame.size.width*0.9, 75);
-    shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-80, self.view.frame.size.width*0.44, 75);
-  }else if ((int)[[UIScreen mainScreen] bounds].size.width > 600){
-    restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-240, self.view.frame.size.width*0.9, 75);
-    shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-60, self.view.frame.size.width*0.44, 75);
-  }else{
-    restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.9-195, self.view.frame.size.width*0.9, 65);
-    shareButton.frame= CGRectMake(self.view.frame.size.width*0.51, self.view.frame.size.height*0.9-55, self.view.frame.size.width*0.44, 50);
-    
-  }
+  restartBut.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5-75, self.view.frame.size.width*0.9, 75);
+  shareButton.frame = CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.5+25, self.view.frame.size.width*0.9, 75);
   
   [pause setAlpha:0];
   [bestScore setAlpha:1];
