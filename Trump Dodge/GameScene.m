@@ -58,6 +58,7 @@ BOOL soundEnabled = TRUE;
 BOOL genteMusicIsPlaying = TRUE;
 BOOL isMute = FALSE;
 BOOL movingUp;
+BOOL ponchoEffectBool = TRUE;
 BOOL canGetFirstLife = TRUE;
 
 
@@ -83,6 +84,7 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *poofSound;
   NSTimer *powerUpdelayTimer;
   NSTimer *powerUpBoolTimer;
+  NSTimer *ponchoEffectBoolTimer;
   SKSpriteNode *fish;
   UILabel *bestScore;
   UIButton *shareButton;
@@ -1285,7 +1287,13 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//removeFist-----------------------------------------------------------------------------------------------------------
 
 -(void)didCollideWithPoncho {
+  
+  if (ponchoEffectBool ==TRUE){
   [self addPonchoEffect:hero.position];
+    ponchoEffectBool = FALSE;
+    ponchoEffectBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updatePonchoEffectBool) userInfo:nil repeats:NO];
+    
+  }
   [poofSound play];
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
@@ -1747,7 +1755,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
 }
 
-
+-(void)updatePonchoEffectBool{
+  ponchoEffectBool = TRUE;
+}
 
 
 @end
