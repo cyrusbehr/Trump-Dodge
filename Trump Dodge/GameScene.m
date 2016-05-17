@@ -558,23 +558,23 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     
   }else if(sideNum<6){
-    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -10);
+    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -20);
     directionDeg = [self getRanNum:180];
     
     
   }else if(sideNum==6){
-    enemy.position = CGPointMake(self.frame.size.width+15, [self getRanNum:self.frame.size.height]);
+    enemy.position = CGPointMake(self.frame.size.width+25, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+90;
     
   }else if (sideNum ==7){
-    enemy.position = CGPointMake(-15, [self getRanNum:self.frame.size.height]);
+    enemy.position = CGPointMake(-20, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+270;
   }else if(sideNum ==8){
-    enemy.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+10);
+    enemy.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+15);
     directionDeg = [self getRanNum:180]+180;
     
   }else{
-    enemy.position = CGPointMake(self.frame.size.width*0.5, -10);
+    enemy.position = CGPointMake(self.frame.size.width*0.5, -20);
     directionDeg = (70+[self getRanNum:40]);
     
   }
@@ -1206,7 +1206,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -1478,27 +1478,27 @@ static inline CGVector radiansToVector(CGFloat radians){
     directionDeg = [self getRanNum:180]+180;
     
   }else if(sideNum<6){
-    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -10);
+    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -20);
     directionDeg = [self getRanNum:180];
     
   }else if(sideNum==6){
-    poncho.position = CGPointMake(self.frame.size.width+15, [self getRanNum:self.frame.size.height]);
+    poncho.position = CGPointMake(self.frame.size.width+20, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+90;
     
     
     
   }else if (sideNum ==7){
-    poncho.position = CGPointMake(-15, [self getRanNum:self.frame.size.height]);
+    poncho.position = CGPointMake(20, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+270;
     
     
   }else if(sideNum ==8){
-    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+10);
+    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+20);
     directionDeg = [self getRanNum:180]+180;
     
     
   }else{
-    poncho.position = CGPointMake(self.frame.size.width*0.5, -10);
+    poncho.position = CGPointMake(self.frame.size.width*0.5, -20);
     directionDeg = (70+[self getRanNum:40]);
     
     
