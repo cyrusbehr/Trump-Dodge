@@ -93,9 +93,9 @@
 -(void)shareGame{
   
   //NSLog(@"shareGame!");
-  NSString *message = @"Check out the new free game Penga Dodge!\n Get the game at: https://itunes.apple.com/us/app/pengadodge/id1012610750?mt=8";
-  UIImage *imageToShare = [UIImage imageNamed:@"shareImage"];
-  NSArray *postItems = @[message, imageToShare];
+  NSString *message = @"Check out the new free game Trumpa Dodge!\n It's as fun as it is controversial!";
+  //UIImage *imageToShare = [UIImage imageNamed:@"shareImage"];
+  NSArray *postItems = @[message]; //image to share
   UIActivityViewController *activityVC = [[UIActivityViewController alloc]
                                           initWithActivityItems:postItems
                                           applicationActivities:nil];
