@@ -1757,6 +1757,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   joystick = [Joystick joystickWithThumb:jsThumb andBackdrop:jsBackdrop];
   joystick.position = CGPointMake((self.size.width - jsBackdrop.size.width * 0.5-self.size.width*0.1),(jsBackdrop.size.height * 0.5+self.size.height*.2));
   [self addChild:joystick];
+  joystick.zPosition = 1;
   [joystick setScale:1.5];
 }
 
