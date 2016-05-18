@@ -251,11 +251,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [restartBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   restartBut.titleLabel.font = [UIFont systemFontOfSize:25];
   [restartBut addTarget:self action:@selector(restartGame) forControlEvents:UIControlEventTouchUpInside];
-  restartBut.layer.masksToBounds = NO;
-  restartBut.layer.shadowColor = [UIColor whiteColor].CGColor;
-  restartBut.layer.shadowOpacity = 10;
-  restartBut.layer.shadowRadius = 0;
-  restartBut.layer.shadowOffset = CGSizeMake(1.5, 1.5);
+  restartBut.layer.borderColor = [UIColor whiteColor].CGColor;
+  restartBut.layer.borderWidth = 2;
   
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
@@ -264,12 +261,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   [shareButton addTarget:self action:@selector(runShareGame:) forControlEvents:UIControlEventTouchUpInside];
   [shareButton setExclusiveTouch:YES];
-  shareButton.layer.masksToBounds = NO;
-  shareButton.layer.shadowColor = [UIColor whiteColor].CGColor;
-  shareButton.layer.shadowOpacity = 10;
-  shareButton.layer.shadowRadius = 0;
-  shareButton.layer.shadowOffset = CGSizeMake(1.5, 1.5);
-  
+  shareButton.layer.borderColor = [UIColor whiteColor].CGColor;
+  shareButton.layer.borderWidth = 2;
+
   
   characterSelected = [[UILabel alloc]init];
   characterSelected.textColor = [UIColor whiteColor];
@@ -659,11 +653,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self.view addSubview:pause];
   [pause setExclusiveTouch:YES];
   
-  pause.layer.masksToBounds = NO;
-  pause.layer.shadowColor = [UIColor whiteColor].CGColor;
-  pause.layer.shadowOpacity = 10;
-  pause.layer.shadowRadius = 0;
-  pause.layer.shadowOffset = CGSizeMake(1, 1);
+  pause.layer.borderColor = [UIColor whiteColor].CGColor;
+  pause.layer.borderWidth = 2;
   
 }//startGame-----------------------------------------------------------------------------------------------------------
 
@@ -744,11 +735,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   resume.titleLabel.font = [UIFont systemFontOfSize:25];
   [pause setAlpha:0];
   [resume setExclusiveTouch:YES];
-  resume.layer.masksToBounds = NO;
-  resume.layer.shadowColor = [UIColor whiteColor].CGColor;
-  resume.layer.shadowOpacity = 10;
-  resume.layer.shadowRadius = 0;
-  resume.layer.shadowOffset = CGSizeMake(1.5, 1.5);
+  resume.layer.borderColor = [UIColor whiteColor].CGColor;
+  resume.layer.borderWidth = 2;
   
   
   
