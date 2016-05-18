@@ -22,9 +22,9 @@ static const uint32_t ponchoCategory = 0x1 <<5;
 int dx;
 int dy;
 int clockTime;
-double initialdelayTime = 0.9;//
+double initialdelayTime = 0.8;//
 double delayTimeMin = 0.2;
-double delayTime = 0.9;//start at 0.9
+double delayTime = 0.8;//start at 0.9
 int speedTime = 70;//70 start
 double timeConstant = 0.0035;//Absolute min time for travel (increase to slow down)(0.0045)
 int rotMax = 100;
@@ -251,7 +251,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   [restartBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   restartBut.titleLabel.font = [UIFont systemFontOfSize:25];
   [restartBut addTarget:self action:@selector(restartGame) forControlEvents:UIControlEventTouchUpInside];
- 
+  restartBut.layer.masksToBounds = NO;
+  restartBut.layer.shadowColor = [UIColor whiteColor].CGColor;
+  restartBut.layer.shadowOpacity = 10;
+  restartBut.layer.shadowRadius = 0;
+  restartBut.layer.shadowOffset = CGSizeMake(1.5, 1.5);
   
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
@@ -260,14 +264,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   [shareButton addTarget:self action:@selector(runShareGame:) forControlEvents:UIControlEventTouchUpInside];
   [shareButton setExclusiveTouch:YES];
-  //shareButton.layer.cornerRadius = 6;
   shareButton.layer.masksToBounds = NO;
-  //shareButton.clipsToBounds = YES;
-  shareButton.layer.borderWidth = 1;
   shareButton.layer.shadowColor = [UIColor whiteColor].CGColor;
-  shareButton.layer.shadowOpacity = 0.8;
-  shareButton.layer.shadowRadius = 12;
-  shareButton.layer.shadowOffset = CGSizeMake(12, 12);
+  shareButton.layer.shadowOpacity = 10;
+  shareButton.layer.shadowRadius = 0;
+  shareButton.layer.shadowOffset = CGSizeMake(1.5, 1.5);
   
   
   characterSelected = [[UILabel alloc]init];
@@ -562,14 +563,14 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //deals with the placement of enemies
   if(sideNum<3){
-    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+20);
+    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
     directionDeg = [self getRanNum:180]+180;
     
     
     
     
   }else if(sideNum<6){
-    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -20);
+    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
     directionDeg = [self getRanNum:180];
     
     
@@ -578,14 +579,14 @@ static inline CGVector radiansToVector(CGFloat radians){
     directionDeg = [self getRanNum:180]+90;
     
   }else if (sideNum ==7){
-    enemy.position = CGPointMake(-20, [self getRanNum:self.frame.size.height]);
+    enemy.position = CGPointMake(-30, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+270;
   }else if(sideNum ==8){
-    enemy.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+15);
+    enemy.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+20);
     directionDeg = [self getRanNum:180]+180;
     
   }else{
-    enemy.position = CGPointMake(self.frame.size.width*0.5, -20);
+    enemy.position = CGPointMake(self.frame.size.width*0.5, -25);
     directionDeg = (70+[self getRanNum:40]);
     
   }
@@ -648,6 +649,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [start setAlpha:0.0];
   pause = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-75, self.view.frame.size.height*0.03, 60, 30)];
   
+  
+  
   [pause setAlpha:0.8];
   [pause setBackgroundImage:[UIImage imageNamed:@"pauseButton"]
                    forState:UIControlStateNormal];
@@ -655,6 +658,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   [pause addTarget:self action:@selector(pauseGame) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:pause];
   [pause setExclusiveTouch:YES];
+  
+  pause.layer.masksToBounds = NO;
+  pause.layer.shadowColor = [UIColor whiteColor].CGColor;
+  pause.layer.shadowOpacity = 10;
+  pause.layer.shadowRadius = 0;
+  pause.layer.shadowOffset = CGSizeMake(1, 1);
   
 }//startGame-----------------------------------------------------------------------------------------------------------
 
@@ -735,6 +744,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   resume.titleLabel.font = [UIFont systemFontOfSize:25];
   [pause setAlpha:0];
   [resume setExclusiveTouch:YES];
+  resume.layer.masksToBounds = NO;
+  resume.layer.shadowColor = [UIColor whiteColor].CGColor;
+  resume.layer.shadowOpacity = 10;
+  resume.layer.shadowRadius = 0;
+  resume.layer.shadowOffset = CGSizeMake(1.5, 1.5);
+  
   
   
   [self.view addSubview:resume ];
@@ -1491,11 +1506,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //deals with the placement of enemies
   if(sideNum<3){
-    poncho.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+20);
+    poncho.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
     directionDeg = [self getRanNum:180]+180;
     
   }else if(sideNum<6){
-    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -20);
+    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
     directionDeg = [self getRanNum:180];
     
   }else if(sideNum==6){
@@ -1505,17 +1520,17 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     
   }else if (sideNum ==7){
-    poncho.position = CGPointMake(20, [self getRanNum:self.frame.size.height]);
+    poncho.position = CGPointMake(-30, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+270;
     
     
   }else if(sideNum ==8){
-    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+20);
+    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+25);
     directionDeg = [self getRanNum:180]+180;
     
     
   }else{
-    poncho.position = CGPointMake(self.frame.size.width*0.5, -20);
+    poncho.position = CGPointMake(self.frame.size.width*0.5, -25);
     directionDeg = (70+[self getRanNum:40]);
     
     
@@ -1551,34 +1566,34 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //deals with the placement of enemies
   if(sideNum<3){
-    gun.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+20);
+    gun.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
     directionDeg = [self getRanNum:180]+180;
     movingUp = FALSE;
   }else if(sideNum<6){
-    gun.position = CGPointMake([self getRanNum:self.frame.size.width], -10);
+    gun.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
     directionDeg = [self getRanNum:180];
     movingUp = TRUE;
     
   }else if(sideNum==6){
-    gun.position = CGPointMake(self.frame.size.width+15, [self getRanNum:self.frame.size.height]);
+    gun.position = CGPointMake(self.frame.size.width+30, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+90;
     if (directionDeg < 270) movingUp = TRUE;
     else movingUp = FALSE;
     
     
   }else if (sideNum ==7){
-    gun.position = CGPointMake(-15, [self getRanNum:self.frame.size.height]);
+    gun.position = CGPointMake(-30, [self getRanNum:self.frame.size.height]);
     directionDeg = [self getRanNum:180]+270;
     if(directionDeg > 360) movingUp = TRUE;
     else movingUp = FALSE;
     
   }else if(sideNum ==8){
-    gun.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+10);
+    gun.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+25);
     directionDeg = [self getRanNum:180]+180;
     movingUp = FALSE;
     
   }else{
-    gun.position = CGPointMake(self.frame.size.width*0.5, -10);
+    gun.position = CGPointMake(self.frame.size.width*0.5, -25);
     directionDeg = (70+[self getRanNum:40]);
     movingUp = TRUE;
     
