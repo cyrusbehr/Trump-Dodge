@@ -251,7 +251,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [restartBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   restartBut.titleLabel.font = [UIFont systemFontOfSize:25];
   [restartBut addTarget:self action:@selector(restartGame) forControlEvents:UIControlEventTouchUpInside];
-  
+ 
   
   shareButton = [[UIButton alloc]init];
   [shareButton setTitle:@"Share" forState:UIControlStateNormal];
@@ -260,6 +260,15 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setBackgroundImage:[UIImage imageNamed:@"blue"] forState:UIControlStateNormal];
   [shareButton addTarget:self action:@selector(runShareGame:) forControlEvents:UIControlEventTouchUpInside];
   [shareButton setExclusiveTouch:YES];
+  //shareButton.layer.cornerRadius = 6;
+  shareButton.layer.masksToBounds = NO;
+  //shareButton.clipsToBounds = YES;
+  shareButton.layer.borderWidth = 1;
+  shareButton.layer.shadowColor = [UIColor whiteColor].CGColor;
+  shareButton.layer.shadowOpacity = 0.8;
+  shareButton.layer.shadowRadius = 12;
+  shareButton.layer.shadowOffset = CGSizeMake(12, 12);
+  
   
   characterSelected = [[UILabel alloc]init];
   characterSelected.textColor = [UIColor whiteColor];
@@ -1208,7 +1217,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      //[self didCollideWithMonster];
+      [self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
