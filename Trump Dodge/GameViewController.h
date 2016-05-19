@@ -16,8 +16,7 @@
 
 @interface GameViewController :  UIViewController <ADBannerViewDelegate>
 {
-  ADBannerView *addView;
-  //   BOOL bannerIsVisible;
+  
   BOOL firstPlay;
   BOOL gameRunning;
 }
