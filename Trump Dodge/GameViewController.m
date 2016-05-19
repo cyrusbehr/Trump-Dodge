@@ -104,61 +104,61 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-  //NSLog(@"an error occured");
-  [self hideBanner];
-  
-}
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-  
-  [UIView beginAnimations:nil context:NULL];
-  [UIView setAnimationDuration:1];
-  [addView setAlpha:1];
-  [UIView commitAnimations];
-  // NSLog(@"banner add did load");
-  
-}
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+//{
+//  //NSLog(@"an error occured");
+//  [self hideBanner];
+//  
+//}
+//
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+//{
+//  
+//  [UIView beginAnimations:nil context:NULL];
+//  [UIView setAnimationDuration:1];
+//  [addView setAlpha:1];
+//  [UIView commitAnimations];
+//  // NSLog(@"banner add did load");
+//  
+//}
 
 - (void)handleNotification:(NSNotification *)notification
 {
   if ([notification.name isEqualToString:@"hideAd"]) {
-    [self hideBanner];
+//    [self hideBanner];
   }else if ([notification.name isEqualToString:@"showAd"]) {
-    [self showBanner];
+//    [self showBanner];
   }
 }
 
--(void)hideBanner{
-  [UIView beginAnimations:nil context:NULL];
-  [UIView setAnimationDuration:1];
-  [addView setAlpha:0];
-  [UIView commitAnimations];
-  //NSLog(@"banner is being hidden");
-}
+//-(void)hideBanner{
+//  [UIView beginAnimations:nil context:NULL];
+//  [UIView setAnimationDuration:1];
+//  [addView setAlpha:0];
+//  [UIView commitAnimations];
+//  //NSLog(@"banner is being hidden");
+//}
 
--(void)showBanner{
-  if(firstPlay==TRUE){
-    addView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    [addView setFrame:CGRectMake(0, self.view.frame.size.height-32, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:addView];
-    [addView setAlpha:0];
-    addView.delegate = self;
-    firstPlay=FALSE;
-    //NSLog(@"banner ad alloc");
-  }
-  
-}
+//-(void)showBanner{
+//  if(firstPlay==TRUE){
+//    addView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+//    [addView setFrame:CGRectMake(0, self.view.frame.size.height-32, self.view.frame.size.width, self.view.frame.size.height)];
+//    [self.view addSubview:addView];
+//    [addView setAlpha:0];
+//    addView.delegate = self;
+//    firstPlay=FALSE;
+//    //NSLog(@"banner ad alloc");
+//  }
 
-
--(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseGame" object:nil];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMusic" object:nil];
-  
-  return YES;
-}
+//}
+//
+//
+//-(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
+//  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseGame" object:nil];
+//  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMusic" object:nil];
+//  
+//  return YES;
+//}
 
 
 @end
