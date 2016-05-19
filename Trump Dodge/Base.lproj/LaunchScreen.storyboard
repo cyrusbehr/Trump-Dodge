@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LaunchScreenFinal1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Pz-skW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LaunchScreenFinalUpdatedCartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Pz-skW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="383"/>
                             </imageView>
                         </subviews>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreenFinal1.png" width="2199" height="1239"/>
+        <image name="LaunchScreenFinalUpdatedCartoon.png" width="2208" height="1242"/>
     </resources>
 </document>

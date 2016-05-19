@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0854775EFB4A56DD6695F4AE /* libPods-Trump DodgeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7B8706CF2B66BCF3EB27CF /* libPods-Trump DodgeUITests.a */; };
+		216291513EA162DA01952A62 /* libPods-Trump DodgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1B62B76119996F96C37832 /* libPods-Trump DodgeTests.a */; };
+		5424516E44CE29F6A5CCDBBE /* libPods-Trump Dodge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AFE91E5341AB23BBAFC7E /* libPods-Trump Dodge.a */; };
 		6E02320D1CE2EEE400472856 /* desert_day.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02320C1CE2EEE400472856 /* desert_day.png */; };
 		6E02320F1CE2EF5300472856 /* desert_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02320E1CE2EF5300472856 /* desert_night.png */; };
 		6E0232121CE2F1A400472856 /* brick wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232101CE2F1A400472856 /* brick wall.png */; };
@@ -60,8 +63,11 @@
 		6E16518C1CDBFC7400004D3D /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16511D1CDBFC7400004D3D /* spark.png */; };
 		6E1651901CDBFC7400004D3D /* turqois.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651211CDBFC7400004D3D /* turqois.png */; };
 		6E16519D1CDBFC7400004D3D /* whiteMusicNote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16512E1CDBFC7400004D3D /* whiteMusicNote@2x.png */; };
-		6E23DA3B1CE971EF00CF2F0E /* LaunchScreenFinal1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */; };
 		6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */; };
+		6E2AD51D1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */; };
+		6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
+		6E2AD5201CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
+		6E2AD5211CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
 		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
 		6E55D10A1CE0021A00E7A983 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1091CE0021A00E7A983 /* taco.png */; };
@@ -89,6 +95,7 @@
 		6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1521CE019CE00E7A983 /* chanclas@2x.png */; };
 		6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1591CE01BAD00E7A983 /* coins.png */; };
 		6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D15A1CE01BAD00E7A983 /* coins@2x.png */; };
+		6E60B4121CEE56D600A00B39 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */; };
 		6EAAEB331CE8100500070F36 /* trumpPoncho@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */; };
 		6EAAEB341CE8100500070F36 /* trumpPoncho.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB321CE8100500070F36 /* trumpPoncho.png */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
@@ -128,6 +135,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A48BB9EF13BFE789829C425 /* Pods-Trump Dodge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump Dodge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trump Dodge/Pods-Trump Dodge.release.xcconfig"; sourceTree = "<group>"; };
+		2B475493056A274E0DDA7900 /* Pods-Trump DodgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump DodgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trump DodgeTests/Pods-Trump DodgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D1B62B76119996F96C37832 /* libPods-Trump DodgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trump DodgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8FEF346CE257DC7E046CA1 /* Pods-Trump DodgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump DodgeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trump DodgeUITests/Pods-Trump DodgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45715EA6626F2C692C0F7CA1 /* Pods-Trump DodgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump DodgeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trump DodgeUITests/Pods-Trump DodgeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6E02320C1CE2EEE400472856 /* desert_day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_day.png; sourceTree = "<group>"; };
 		6E02320E1CE2EF5300472856 /* desert_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_night.png; sourceTree = "<group>"; };
 		6E0232101CE2F1A400472856 /* brick wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brick wall.png"; sourceTree = "<group>"; };
@@ -182,8 +194,9 @@
 		6E16511D1CDBFC7400004D3D /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		6E1651211CDBFC7400004D3D /* turqois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turqois.png; sourceTree = "<group>"; };
 		6E16512E1CDBFC7400004D3D /* whiteMusicNote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteMusicNote@2x.png"; sourceTree = "<group>"; };
-		6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinal1.png; sourceTree = "<group>"; };
 		6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
+		6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinalUpdatedCartoon.png; sourceTree = "<group>"; };
+		6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D1091CE0021A00E7A983 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
@@ -211,6 +224,7 @@
 		6E55D1521CE019CE00E7A983 /* chanclas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chanclas@2x.png"; sourceTree = "<group>"; };
 		6E55D1591CE01BAD00E7A983 /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
 		6E55D15A1CE01BAD00E7A983 /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
+		6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpPoncho@2x.png"; sourceTree = "<group>"; };
 		6EAAEB321CE8100500070F36 /* trumpPoncho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpPoncho.png; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +253,10 @@
 		6EEDFEF11CE98D63008E63D1 /* confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = confetti.sks; sourceTree = "<group>"; };
 		6EFB26FA1CEBBD48001313DD /* moustache@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moustache@2x.png"; sourceTree = "<group>"; };
 		6EFB26FB1CEBBD48001313DD /* moustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moustache.png; sourceTree = "<group>"; };
+		A3841B54B70912BE6837F733 /* Pods-Trump Dodge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump Dodge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trump Dodge/Pods-Trump Dodge.debug.xcconfig"; sourceTree = "<group>"; };
+		AA7B8706CF2B66BCF3EB27CF /* libPods-Trump DodgeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trump DodgeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8BD54D2FB516C1663069E9 /* Pods-Trump DodgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trump DodgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trump DodgeTests/Pods-Trump DodgeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD2AFE91E5341AB23BBAFC7E /* libPods-Trump Dodge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trump Dodge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +264,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E60B4121CEE56D600A00B39 /* GoogleMobileAds.framework in Frameworks */,
+				5424516E44CE29F6A5CCDBBE /* libPods-Trump Dodge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216291513EA162DA01952A62 /* libPods-Trump DodgeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0854775EFB4A56DD6695F4AE /* libPods-Trump DodgeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +291,13 @@
 		6EBCC9601CDBF69100EAE7A8 = {
 			isa = PBXGroup;
 			children = (
+				6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */,
 				6EBCC96B1CDBF69100EAE7A8 /* Trump Dodge */,
 				6EBCC98A1CDBF69100EAE7A8 /* Trump DodgeTests */,
 				6EBCC9951CDBF69100EAE7A8 /* Trump DodgeUITests */,
 				6EBCC96A1CDBF69100EAE7A8 /* Products */,
+				CBB2216E8554B99ECF12C72F /* Pods */,
+				FECA60C37341BF97210AFDF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +330,7 @@
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
 				6E0D28071CE93780003A13F5 /* Joystick.h */,
 				6E0D28081CE93780003A13F5 /* Joystick.m */,
+				6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */,
 				6EBCC9821CDBF69100EAE7A8 /* Info.plist */,
 				6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */,
 			);
@@ -315,9 +341,9 @@
 			isa = PBXGroup;
 			children = (
 				6EDF7AAA1CE981E8003C336D /* moneyBag.png */,
-				6E23DA3A1CE971EF00CF2F0E /* LaunchScreenFinal1.png */,
 				6E0D282E1CE95AFF003A13F5 /* blueBut.png */,
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
+				6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */,
 				6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */,
 				6E0D282C1CE958AF003A13F5 /* greenButton_burned.png */,
 				6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */,
@@ -423,6 +449,29 @@
 			path = "Trump DodgeUITests";
 			sourceTree = "<group>";
 		};
+		CBB2216E8554B99ECF12C72F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3841B54B70912BE6837F733 /* Pods-Trump Dodge.debug.xcconfig */,
+				1A48BB9EF13BFE789829C425 /* Pods-Trump Dodge.release.xcconfig */,
+				2B475493056A274E0DDA7900 /* Pods-Trump DodgeTests.debug.xcconfig */,
+				BC8BD54D2FB516C1663069E9 /* Pods-Trump DodgeTests.release.xcconfig */,
+				3E8FEF346CE257DC7E046CA1 /* Pods-Trump DodgeUITests.debug.xcconfig */,
+				45715EA6626F2C692C0F7CA1 /* Pods-Trump DodgeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FECA60C37341BF97210AFDF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AFE91E5341AB23BBAFC7E /* libPods-Trump Dodge.a */,
+				2D1B62B76119996F96C37832 /* libPods-Trump DodgeTests.a */,
+				AA7B8706CF2B66BCF3EB27CF /* libPods-Trump DodgeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,9 +479,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EBCC99B1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump Dodge" */;
 			buildPhases = (
+				D31851184A05B1E4BAEC2241 /* 📦 Check Pods Manifest.lock */,
 				6EBCC9651CDBF69100EAE7A8 /* Sources */,
 				6EBCC9661CDBF69100EAE7A8 /* Frameworks */,
 				6EBCC9671CDBF69100EAE7A8 /* Resources */,
+				96CEC319FB17AEAE76F28B7D /* 📦 Embed Pods Frameworks */,
+				ABCC9F9F5DEAF0434418F019 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,9 +499,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EBCC99E1CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeTests" */;
 			buildPhases = (
+				F731FDD97A562B23AB2B9E79 /* 📦 Check Pods Manifest.lock */,
 				6EBCC9831CDBF69100EAE7A8 /* Sources */,
 				6EBCC9841CDBF69100EAE7A8 /* Frameworks */,
 				6EBCC9851CDBF69100EAE7A8 /* Resources */,
+				10F0E2A042B9109EEA15D116 /* 📦 Embed Pods Frameworks */,
+				D34A505245E07EB74A02C703 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,9 +520,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EBCC9A11CDBF69100EAE7A8 /* Build configuration list for PBXNativeTarget "Trump DodgeUITests" */;
 			buildPhases = (
+				CB02D173169DDF860E11955F /* 📦 Check Pods Manifest.lock */,
 				6EBCC98E1CDBF69100EAE7A8 /* Sources */,
 				6EBCC98F1CDBF69100EAE7A8 /* Frameworks */,
 				6EBCC9901CDBF69100EAE7A8 /* Resources */,
+				478F35BA6E8A91FBE9BE1398 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,6 +610,7 @@
 				6E0D28231CE94633003A13F5 /* trumpquote7.mp3 in Resources */,
 				6E16517E1CDBFC7400004D3D /* musicNoteFix@2x.png in Resources */,
 				6E0232181CE2F31100472856 /* cactus.png in Resources */,
+				6E2AD51D1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png in Resources */,
 				6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */,
 				6E0D280B1CE93792003A13F5 /* joystick.png in Resources */,
 				6E1651871CDBFC7400004D3D /* powerup@2x.png in Resources */,
@@ -613,6 +671,7 @@
 				6EFB26FD1CEBBD48001313DD /* moustache.png in Resources */,
 				6E55D1341CE011EA00E7A983 /* poncho@2x.png in Resources */,
 				6EAAEB331CE8100500070F36 /* trumpPoncho@2x.png in Resources */,
+				6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */,
 				6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */,
 				6E0D282A1CE94633003A13F5 /* trumpquote15.mp3 in Resources */,
 				6E0232121CE2F1A400472856 /* brick wall.png in Resources */,
@@ -620,7 +679,6 @@
 				6E55D1531CE019CE00E7A983 /* chanclas.png in Resources */,
 				6E0232191CE2F31100472856 /* cactus@2x.png in Resources */,
 				6E0D28021CE903F9003A13F5 /* moustache@2x.png in Resources */,
-				6E23DA3B1CE971EF00CF2F0E /* LaunchScreenFinal1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +686,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2AD5201CED915D00030B16 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,10 +694,134 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2AD5211CED915D00030B16 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10F0E2A042B9109EEA15D116 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trump DodgeTests/Pods-Trump DodgeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		478F35BA6E8A91FBE9BE1398 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trump DodgeUITests/Pods-Trump DodgeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96CEC319FB17AEAE76F28B7D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trump Dodge/Pods-Trump Dodge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABCC9F9F5DEAF0434418F019 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trump Dodge/Pods-Trump Dodge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB02D173169DDF860E11955F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D31851184A05B1E4BAEC2241 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D34A505245E07EB74A02C703 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trump DodgeTests/Pods-Trump DodgeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F731FDD97A562B23AB2B9E79 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EBCC9651CDBF69100EAE7A8 /* Sources */ = {
@@ -741,9 +924,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge-1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -780,8 +964,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge-1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -790,38 +975,51 @@
 		};
 		6EBCC99C1CDBF69100EAE7A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3841B54B70912BE6837F733 /* Pods-Trump Dodge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "955a9109-4f5e-4a28-adfb-b4ed584f877b";
 			};
 			name = Debug;
 		};
 		6EBCC99D1CDBF69100EAE7A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A48BB9EF13BFE789829C425 /* Pods-Trump Dodge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cyrusbehroozi.Trump-Dodge-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "955a9109-4f5e-4a28-adfb-b4ed584f877b";
 			};
 			name = Release;
 		};
 		6EBCC99F1CDBF69100EAE7A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B475493056A274E0DDA7900 /* Pods-Trump DodgeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -835,6 +1033,7 @@
 		};
 		6EBCC9A01CDBF69100EAE7A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8BD54D2FB516C1663069E9 /* Pods-Trump DodgeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Trump DodgeTests/Info.plist";
@@ -847,6 +1046,7 @@
 		};
 		6EBCC9A21CDBF69100EAE7A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8FEF346CE257DC7E046CA1 /* Pods-Trump DodgeUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Trump DodgeUITests/Info.plist";
@@ -859,6 +1059,7 @@
 		};
 		6EBCC9A31CDBF69100EAE7A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45715EA6626F2C692C0F7CA1 /* Pods-Trump DodgeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Trump DodgeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

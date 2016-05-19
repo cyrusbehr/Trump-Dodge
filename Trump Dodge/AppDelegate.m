@@ -20,8 +20,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
   gameWasRunning = FALSE;
+  [FIRApp configure];
   return YES;
   
 }
