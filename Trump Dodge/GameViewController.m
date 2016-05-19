@@ -34,13 +34,13 @@
 }
 
 @end
-//
+
 @interface GameViewController () <GADInterstitialDelegate, UIAlertViewDelegate>
 
 @property(nonatomic, strong) GADInterstitial *interstitial;
 
 @end
-//
+
 
 @implementation GameViewController
 //@synthesize bannerIsVisible;
@@ -48,7 +48,7 @@
 {
   [super viewDidLoad];
   
-   self.interstitial = [self createAndLoadInterstitial];
+  self.interstitial = [self createAndLoadInterstitial];
   
   gameRunning = FALSE;
   firstPlay = TRUE;
@@ -114,9 +114,9 @@
 
 - (void)handleNotification:(NSNotification *)notification
 {
-   if ([notification.name isEqualToString:@"showAd"]) {
+  if ([notification.name isEqualToString:@"showAd"]) {
     [self showAdd];
-   }
+  }
 }
 
 -(void)showAdd{

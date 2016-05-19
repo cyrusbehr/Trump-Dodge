@@ -35,6 +35,7 @@ double initialTimeConstant = 0.0045;
 int initialspeedTime = 70;
 int initialrotMax = 100;
 int lives = 0;
+int numDeaths = 0;
 
 BOOL gunIsOnScreen;
 BOOL ponchoIsOnScreen;
@@ -263,7 +264,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setExclusiveTouch:YES];
   shareButton.layer.borderColor = [UIColor whiteColor].CGColor;
   shareButton.layer.borderWidth = 2;
-
+  
   
   characterSelected = [[UILabel alloc]init];
   characterSelected.textColor = [UIColor whiteColor];
@@ -608,8 +609,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
   hero.alpha = 1;
   
-//  
-//  adDelayTime = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(triggerAd) userInfo:nil repeats:NO];
+  //
+  //  adDelayTime = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(triggerAd) userInfo:nil repeats:NO];
   
   
   hasBegan = TRUE;
@@ -787,7 +788,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//stopeTimer-----------------------------------------------------------------------------------------------------------
 
 -(void) restartGame{
-//  [self requestAd];
+  //  [self requestAd];
   
   plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
   canGetFirstLife = TRUE;
@@ -973,9 +974,9 @@ static inline CGVector radiansToVector(CGFloat radians){
     
   }
   
-
+  
   if(!(clockTime==0)&&(clockTime%100==0)&&(musicTransitionBool==TRUE)){
-
+    
     
   }
   if(!(clockTime==0)&&(clockTime%14==0)&&(fishSpawnBool==TRUE)){
@@ -1192,7 +1193,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self addFeathers:deadPos];
   [self addBacon:deadPos];
   
-
+  
   [pause setAlpha:0];
   gameOverDelay = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
   
@@ -1257,12 +1258,15 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//didBeginContact-----------------------------------------------------------------------------------------------------------
 
 -(void)gameOver{
-    if((clockTime%14==0) || (clockTime%25==0) || (clockTime%40==0) || (clockTime%50==0)){
+  if((clockTime%14==0) || (clockTime%25==0) || (clockTime%40==0) || (clockTime%50==0)){
     clockTime+=3;
   }
   
-  [self showAd];
-  
+  numDeaths+=1;
+  if (numDeaths==2){
+    [self showAd];
+    numDeaths = 0;
+  }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
   genteMusicIsPlaying = TRUE;
@@ -1303,7 +1307,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)didCollideWithPoncho {
   
   if (ponchoEffectBool ==TRUE){
-  [self addPonchoEffect:hero.position];
+    [self addPonchoEffect:hero.position];
     ponchoEffectBool = FALSE;
     ponchoEffectBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updatePonchoEffectBool) userInfo:nil repeats:NO];
     
@@ -1464,7 +1468,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 //-(void)requestAd{
 //  [[NSNotificationCenter defaultCenter] postNotificationName:@"requestAd" object:nil];
-//  
+//
 //}
 
 
