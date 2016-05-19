@@ -95,6 +95,7 @@
 		6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1521CE019CE00E7A983 /* chanclas@2x.png */; };
 		6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1591CE01BAD00E7A983 /* coins.png */; };
 		6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D15A1CE01BAD00E7A983 /* coins@2x.png */; };
+		6E60B4121CEE56D600A00B39 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */; };
 		6EAAEB331CE8100500070F36 /* trumpPoncho@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */; };
 		6EAAEB341CE8100500070F36 /* trumpPoncho.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB321CE8100500070F36 /* trumpPoncho.png */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
@@ -223,6 +224,7 @@
 		6E55D1521CE019CE00E7A983 /* chanclas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chanclas@2x.png"; sourceTree = "<group>"; };
 		6E55D1591CE01BAD00E7A983 /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
 		6E55D15A1CE01BAD00E7A983 /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
+		6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpPoncho@2x.png"; sourceTree = "<group>"; };
 		6EAAEB321CE8100500070F36 /* trumpPoncho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpPoncho.png; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E60B4121CEE56D600A00B39 /* GoogleMobileAds.framework in Frameworks */,
 				5424516E44CE29F6A5CCDBBE /* libPods-Trump Dodge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +291,7 @@
 		6EBCC9601CDBF69100EAE7A8 = {
 			isa = PBXGroup;
 			children = (
+				6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */,
 				6EBCC96B1CDBF69100EAE7A8 /* Trump Dodge */,
 				6EBCC98A1CDBF69100EAE7A8 /* Trump DodgeTests */,
 				6EBCC9951CDBF69100EAE7A8 /* Trump DodgeUITests */,
@@ -977,6 +981,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -995,6 +1003,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Trump Dodge/Info.plist";
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -608,8 +608,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
   hero.alpha = 1;
   
-  
-  adDelayTime = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(triggerAd) userInfo:nil repeats:NO];
+//  
+//  adDelayTime = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(triggerAd) userInfo:nil repeats:NO];
   
   
   hasBegan = TRUE;
@@ -696,7 +696,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//updateTime-----------------------------------------------------------------------------------------------------------
 
 -(void)pauseGame{
-  //[[NSNotificationCenter defaultCenter] postNotificationName:@"hideAd" object:nil];
+  
   if(score > highScore){
     [self changeScore:score];
     
@@ -759,7 +759,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   gunTestingPoint.physicsBody.velocity = CGVectorMake(rotationVector.dx*270, rotationVector.dy*270);
   
   
-  //[[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
   isPaused = FALSE;
   [pauseScreen setAlpha:0];
   [resume setAlpha:0];
@@ -800,7 +799,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //[backgroundMusicIntense stop];
     //}
   }
-  // [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
+  
   tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to get your %@ back next round!", characterName];
   [tauntLabel sizeToFit];
   [tauntLabel setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.3)];
@@ -1256,10 +1255,11 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//didBeginContact-----------------------------------------------------------------------------------------------------------
 
 -(void)gameOver{
-  //[[NSNotificationCenter defaultCenter] postNotificationName:@"hideAd" object:nil];
-  if((clockTime%14==0) || (clockTime%25==0) || (clockTime%40==0) || (clockTime%50==0)){
+    if((clockTime%14==0) || (clockTime%25==0) || (clockTime%40==0) || (clockTime%50==0)){
     clockTime+=3;
   }
+  
+  [self requestAd];
   
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
@@ -1455,7 +1455,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
 }
 
--(void)triggerAd{
+-(void)requestAd{
   
   [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
 }

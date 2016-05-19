@@ -11,7 +11,7 @@
 @import AVFoundation;
 #import "AppDelegate.h"
 
-
+@import GoogleMobileAds;
 
 @implementation SKScene (Unarchive)
 
@@ -34,14 +34,30 @@
 }
 
 @end
+//
+@interface GameViewController () <GADInterstitialDelegate, UIAlertViewDelegate>
+
+@property(nonatomic, strong) GADInterstitial *interstitial;
+
+@end
+//
 
 @implementation GameViewController
 //@synthesize bannerIsVisible;
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/4411468910"];
+  
+  GADRequest *request = [GADRequest request];
+  // Requests test ads on test devices.
+  request.testDevices = @[@"2077ef9a63d2b398840261c8221a0c9b"];
+  [self.interstitial loadRequest:request];
+  
   gameRunning = FALSE;
   firstPlay = TRUE;
+  
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"hideAd" object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"showAd" object:nil];
   
@@ -103,62 +119,20 @@
 }
 
 
-//---------------------------------------------------------------------------------------------------------
-//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-//{
-//  //NSLog(@"an error occured");
-//  [self hideBanner];
-//  
-//}
-//
-//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-//{
-//  
-//  [UIView beginAnimations:nil context:NULL];
-//  [UIView setAnimationDuration:1];
-//  [addView setAlpha:1];
-//  [UIView commitAnimations];
-//  // NSLog(@"banner add did load");
-//  
-//}
+
 
 - (void)handleNotification:(NSNotification *)notification
 {
-  if ([notification.name isEqualToString:@"hideAd"]) {
-//    [self hideBanner];
-  }else if ([notification.name isEqualToString:@"showAd"]) {
-//    [self showBanner];
+   if ([notification.name isEqualToString:@"showAd"]) {
+    [self showAdd];
   }
 }
 
-//-(void)hideBanner{
-//  [UIView beginAnimations:nil context:NULL];
-//  [UIView setAnimationDuration:1];
-//  [addView setAlpha:0];
-//  [UIView commitAnimations];
-//  //NSLog(@"banner is being hidden");
-//}
-
-//-(void)showBanner{
-//  if(firstPlay==TRUE){
-//    addView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-//    [addView setFrame:CGRectMake(0, self.view.frame.size.height-32, self.view.frame.size.width, self.view.frame.size.height)];
-//    [self.view addSubview:addView];
-//    [addView setAlpha:0];
-//    addView.delegate = self;
-//    firstPlay=FALSE;
-//    //NSLog(@"banner ad alloc");
-//  }
-
-//}
-//
-//
-//-(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-//  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseGame" object:nil];
-//  [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMusic" object:nil];
-//  
-//  return YES;
-//}
+-(void)showAdd{
+  if ([self.interstitial isReady]) {
+    [self.interstitial presentFromRootViewController:self];
+  }
+}
 
 
 @end
