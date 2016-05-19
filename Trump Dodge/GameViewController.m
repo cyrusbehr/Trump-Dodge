@@ -48,19 +48,12 @@
 {
   [super viewDidLoad];
   
-  self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/4411468910"];
-  
-  GADRequest *request = [GADRequest request];
-  // Requests test ads on test devices.
-  request.testDevices = @[@"2077ef9a63d2b398840261c8221a0c9b"];
-  [self.interstitial loadRequest:request];
+   self.interstitial = [self createAndLoadInterstitial];
   
   gameRunning = FALSE;
   firstPlay = TRUE;
   
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"hideAd" object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"showAd" object:nil];
-  
   
   
   
@@ -97,8 +90,6 @@
 }
 
 
-
-
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
@@ -125,7 +116,7 @@
 {
    if ([notification.name isEqualToString:@"showAd"]) {
     [self showAdd];
-  }
+   }
 }
 
 -(void)showAdd{
@@ -134,5 +125,16 @@
   }
 }
 
+- (GADInterstitial *)createAndLoadInterstitial {
+  GADInterstitial *interstitial =
+  [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/4411468910"];
+  interstitial.delegate = self;
+  [interstitial loadRequest:[GADRequest request]];
+  return interstitial;
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+  self.interstitial = [self createAndLoadInterstitial];
+}
 
 @end

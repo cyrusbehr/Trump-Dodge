@@ -787,6 +787,8 @@ static inline CGVector radiansToVector(CGFloat radians){
 }//stopeTimer-----------------------------------------------------------------------------------------------------------
 
 -(void) restartGame{
+//  [self requestAd];
+  
   plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
   canGetFirstLife = TRUE;
   lives = 0;
@@ -1259,7 +1261,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     clockTime+=3;
   }
   
-  [self requestAd];
+  [self showAd];
   
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
@@ -1455,11 +1457,15 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
 }
 
--(void)requestAd{
+-(void)showAd{
   
   [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
 }
 
+//-(void)requestAd{
+//  [[NSNotificationCenter defaultCenter] postNotificationName:@"requestAd" object:nil];
+//  
+//}
 
 
 
