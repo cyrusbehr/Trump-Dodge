@@ -73,7 +73,6 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *pigSound;
   NSTimer *updateMusicTransitionBoolTimer;
   UILabel *characterSelected;
-  UILabel *characterTitle;
   UIButton *pigButton;
   NSTimer *adDelayTime;
   AVAudioPlayer *goldClink;
@@ -275,20 +274,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
   [characterSelected setAlpha:0];
   
-  characterTitle = [[UILabel alloc]init];
-  characterTitle.textColor = [UIColor yellowColor];
-  characterTitle.font = [UIFont systemFontOfSize:25];
-  characterTitle.text = [NSString stringWithFormat:@"Achieve shown score to unlock:"];
-  [characterTitle sizeToFit];
-  [characterTitle setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.28)];
-  [characterTitle setAlpha:0];
-  
+
   [self.view addSubview:pauseScreen];
   [self.view addSubview:restartBut ];
   [self.view addSubview:shareButton];
   
   [self.view addSubview:characterSelected];
-  [self.view addSubview:characterTitle];
+  
   
   
   [shareButton setAlpha:0];
