@@ -1241,7 +1241,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     numDeaths = 0;
     threshold = [self getRanNum:2]+1;
     
-  }=
+  }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
   genteMusicIsPlaying = TRUE;
