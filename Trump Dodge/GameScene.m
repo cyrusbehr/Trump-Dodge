@@ -1152,7 +1152,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 
 - (void) didCollideWithMonster{
-  NSLog(@"this ran");
   collideBool = FALSE;
   CGPoint deadPos = hero.position;
   //NSLog(@"hit");
