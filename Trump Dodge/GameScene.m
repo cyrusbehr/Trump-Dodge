@@ -36,6 +36,7 @@ int initialspeedTime = 70;
 int initialrotMax = 100;
 int lives = 0;
 int numDeaths = 0;
+int threshold = 2;
 
 BOOL gunIsOnScreen;
 BOOL ponchoIsOnScreen;
@@ -72,7 +73,6 @@ BOOL canGetFirstLife = TRUE;
   AVAudioPlayer *pigSound;
   NSTimer *updateMusicTransitionBoolTimer;
   UILabel *characterSelected;
-  UILabel *characterTitle;
   UIButton *pigButton;
   NSTimer *adDelayTime;
   AVAudioPlayer *goldClink;
@@ -274,20 +274,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
   [characterSelected setAlpha:0];
   
-  characterTitle = [[UILabel alloc]init];
-  characterTitle.textColor = [UIColor yellowColor];
-  characterTitle.font = [UIFont systemFontOfSize:25];
-  characterTitle.text = [NSString stringWithFormat:@"Achieve shown score to unlock:"];
-  [characterTitle sizeToFit];
-  [characterTitle setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.28)];
-  [characterTitle setAlpha:0];
-  
+
   [self.view addSubview:pauseScreen];
   [self.view addSubview:restartBut ];
   [self.view addSubview:shareButton];
   
   [self.view addSubview:characterSelected];
-  [self.view addSubview:characterTitle];
+  
   
   
   [shareButton setAlpha:0];
@@ -501,36 +494,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   
-}//didMoveToView-----------------------------------------------------------------------------------------------------------
-
-
-//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-//
-//  for (UITouch *touch in touches) {
-//    if(mainLayer.speed>0){
-//      CGPoint location = [touch locationInNode:self];
-//      int deltax = location.x+dx;
-//      int deltay = location.y+dy;
-//
-//
-//      hero.position = CGPointMake(deltax,deltay);
-//
-//    }
-//  }
-//
-//}
-//
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//
-//  for (UITouch *touch in touches) {
-//    if(mainLayer.speed>0){
-//      CGPoint location = [touch locationInNode:self];
-//      dx=hero.position.x-location.x;
-//      dy=hero.position.y-location.y;
-//
-//    }
-//  }
-//}//touchesBegan-----------------------------------------------------------------------------------------------------------
+}//touchesBegan-----------------------------------------------------------------------------------------------------------
 
 -(int)getRanNum: (int) boundary{
   
@@ -1180,7 +1144,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 
 - (void) didCollideWithMonster{
-  NSLog(@"this ran");
   collideBool = FALSE;
   CGPoint deadPos = hero.position;
   //NSLog(@"hit");
@@ -1263,9 +1226,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   numDeaths+=1;
-  if (numDeaths==2){
+  if (numDeaths==threshold){
+    
     [self showAd];
     numDeaths = 0;
+    threshold = [self getRanNum:2]+1;
+    
   }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
