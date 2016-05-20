@@ -36,6 +36,7 @@ int initialspeedTime = 70;
 int initialrotMax = 100;
 int lives = 0;
 int numDeaths = 0;
+int threshold = 2;
 
 BOOL gunIsOnScreen;
 BOOL ponchoIsOnScreen;
@@ -501,36 +502,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   
-}//didMoveToView-----------------------------------------------------------------------------------------------------------
-
-
-//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-//
-//  for (UITouch *touch in touches) {
-//    if(mainLayer.speed>0){
-//      CGPoint location = [touch locationInNode:self];
-//      int deltax = location.x+dx;
-//      int deltay = location.y+dy;
-//
-//
-//      hero.position = CGPointMake(deltax,deltay);
-//
-//    }
-//  }
-//
-//}
-//
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//
-//  for (UITouch *touch in touches) {
-//    if(mainLayer.speed>0){
-//      CGPoint location = [touch locationInNode:self];
-//      dx=hero.position.x-location.x;
-//      dy=hero.position.y-location.y;
-//
-//    }
-//  }
-//}//touchesBegan-----------------------------------------------------------------------------------------------------------
+}//touchesBegan-----------------------------------------------------------------------------------------------------------
 
 -(int)getRanNum: (int) boundary{
   
@@ -1263,10 +1235,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   numDeaths+=1;
-  if (numDeaths==2){
+  if (numDeaths==threshold){
+    
     [self showAd];
     numDeaths = 0;
-  }
+    threshold = [self getRanNum:2]+1;
+    
+  }=
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
   genteMusicIsPlaying = TRUE;
