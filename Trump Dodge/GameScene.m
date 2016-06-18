@@ -294,7 +294,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"moustache",@"chanclas",@"cactus",@"democrat",@"kabob",@"hilary",@"ak", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"cactus",@"democrat",@"kabob",@"hilary",@"ak", nil]; 
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -522,14 +522,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //deals with the placement of enemies
   if(sideNum<3){
-    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
+    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+30);
     directionDeg = [self getRanNum:180]+180;
     
-    
-    
-    
   }else if(sideNum<6){
-    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
+    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -30);
     directionDeg = [self getRanNum:180];
     
     
