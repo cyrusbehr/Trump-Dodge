@@ -187,7 +187,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   NSString *path = [NSString stringWithFormat:@"%@/Dying.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
   poofSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-  poofSound.volume = 2;
+  poofSound.volume = 2.5;
   
   NSString *path2 = [NSString stringWithFormat:@"%@/splat.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
@@ -1182,7 +1182,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      //[self didCollideWithMonster];
+      [self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
@@ -1227,7 +1227,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     [self showAd];
     numDeaths = 0;
-    threshold = [self getRanNum:2]+1;
+    threshold = [self getRanNum:3]+1;
     
   }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
