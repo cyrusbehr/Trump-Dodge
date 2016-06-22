@@ -180,7 +180,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   //sound initialization
   
   
-  [self playQuote];
+  //[self playQuote]; TODO uncomment this!
   
   [self JoystickInit];
   
@@ -1279,7 +1279,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
   [hero removeFromParent];
-  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"]; //TODO put image here
+  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"];
   hero.position = heroPos;
   hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
   hero.physicsBody.dynamic=YES;
