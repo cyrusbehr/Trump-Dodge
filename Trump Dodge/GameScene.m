@@ -180,7 +180,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   //sound initialization
   
   
-  //[self playQuote]; TODO uncomment this!
+  [self playQuote]; 
   
   [self JoystickInit];
   
