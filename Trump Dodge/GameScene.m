@@ -940,7 +940,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     
   }
-  if(!(clockTime==0)&&(clockTime%14==0)&&(fishSpawnBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%12==0)&&(fishSpawnBool==TRUE)){
     fish.alpha = 1;
     fishSpawnBool=FALSE;
     CGPoint fishPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100, [self getRanNum:(self.frame.size.height)]*0.55+190);
@@ -981,7 +981,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //set to 30
   }
   //powerUp
-  if(!(clockTime==0)&&(clockTime%20==0)&&(powerUpTimeBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%14==0)&&(powerUpTimeBool==TRUE)){
     powerUpTimeBool=FALSE;
     CGPoint powerUpPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100,[self getRanNum:(self.frame.size.height)]*0.55+190);
     powerUp.position = powerUpPosition;
