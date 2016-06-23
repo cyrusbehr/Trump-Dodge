@@ -180,14 +180,14 @@ static inline CGVector radiansToVector(CGFloat radians){
   //sound initialization
   
   
-  [self playQuote];
+  [self playQuote]; 
   
   [self JoystickInit];
   
   NSString *path = [NSString stringWithFormat:@"%@/Dying.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl = [NSURL fileURLWithPath:path];
   poofSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-  poofSound.volume = 2;
+  poofSound.volume = 2.5;
   
   NSString *path2 = [NSString stringWithFormat:@"%@/splat.mp3", [[NSBundle mainBundle] resourcePath]];
   NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
@@ -294,7 +294,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"sombrero",@"taco",@"burritoTest",@"maracas",@"moustache",@"chanclas",@"mexicanNew",@"cactus", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"cactus",@"democrat",@"hilary",@"ak",@"antiGun@2x",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -522,14 +522,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //deals with the placement of enemies
   if(sideNum<3){
-    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
+    enemy.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+30);
     directionDeg = [self getRanNum:180]+180;
     
-    
-    
-    
   }else if(sideNum<6){
-    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
+    enemy.position = CGPointMake([self getRanNum:self.frame.size.width], -30);
     directionDeg = [self getRanNum:180];
     
     
@@ -943,7 +940,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     
   }
-  if(!(clockTime==0)&&(clockTime%14==0)&&(fishSpawnBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%12==0)&&(fishSpawnBool==TRUE)){
     fish.alpha = 1;
     fishSpawnBool=FALSE;
     CGPoint fishPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100, [self getRanNum:(self.frame.size.height)]*0.55+190);
@@ -984,7 +981,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //set to 30
   }
   //powerUp
-  if(!(clockTime==0)&&(clockTime%20==0)&&(powerUpTimeBool==TRUE)){
+  if(!(clockTime==0)&&(clockTime%14==0)&&(powerUpTimeBool==TRUE)){
     powerUpTimeBool=FALSE;
     CGPoint powerUpPosition = CGPointMake([self getRanNum:self.frame.size.width]*0.7+100,[self getRanNum:(self.frame.size.height)]*0.55+190);
     powerUp.position = powerUpPosition;
@@ -1230,7 +1227,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     [self showAd];
     numDeaths = 0;
-    threshold = [self getRanNum:2]+1;
+    threshold = [self getRanNum:3]+1;
     
   }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
@@ -1282,7 +1279,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [poncho removeFromParent];
   CGPoint heroPos = hero.position;
   [hero removeFromParent];
-  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"]; //TODO put image here
+  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"];
   hero.position = heroPos;
   hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
   hero.physicsBody.dynamic=YES;
