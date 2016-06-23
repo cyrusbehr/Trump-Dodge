@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,14 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LaunchScreenFinalUpdatedCartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="hez-Pz-skW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="383"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-Vv-qmO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hez-Pz-skW" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1.01" id="ALj-Ox-zFl"/>
-                            <constraint firstItem="hez-Pz-skW" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1.01" id="wtU-SR-jbX"/>
+                            <constraint firstItem="LVa-Vv-qmO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hO4-X6-nor"/>
+                            <constraint firstItem="LVa-Vv-qmO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mSA-Ev-cJ7"/>
+                            <constraint firstItem="LVa-Vv-qmO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="oMB-4m-nO8"/>
+                            <constraint firstItem="LVa-Vv-qmO" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="uyD-dk-gid"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreenFinalUpdatedCartoon.png" width="2208" height="1242"/>
+        <image name="SplashScreen.jpeg" width="2208" height="1242"/>
     </resources>
 </document>

@@ -79,6 +79,7 @@
 		6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
 		6E2AD5201CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
 		6E2AD5211CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
+		6E31AD911D1BB1900077B42F /* SplashScreen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E31AD901D1BB1900077B42F /* SplashScreen.jpeg */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
 		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
 		6E55D10A1CE0021A00E7A983 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1091CE0021A00E7A983 /* taco.png */; };
@@ -221,6 +222,7 @@
 		6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
 		6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinalUpdatedCartoon.png; sourceTree = "<group>"; };
 		6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E31AD901D1BB1900077B42F /* SplashScreen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplashScreen.jpeg; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D1091CE0021A00E7A983 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E31AD901D1BB1900077B42F /* SplashScreen.jpeg */,
 				6E077B5C1D1A4270003E231B /* bernie@2x.png */,
 				6E077B5E1D1A4507003E231B /* taxes@2x.png */,
 				6E077B5A1D1A3F9D003E231B /* alien@2x.png */,
@@ -730,6 +733,7 @@
 				6E1651901CDBFC7400004D3D /* turqois.png in Resources */,
 				6E55D1531CE019CE00E7A983 /* chanclas.png in Resources */,
 				6E0232191CE2F31100472856 /* cactus@2x.png in Resources */,
+				6E31AD911D1BB1900077B42F /* SplashScreen.jpeg in Resources */,
 				6E0D28021CE903F9003A13F5 /* moustache@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
