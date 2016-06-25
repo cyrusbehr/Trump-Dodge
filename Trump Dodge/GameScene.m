@@ -294,7 +294,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"cactus",@"democrat",@"hilary",@"ak",@"antiGun@2x",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"democrat",@"hilary",@"ak",@"antiGun@2x",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -598,7 +598,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   gunSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(spawnGun) userInfo:nil repeats:YES];
   
-  ponchoTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnPonch) userInfo:nil repeats:YES];
   
   [start.layer removeAllAnimations];
   
@@ -685,7 +684,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTimer invalidate];
   [mainTimer invalidate];
   [gunSpawnTimer invalidate];
-  [ponchoTimer invalidate];
   
   mainLayer.speed = 0;
   
@@ -732,7 +730,6 @@ static inline CGVector radiansToVector(CGFloat radians){
                                              repeats:YES];
   
   gunSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:12 target:self selector:@selector(spawnGun) userInfo:nil repeats:YES];
-  ponchoTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnPonch) userInfo:nil repeats:YES];
   
   [shareButton setAlpha:0];
   [restartBut setAlpha:0];
@@ -744,7 +741,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)stopTimer{
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
-  [ponchoTimer invalidate];
   
 }//stopeTimer-----------------------------------------------------------------------------------------------------------
 
@@ -836,9 +832,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer enumerateChildNodesWithName:@"gunTestingPoint" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
-  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
-    [node removeFromParent];
-  }];
+
   [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
@@ -885,12 +879,7 @@ static inline CGVector radiansToVector(CGFloat radians){
       gunIsOnScreen = FALSE;
     }
   }];
-  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
-    if ((node.position.x > self.frame.size.width+200)||(node.position.x<-200) || (node.position.y > self.frame.size.height+200)||(node.position.y<-200)) {
-      [node removeFromParent];
-      ponchoIsOnScreen = FALSE;
-    }
-  }];
+
   
   [mainLayer enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
     if ((node.position.x > self.frame.size.width*2)||(node.position.x<-700) || (node.position.y > self.frame.size.height*2)||(node.position.y<-700)) {
@@ -1014,18 +1003,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *removeExposion = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
   [explosion runAction:removeExposion];
 }//addBomb------------------------------------------------------------------------------------------
--(void)addPonchoEffect: (CGPoint) position{
-  
-  NSString *ponchoEffectPath = [[NSBundle mainBundle] pathForResource:@"confetti" ofType:@"sks"];
-  SKEmitterNode *ponchoEffect = [NSKeyedUnarchiver unarchiveObjectWithFile:ponchoEffectPath];
-  ponchoEffect.position = position;
-  [mainLayer addChild:ponchoEffect];
-  
-  SKAction *removePonchoEffect = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
-  [ponchoEffect runAction:removePonchoEffect];
-  
-}
-
 
 -(void)addFeathers: (CGPoint) position{
   if (soundEnabled==TRUE) {
@@ -1149,7 +1126,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [gameTimer invalidate];
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
-  [ponchoTimer invalidate];
   [self addFeathers:deadPos];
   [self addBacon:deadPos];
   
@@ -1188,11 +1164,6 @@ static inline CGVector radiansToVector(CGFloat radians){
     }
   }
   
-  if((firstBody.categoryBitMask & heroCategory) != 0 && (secondBody.categoryBitMask & ponchoCategory) !=0 ){
-    
-    [self didCollideWithPoncho];
-    
-  }
   
   if((firstBody.categoryBitMask & heroCategory) != 0 && (secondBody.categoryBitMask & fishCategory) !=0 && (fishDelayTimeBool == TRUE)){
     [self removeFish];
@@ -1267,31 +1238,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
 }//removeFist-----------------------------------------------------------------------------------------------------------
 
--(void)didCollideWithPoncho {
-  
-  if (ponchoEffectBool ==TRUE){
-    [self addPonchoEffect:hero.position];
-    ponchoEffectBool = FALSE;
-    ponchoEffectBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updatePonchoEffectBool) userInfo:nil repeats:NO];
-    
-  }
-  [poofSound play];
-  [poncho removeFromParent];
-  CGPoint heroPos = hero.position;
-  [hero removeFromParent];
-  hero = [SKSpriteNode spriteNodeWithImageNamed:@"trumpPoncho"];
-  hero.position = heroPos;
-  hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
-  hero.physicsBody.dynamic=YES;
-  hero.physicsBody.friction=NO;
-  hero.physicsBody.allowsRotation=NO;
-  hero.physicsBody.categoryBitMask = heroCategory;
-  hero.physicsBody.contactTestBitMask = enemyCategory;
-  hero.physicsBody.collisionBitMask = 0;
-  hero.physicsBody.usesPreciseCollisionDetection = YES;
-  [mainLayer addChild:hero];
-  
-}
+
 
 -(void)didCollideWithFish{
   if (soundEnabled==TRUE) {
@@ -1337,12 +1284,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
-  [mainLayer enumerateChildNodesWithName:@"poncho" usingBlock:^(SKNode *node, BOOL *stop) {
-    [node removeFromParent];
-  }];
+  
   
   gunIsOnScreen = FALSE;
-  ponchoIsOnScreen = FALSE;
+
   
   //NSLog(@"did collide with powerup method was run!");
   
@@ -1445,68 +1390,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   return [self getRanNum:2];
 }
 
--(void)spawnPonch{
-  poncho = [SKSpriteNode spriteNodeWithImageNamed:@"poncho"];
-  poncho.physicsBody = [SKPhysicsBody bodyWithTexture:poncho.texture size:(poncho.texture.size)];
-  poncho.physicsBody.dynamic = YES;
-  poncho.physicsBody.friction=NO;
-  poncho.physicsBody.categoryBitMask = ponchoCategory;
-  poncho.physicsBody.contactTestBitMask = heroCategory;
-  poncho.physicsBody.collisionBitMask = 0;
-  //poncho.physicsBody.usesPreciseCollisionDetection = YES;
-  poncho.name = @"poncho";
-  double rotAngle = (double)[self getRanNum:rotMax]/100;
-  rotate = [SKAction rotateByAngle:(M_PI)*rotAngle duration:1];
-  [poncho runAction:[SKAction repeatActionForever:rotate]];
-  
-  
-  int sideNum = [self getRanNum:10];
-  int directionDeg;
-  ponchoIsOnScreen = TRUE;
-  
-  
-  //deals with the placement of enemies
-  if(sideNum<3){
-    poncho.position = CGPointMake([self getRanNum:(self.frame.size.width)], (self.frame.size.height)+25);
-    directionDeg = [self getRanNum:180]+180;
-    
-  }else if(sideNum<6){
-    poncho.position = CGPointMake([self getRanNum:self.frame.size.width], -25);
-    directionDeg = [self getRanNum:180];
-    
-  }else if(sideNum==6){
-    poncho.position = CGPointMake(self.frame.size.width+20, [self getRanNum:self.frame.size.height]);
-    directionDeg = [self getRanNum:180]+90;
-    
-    
-    
-  }else if (sideNum ==7){
-    poncho.position = CGPointMake(-30, [self getRanNum:self.frame.size.height]);
-    directionDeg = [self getRanNum:180]+270;
-    
-    
-  }else if(sideNum ==8){
-    poncho.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height+25);
-    directionDeg = [self getRanNum:180]+180;
-    
-    
-  }else{
-    poncho.position = CGPointMake(self.frame.size.width*0.5, -25);
-    directionDeg = (70+[self getRanNum:40]);
-    
-    
-  }
-  
-  CGVector ponchoDirection = degreesToVector(directionDeg);
-  
-  [mainLayer addChild:poncho];
-  
-  
-  SKAction *movePoncho =  [SKAction moveBy:ponchoDirection duration:0.007];//0.007
-  [poncho runAction:[SKAction repeatActionForever:movePoncho]];
-  
-  
-}
 
 
 -(void)spawnGun{
@@ -1667,12 +1550,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   plus1lifeButton.transform = CGAffineTransformMakeScale(2,2);
   [plus1lifeButton setAlpha:0];
   [UIView commitAnimations];
-  
 }
 
 -(void)playQuote{
   
-  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpQuote2.mp3",@"%@/trumpquote3.mp3",@"%@/trumpquote4.mp3",@"%@/trumpquote5.mp3",@"%@/trumpquote6.mp3",@"%@/trumpquote7.mp3",@"%@/trumpquote8.mp3",@"%@/trumpquote10.mp3",@"%@/trumpquote11.mp3",@"%@/trumpquote12.mp3",@"%@/trumpquote13.mp3",@"%@/trumpquote14.mp3",@"%@/trumpquote5.mp3",@"%@/trumpquote16.mp3", nil];
+  quoteList = [NSMutableArray arrayWithObjects:@"%@/trumpQuote1.mp3",@"%@/trumpquote3.mp3",@"%@/trumpquote4.mp3",@"%@/trumpquote5.mp3",@"%@/trumpquote6.mp3",@"%@/trumpquote7.mp3",@"%@/trumpquote8.mp3",@"%@/trumpquote10.mp3",@"%@/trumpquote11.mp3",@"%@/trumpquote14.mp3",@"%@/trumpquote15.mp3",@"%@/trumpquote16.mp3", nil];
   int QuoteDelayList[15] = {2,3,4,3,2,3.5,2,4,5,2,5,5,2.5,2,2 };
   
   int num = [self getRanNum:(int)[quoteList count]];
