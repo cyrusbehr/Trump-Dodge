@@ -126,6 +126,8 @@
 		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
 		6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDF7AAA1CE981E8003C336D /* moneyBag.png */; };
+		6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D781D1F4CB7008C806D /* cnn@2x.png */; };
+		6EE92D7B1D1F4CD3008C806D /* weThePeeps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */; };
 		6EEDFEF21CE98D63008E63D1 /* confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDFEF11CE98D63008E63D1 /* confetti.sks */; };
 		6EFB26FC1CEBBD48001313DD /* moustache@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFB26FA1CEBBD48001313DD /* moustache@2x.png */; };
 		6EFB26FD1CEBBD48001313DD /* moustache.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFB26FB1CEBBD48001313DD /* moustache.png */; };
@@ -278,6 +280,8 @@
 		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
 		6EDF7AAA1CE981E8003C336D /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
+		6EE92D781D1F4CB7008C806D /* cnn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cnn@2x.png"; sourceTree = "<group>"; };
+		6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weThePeeps@2x.png"; sourceTree = "<group>"; };
 		6EEDFEF11CE98D63008E63D1 /* confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = confetti.sks; sourceTree = "<group>"; };
 		6EFB26FA1CEBBD48001313DD /* moustache@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moustache@2x.png"; sourceTree = "<group>"; };
 		6EFB26FB1CEBBD48001313DD /* moustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moustache.png; sourceTree = "<group>"; };
@@ -368,6 +372,8 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6EE92D781D1F4CB7008C806D /* cnn@2x.png */,
+				6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */,
 				6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */,
 				6E077B5C1D1A4270003E231B /* bernie@2x.png */,
 				6E077B5E1D1A4507003E231B /* taxes@2x.png */,
@@ -642,6 +648,7 @@
 				6E55D14F1CE0185100E7A983 /* TrumpwithWings.png in Resources */,
 				6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */,
 				6E0D28251CE94633003A13F5 /* trumpquote10.mp3 in Resources */,
+				6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */,
 				6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D10A1CE0021A00E7A983 /* taco.png in Resources */,
@@ -684,6 +691,7 @@
 				6E0D282D1CE958AF003A13F5 /* greenButton_burned.png in Resources */,
 				6E55D10C1CE0023700E7A983 /* taco@2x.png in Resources */,
 				6E9959331D1E235300C3E6EF /* splashScreenFIXED5.jpeg in Resources */,
+				6EE92D7B1D1F4CD3008C806D /* weThePeeps@2x.png in Resources */,
 				6E0D28051CE92798003A13F5 /* trumpQuote1.mp3 in Resources */,
 				6E0232131CE2F1A400472856 /* brick wall@2x.png in Resources */,
 				6E14DE321CE578BB009C81CF /* trumpToupe@2x.png in Resources */,
