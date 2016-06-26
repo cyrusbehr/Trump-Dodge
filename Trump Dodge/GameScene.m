@@ -294,7 +294,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"democrat",@"hilary",@"ak",@"antiGun@2x",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes",@"weThePeeps",@"cnn", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"democrat",@"hilary",@"ak",@"antiGun",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes",@"weThePeeps",@"cnn",@"marcRubio",@"hillar",@"Republicanlogo",@"trumpUni", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];

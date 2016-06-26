@@ -106,6 +106,7 @@
 		6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1521CE019CE00E7A983 /* chanclas@2x.png */; };
 		6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1591CE01BAD00E7A983 /* coins.png */; };
 		6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D15A1CE01BAD00E7A983 /* coins@2x.png */; };
+		6E5C179F1D1F995C006730FA /* trumpUni@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C179E1D1F995C006730FA /* trumpUni@2x.png */; };
 		6E60B4121CEE56D600A00B39 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */; };
 		6E750D871D092761006A0AAD /* kabob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D861D092761006A0AAD /* kabob@2x.png */; };
 		6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D8E1D092AEA006A0AAD /* ak@2x.png */; };
@@ -128,6 +129,9 @@
 		6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDF7AAA1CE981E8003C336D /* moneyBag.png */; };
 		6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D781D1F4CB7008C806D /* cnn@2x.png */; };
 		6EE92D7B1D1F4CD3008C806D /* weThePeeps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */; };
+		6EE92D7D1D1F72B6008C806D /* marcRubio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D7C1D1F72B6008C806D /* marcRubio@2x.png */; };
+		6EE92D7F1D1F7422008C806D /* hillar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D7E1D1F7422008C806D /* hillar@2x.png */; };
+		6EE92D811D1F75A8008C806D /* Republicanlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D801D1F75A8008C806D /* Republicanlogo@2x.png */; };
 		6EEDFEF21CE98D63008E63D1 /* confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EEDFEF11CE98D63008E63D1 /* confetti.sks */; };
 		6EFB26FC1CEBBD48001313DD /* moustache@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFB26FA1CEBBD48001313DD /* moustache@2x.png */; };
 		6EFB26FD1CEBBD48001313DD /* moustache.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFB26FB1CEBBD48001313DD /* moustache.png */; };
@@ -251,6 +255,7 @@
 		6E55D1521CE019CE00E7A983 /* chanclas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chanclas@2x.png"; sourceTree = "<group>"; };
 		6E55D1591CE01BAD00E7A983 /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
 		6E55D15A1CE01BAD00E7A983 /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
+		6E5C179E1D1F995C006730FA /* trumpUni@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpUni@2x.png"; sourceTree = "<group>"; };
 		6E60B4111CEE56D600A00B39 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		6E750D861D092761006A0AAD /* kabob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kabob@2x.png"; sourceTree = "<group>"; };
 		6E750D8E1D092AEA006A0AAD /* ak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ak@2x.png"; sourceTree = "<group>"; };
@@ -282,6 +287,9 @@
 		6EDF7AAA1CE981E8003C336D /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
 		6EE92D781D1F4CB7008C806D /* cnn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cnn@2x.png"; sourceTree = "<group>"; };
 		6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weThePeeps@2x.png"; sourceTree = "<group>"; };
+		6EE92D7C1D1F72B6008C806D /* marcRubio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marcRubio@2x.png"; sourceTree = "<group>"; };
+		6EE92D7E1D1F7422008C806D /* hillar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hillar@2x.png"; sourceTree = "<group>"; };
+		6EE92D801D1F75A8008C806D /* Republicanlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Republicanlogo@2x.png"; sourceTree = "<group>"; };
 		6EEDFEF11CE98D63008E63D1 /* confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = confetti.sks; sourceTree = "<group>"; };
 		6EFB26FA1CEBBD48001313DD /* moustache@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moustache@2x.png"; sourceTree = "<group>"; };
 		6EFB26FB1CEBBD48001313DD /* moustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moustache.png; sourceTree = "<group>"; };
@@ -372,6 +380,10 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E5C179E1D1F995C006730FA /* trumpUni@2x.png */,
+				6EE92D801D1F75A8008C806D /* Republicanlogo@2x.png */,
+				6EE92D7E1D1F7422008C806D /* hillar@2x.png */,
+				6EE92D7C1D1F72B6008C806D /* marcRubio@2x.png */,
 				6EE92D781D1F4CB7008C806D /* cnn@2x.png */,
 				6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */,
 				6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */,
@@ -636,6 +648,7 @@
 				6EBCC9761CDBF69100EAE7A8 /* GameScene.sks in Resources */,
 				6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */,
 				6E1651601CDBFC7400004D3D /* gun@2x.png in Resources */,
+				6EE92D811D1F75A8008C806D /* Republicanlogo@2x.png in Resources */,
 				6E1651441CDBFC7400004D3D /* bullet@2x.png in Resources */,
 				6EFB26FC1CEBBD48001313DD /* moustache@2x.png in Resources */,
 				6E16517F1CDBFC7400004D3D /* MusicNoteWhite.png in Resources */,
@@ -649,6 +662,7 @@
 				6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */,
 				6E0D28251CE94633003A13F5 /* trumpquote10.mp3 in Resources */,
 				6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */,
+				6EE92D7D1D1F72B6008C806D /* marcRubio@2x.png in Resources */,
 				6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D10A1CE0021A00E7A983 /* taco.png in Resources */,
@@ -709,6 +723,7 @@
 				6E55D10E1CE0025500E7A983 /* taco@3x.png in Resources */,
 				6E16513F1CDBFC7400004D3D /* blue.png in Resources */,
 				6E55D12B1CE0104600E7A983 /* maracas.png in Resources */,
+				6EE92D7F1D1F7422008C806D /* hillar@2x.png in Resources */,
 				6E077B5F1D1A4507003E231B /* taxes@2x.png in Resources */,
 				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
 				6E0D28261CE94633003A13F5 /* trumpquote11.mp3 in Resources */,
@@ -726,6 +741,7 @@
 				6E55D1331CE011EA00E7A983 /* poncho.png in Resources */,
 				6E077B591D1A3C7F003E231B /* gavel@2x.png in Resources */,
 				6E0232211CE2F6A700472856 /* burritoTest.png in Resources */,
+				6E5C179F1D1F995C006730FA /* trumpUni@2x.png in Resources */,
 				6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */,
 				6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */,
 				6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */,
