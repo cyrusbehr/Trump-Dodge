@@ -17,7 +17,7 @@ static const uint32_t enemyCategory    =  0x1 << 1;
 static const uint32_t fishCategory    =  0x1 << 2;
 static const uint32_t powerUpCategory=  0x1 << 3;
 static const uint32_t noCategory =      0X1 <<4;
-static const uint32_t ponchoCategory = 0x1 <<5;
+
 
 int dx;
 int dy;
@@ -294,7 +294,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   self.physicsWorld.contactDelegate = self;
   
   //MutableArray ---> instert enemy image name in this array
-  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"democrat",@"hilary",@"ak",@"antiGun@2x",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes", nil];
+  enemyList = [NSMutableArray arrayWithObjects:@"moustache",@"democrat",@"hilary",@"ak",@"antiGun",@"obama",@"policeNoBG",@"hairspray",@"hairbrush",@"gavel",@"alien",@"bernie",@"taxes",@"weThePeeps",@"cnn",@"marcRubio",@"hillar",@"Republicanlogo",@"trumpUni", nil];
   
   //delayTimeLabel
   delayTimeLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5, 200, 50)];
@@ -1158,7 +1158,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      [self didCollideWithMonster];
+      //[self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
