@@ -1158,7 +1158,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     //comment out the following line to make hero invinsible
     if(lives==0){
-      //[self didCollideWithMonster];
+      [self didCollideWithMonster];
     }else{
       [self didCollideWithNonLethal];
     }
