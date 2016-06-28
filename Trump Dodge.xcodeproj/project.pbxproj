@@ -14,11 +14,6 @@
 		6E02320F1CE2EF5300472856 /* desert_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02320E1CE2EF5300472856 /* desert_night.png */; };
 		6E0232121CE2F1A400472856 /* brick wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232101CE2F1A400472856 /* brick wall.png */; };
 		6E0232131CE2F1A400472856 /* brick wall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232111CE2F1A400472856 /* brick wall@2x.png */; };
-		6E0232181CE2F31100472856 /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232161CE2F31100472856 /* cactus.png */; };
-		6E0232191CE2F31100472856 /* cactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232171CE2F31100472856 /* cactus@2x.png */; };
-		6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321C1CE2F59600472856 /* burritTest@2x.png */; };
-		6E02321F1CE2F68200472856 /* burritoTest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E02321E1CE2F68200472856 /* burritoTest@2x.png */; };
-		6E0232211CE2F6A700472856 /* burritoTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232201CE2F6A700472856 /* burritoTest.png */; };
 		6E0232231CE2F79700472856 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232221CE2F79700472856 /* explosion.mp3 */; };
 		6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232241CE2FB8D00472856 /* cash.mp3 */; };
 		6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232261CE2FCF100472856 /* moneyExplosion.sks */; };
@@ -40,7 +35,6 @@
 		6E0D280B1CE93792003A13F5 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280A1CE93792003A13F5 /* joystick.png */; };
 		6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280C1CE937A0003A13F5 /* dpad.png */; };
 		6E0D280F1CE93B52003A13F5 /* Dying.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D280E1CE93B52003A13F5 /* Dying.mp3 */; };
-		6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */; };
 		6E0D281F1CE94633003A13F5 /* trumpquote3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */; };
 		6E0D28211CE94633003A13F5 /* trumpquote5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */; };
 		6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */; };
@@ -54,10 +48,8 @@
 		6E0D282A1CE94633003A13F5 /* trumpquote15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281D1CE94633003A13F5 /* trumpquote15.mp3 */; };
 		6E0D282B1CE94633003A13F5 /* trumpquote16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */; };
 		6E0D282D1CE958AF003A13F5 /* greenButton_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D282C1CE958AF003A13F5 /* greenButton_burned.png */; };
-		6E0D282F1CE95AFF003A13F5 /* blueBut.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D282E1CE95AFF003A13F5 /* blueBut.png */; };
 		6E14DE321CE578BB009C81CF /* trumpToupe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */; };
 		6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14DE311CE578BB009C81CF /* trumpToupe.png */; };
-		6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650C81CDBFC7400004D3D /* Axe1@2x.png */; };
 		6E16513F1CDBFC7400004D3D /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650D01CDBFC7400004D3D /* blue.png */; };
 		6E1651441CDBFC7400004D3D /* bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650D51CDBFC7400004D3D /* bullet@2x.png */; };
 		6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1650D61CDBFC7400004D3D /* bulletSmall@2x.png */; };
@@ -67,7 +59,6 @@
 		6E16517D1CDBFC7400004D3D /* musicNote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16510E1CDBFC7400004D3D /* musicNote@2x.png */; };
 		6E16517E1CDBFC7400004D3D /* musicNoteFix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16510F1CDBFC7400004D3D /* musicNoteFix@2x.png */; };
 		6E16517F1CDBFC7400004D3D /* MusicNoteWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651101CDBFC7400004D3D /* MusicNoteWhite.png */; };
-		6E1651811CDBFC7400004D3D /* organe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651121CDBFC7400004D3D /* organe.png */; };
 		6E1651831CDBFC7400004D3D /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651141CDBFC7400004D3D /* pauseButton.png */; };
 		6E1651871CDBFC7400004D3D /* powerup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651181CDBFC7400004D3D /* powerup@2x.png */; };
 		6E16518C1CDBFC7400004D3D /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16511D1CDBFC7400004D3D /* spark.png */; };
@@ -81,29 +72,16 @@
 		6E2AD5211CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
 		6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */; };
 		6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */; };
-		6E55D10A1CE0021A00E7A983 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1091CE0021A00E7A983 /* taco.png */; };
-		6E55D10C1CE0023700E7A983 /* taco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D10B1CE0023700E7A983 /* taco@2x.png */; };
-		6E55D10E1CE0025500E7A983 /* taco@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D10D1CE0025500E7A983 /* taco@3x.png */; };
 		6E55D1131CE0052400E7A983 /* trumpFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1111CE0052400E7A983 /* trumpFace.png */; };
 		6E55D1141CE0052400E7A983 /* trumpFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1121CE0052400E7A983 /* trumpFace@2x.png */; };
 		6E55D11B1CE0073500E7A983 /* trumpFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1191CE0073500E7A983 /* trumpFace.png */; };
 		6E55D11C1CE0073500E7A983 /* trumpFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D11A1CE0073500E7A983 /* trumpFace@2x.png */; };
-		6E55D1231CE00E5200E7A983 /* burrito.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1211CE00E5200E7A983 /* burrito.png */; };
-		6E55D1241CE00E5200E7A983 /* burrito@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1221CE00E5200E7A983 /* burrito@2x.png */; };
-		6E55D12B1CE0104600E7A983 /* maracas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1291CE0104600E7A983 /* maracas.png */; };
-		6E55D12C1CE0104600E7A983 /* maracas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D12A1CE0104600E7A983 /* maracas@2x.png */; };
-		6E55D1331CE011EA00E7A983 /* poncho.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1311CE011EA00E7A983 /* poncho.png */; };
-		6E55D1341CE011EA00E7A983 /* poncho@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1321CE011EA00E7A983 /* poncho@2x.png */; };
-		6E55D13F1CE012E600E7A983 /* sombrero.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D13D1CE012E600E7A983 /* sombrero.png */; };
-		6E55D1401CE012E600E7A983 /* sombrero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D13E1CE012E600E7A983 /* sombrero@2x.png */; };
 		6E55D1431CE013AE00E7A983 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1411CE013AE00E7A983 /* money.png */; };
 		6E55D1441CE013AE00E7A983 /* money@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1421CE013AE00E7A983 /* money@2x.png */; };
 		6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1491CE0170700E7A983 /* TrumpwithWings.png */; };
 		6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */; };
 		6E55D14F1CE0185100E7A983 /* TrumpwithWings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */; };
 		6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */; };
-		6E55D1531CE019CE00E7A983 /* chanclas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1511CE019CE00E7A983 /* chanclas.png */; };
-		6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1521CE019CE00E7A983 /* chanclas@2x.png */; };
 		6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D1591CE01BAD00E7A983 /* coins.png */; };
 		6E55D15C1CE01BAD00E7A983 /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E55D15A1CE01BAD00E7A983 /* coins@2x.png */; };
 		6E5C179F1D1F995C006730FA /* trumpUni@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C179E1D1F995C006730FA /* trumpUni@2x.png */; };
@@ -111,8 +89,6 @@
 		6E750D871D092761006A0AAD /* kabob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D861D092761006A0AAD /* kabob@2x.png */; };
 		6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D8E1D092AEA006A0AAD /* ak@2x.png */; };
 		6E9959331D1E235300C3E6EF /* splashScreenFIXED5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */; };
-		6EAAEB331CE8100500070F36 /* trumpPoncho@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */; };
-		6EAAEB341CE8100500070F36 /* trumpPoncho.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAEB321CE8100500070F36 /* trumpPoncho.png */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
 		6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */; };
 		6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9731CDBF69100EAE7A8 /* GameScene.m */; };
@@ -164,11 +140,6 @@
 		6E02320E1CE2EF5300472856 /* desert_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desert_night.png; sourceTree = "<group>"; };
 		6E0232101CE2F1A400472856 /* brick wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brick wall.png"; sourceTree = "<group>"; };
 		6E0232111CE2F1A400472856 /* brick wall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brick wall@2x.png"; sourceTree = "<group>"; };
-		6E0232161CE2F31100472856 /* cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactus.png; sourceTree = "<group>"; };
-		6E0232171CE2F31100472856 /* cactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cactus@2x.png"; sourceTree = "<group>"; };
-		6E02321C1CE2F59600472856 /* burritTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritTest@2x.png"; sourceTree = "<group>"; };
-		6E02321E1CE2F68200472856 /* burritoTest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burritoTest@2x.png"; sourceTree = "<group>"; };
-		6E0232201CE2F6A700472856 /* burritoTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burritoTest.png; sourceTree = "<group>"; };
 		6E0232221CE2F79700472856 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		6E0232241CE2FB8D00472856 /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
 		6E0232261CE2FCF100472856 /* moneyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = moneyExplosion.sks; path = ../moneyExplosion.sks; sourceTree = "<group>"; };
@@ -191,7 +162,6 @@
 		6E0D280A1CE93792003A13F5 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
 		6E0D280C1CE937A0003A13F5 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		6E0D280E1CE93B52003A13F5 /* Dying.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dying.mp3; sourceTree = "<group>"; };
-		6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mexicanNew@2x.png"; sourceTree = "<group>"; };
 		6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote3.mp3; sourceTree = "<group>"; };
 		6E0D28141CE94633003A13F5 /* trumpquote5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote5.mp3; sourceTree = "<group>"; };
 		6E0D28151CE94633003A13F5 /* trumpquote6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote6.mp3; sourceTree = "<group>"; };
@@ -205,10 +175,8 @@
 		6E0D281D1CE94633003A13F5 /* trumpquote15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote15.mp3; sourceTree = "<group>"; };
 		6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote16.mp3; sourceTree = "<group>"; };
 		6E0D282C1CE958AF003A13F5 /* greenButton_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton_burned.png; sourceTree = "<group>"; };
-		6E0D282E1CE95AFF003A13F5 /* blueBut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueBut.png; sourceTree = "<group>"; };
 		6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpToupe@2x.png"; sourceTree = "<group>"; };
 		6E14DE311CE578BB009C81CF /* trumpToupe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpToupe.png; sourceTree = "<group>"; };
-		6E1650C81CDBFC7400004D3D /* Axe1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe1@2x.png"; sourceTree = "<group>"; };
 		6E1650D01CDBFC7400004D3D /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		6E1650D51CDBFC7400004D3D /* bullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet@2x.png"; sourceTree = "<group>"; };
 		6E1650D61CDBFC7400004D3D /* bulletSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulletSmall@2x.png"; sourceTree = "<group>"; };
@@ -218,7 +186,6 @@
 		6E16510E1CDBFC7400004D3D /* musicNote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "musicNote@2x.png"; sourceTree = "<group>"; };
 		6E16510F1CDBFC7400004D3D /* musicNoteFix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "musicNoteFix@2x.png"; sourceTree = "<group>"; };
 		6E1651101CDBFC7400004D3D /* MusicNoteWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MusicNoteWhite.png; sourceTree = "<group>"; };
-		6E1651121CDBFC7400004D3D /* organe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organe.png; sourceTree = "<group>"; };
 		6E1651141CDBFC7400004D3D /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
 		6E1651181CDBFC7400004D3D /* powerup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powerup@2x.png"; sourceTree = "<group>"; };
 		6E16511D1CDBFC7400004D3D /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
@@ -230,29 +197,16 @@
 		6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E55D0FD1CDFF0E100E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
 		6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuSong.mp3; sourceTree = "<group>"; };
-		6E55D1091CE0021A00E7A983 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
-		6E55D10B1CE0023700E7A983 /* taco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taco@2x.png"; sourceTree = "<group>"; };
-		6E55D10D1CE0025500E7A983 /* taco@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taco@3x.png"; sourceTree = "<group>"; };
 		6E55D1111CE0052400E7A983 /* trumpFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpFace.png; sourceTree = "<group>"; };
 		6E55D1121CE0052400E7A983 /* trumpFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpFace@2x.png"; sourceTree = "<group>"; };
 		6E55D1191CE0073500E7A983 /* trumpFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpFace.png; sourceTree = "<group>"; };
 		6E55D11A1CE0073500E7A983 /* trumpFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpFace@2x.png"; sourceTree = "<group>"; };
-		6E55D1211CE00E5200E7A983 /* burrito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burrito.png; sourceTree = "<group>"; };
-		6E55D1221CE00E5200E7A983 /* burrito@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burrito@2x.png"; sourceTree = "<group>"; };
-		6E55D1291CE0104600E7A983 /* maracas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maracas.png; sourceTree = "<group>"; };
-		6E55D12A1CE0104600E7A983 /* maracas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maracas@2x.png"; sourceTree = "<group>"; };
-		6E55D1311CE011EA00E7A983 /* poncho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poncho.png; sourceTree = "<group>"; };
-		6E55D1321CE011EA00E7A983 /* poncho@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poncho@2x.png"; sourceTree = "<group>"; };
-		6E55D13D1CE012E600E7A983 /* sombrero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombrero.png; sourceTree = "<group>"; };
-		6E55D13E1CE012E600E7A983 /* sombrero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sombrero@2x.png"; sourceTree = "<group>"; };
 		6E55D1411CE013AE00E7A983 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
 		6E55D1421CE013AE00E7A983 /* money@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money@2x.png"; sourceTree = "<group>"; };
 		6E55D1491CE0170700E7A983 /* TrumpwithWings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrumpwithWings.png; sourceTree = "<group>"; };
 		6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrumpwithWings@2x.png"; sourceTree = "<group>"; };
 		6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrumpwithWings.png; sourceTree = "<group>"; };
 		6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrumpwithWings@2x.png"; sourceTree = "<group>"; };
-		6E55D1511CE019CE00E7A983 /* chanclas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chanclas.png; sourceTree = "<group>"; };
-		6E55D1521CE019CE00E7A983 /* chanclas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chanclas@2x.png"; sourceTree = "<group>"; };
 		6E55D1591CE01BAD00E7A983 /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
 		6E55D15A1CE01BAD00E7A983 /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
 		6E5C179E1D1F995C006730FA /* trumpUni@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpUni@2x.png"; sourceTree = "<group>"; };
@@ -260,8 +214,6 @@
 		6E750D861D092761006A0AAD /* kabob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kabob@2x.png"; sourceTree = "<group>"; };
 		6E750D8E1D092AEA006A0AAD /* ak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ak@2x.png"; sourceTree = "<group>"; };
 		6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashScreenFIXED5.jpeg; sourceTree = "<group>"; };
-		6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trumpPoncho@2x.png"; sourceTree = "<group>"; };
-		6EAAEB321CE8100500070F36 /* trumpPoncho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpPoncho.png; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC96D1CDBF69100EAE7A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -401,7 +353,6 @@
 				6E1A28341D1607EC001E41FF /* democrat@2x.png */,
 				6E750D861D092761006A0AAD /* kabob@2x.png */,
 				6EDF7AAA1CE981E8003C336D /* moneyBag.png */,
-				6E0D282E1CE95AFF003A13F5 /* blueBut.png */,
 				6E0D280C1CE937A0003A13F5 /* dpad.png */,
 				6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */,
 				6E0D28121CE94633003A13F5 /* trumpquote3.mp3 */,
@@ -422,53 +373,31 @@
 				6E0D281E1CE94633003A13F5 /* trumpquote16.mp3 */,
 				6E0D280A1CE93792003A13F5 /* joystick.png */,
 				6E0D280E1CE93B52003A13F5 /* Dying.mp3 */,
-				6EAAEB311CE8100500070F36 /* trumpPoncho@2x.png */,
-				6E0D28101CE94230003A13F5 /* mexicanNew@2x.png */,
-				6EAAEB321CE8100500070F36 /* trumpPoncho.png */,
-				6E55D13D1CE012E600E7A983 /* sombrero.png */,
 				6E02320C1CE2EEE400472856 /* desert_day.png */,
 				6E0D28031CE92798003A13F5 /* trumpQuote1.mp3 */,
 				6E0D28041CE92798003A13F5 /* trumpQuote2.mp3 */,
-				6E0232201CE2F6A700472856 /* burritoTest.png */,
 				6E14DE301CE578BB009C81CF /* trumpToupe@2x.png */,
 				6E14DE311CE578BB009C81CF /* trumpToupe.png */,
-				6E55D13E1CE012E600E7A983 /* sombrero@2x.png */,
 				6E0232101CE2F1A400472856 /* brick wall.png */,
-				6E0232161CE2F31100472856 /* cactus.png */,
-				6E0232171CE2F31100472856 /* cactus@2x.png */,
 				6E0232111CE2F1A400472856 /* brick wall@2x.png */,
-				6E02321E1CE2F68200472856 /* burritoTest@2x.png */,
 				6E55D1411CE013AE00E7A983 /* money.png */,
 				6E0232221CE2F79700472856 /* explosion.mp3 */,
-				6E02321C1CE2F59600472856 /* burritTest@2x.png */,
 				6E02320E1CE2EF5300472856 /* desert_night.png */,
 				6E55D1491CE0170700E7A983 /* TrumpwithWings.png */,
 				6E55D14A1CE0170700E7A983 /* TrumpwithWings@2x.png */,
 				6E55D1591CE01BAD00E7A983 /* coins.png */,
 				6E55D15A1CE01BAD00E7A983 /* coins@2x.png */,
 				6E55D1421CE013AE00E7A983 /* money@2x.png */,
-				6E55D1511CE019CE00E7A983 /* chanclas.png */,
 				6E0232241CE2FB8D00472856 /* cash.mp3 */,
-				6E55D1521CE019CE00E7A983 /* chanclas@2x.png */,
-				6E1650C81CDBFC7400004D3D /* Axe1@2x.png */,
 				6E55D14D1CE0185100E7A983 /* TrumpwithWings.png */,
 				6E0D27FF1CE903F8003A13F5 /* moustache.png */,
 				6E0D28001CE903F9003A13F5 /* moustache@2x.png */,
 				6E55D14E1CE0185100E7A983 /* TrumpwithWings@2x.png */,
 				6E55D0FF1CDFFE1800E7A983 /* menuSong.mp3 */,
-				6E55D1211CE00E5200E7A983 /* burrito.png */,
-				6E55D1221CE00E5200E7A983 /* burrito@2x.png */,
-				6E55D1311CE011EA00E7A983 /* poncho.png */,
-				6E55D1321CE011EA00E7A983 /* poncho@2x.png */,
-				6E55D1291CE0104600E7A983 /* maracas.png */,
-				6E55D12A1CE0104600E7A983 /* maracas@2x.png */,
 				6E55D1111CE0052400E7A983 /* trumpFace.png */,
 				6E55D1121CE0052400E7A983 /* trumpFace@2x.png */,
 				6E1650D01CDBFC7400004D3D /* blue.png */,
-				6E55D10B1CE0023700E7A983 /* taco@2x.png */,
 				6E1650D51CDBFC7400004D3D /* bullet@2x.png */,
-				6E55D10D1CE0025500E7A983 /* taco@3x.png */,
-				6E55D1091CE0021A00E7A983 /* taco.png */,
 				6E1650D61CDBFC7400004D3D /* bulletSmall@2x.png */,
 				6E1650F01CDBFC7400004D3D /* gun.png */,
 				6E1650F11CDBFC7400004D3D /* gun@2x.png */,
@@ -477,7 +406,6 @@
 				6E16510E1CDBFC7400004D3D /* musicNote@2x.png */,
 				6E16510F1CDBFC7400004D3D /* musicNoteFix@2x.png */,
 				6E1651101CDBFC7400004D3D /* MusicNoteWhite.png */,
-				6E1651121CDBFC7400004D3D /* organe.png */,
 				6E1651141CDBFC7400004D3D /* pauseButton.png */,
 				6E1651181CDBFC7400004D3D /* powerup@2x.png */,
 				6E55D1191CE0073500E7A983 /* trumpFace.png */,
@@ -654,7 +582,6 @@
 				6E16517F1CDBFC7400004D3D /* MusicNoteWhite.png in Resources */,
 				6E0D28011CE903F9003A13F5 /* moustache.png in Resources */,
 				6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */,
-				6E1651371CDBFC7400004D3D /* Axe1@2x.png in Resources */,
 				6E0983C71D160AB600BDA956 /* hilary@2x.png in Resources */,
 				6E077B551D1A3B45003E231B /* hairspray.png in Resources */,
 				6E077B531D1A3798003E231B /* hairbrush@2x.png in Resources */,
@@ -665,11 +592,7 @@
 				6EE92D7D1D1F72B6008C806D /* marcRubio@2x.png in Resources */,
 				6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
-				6E55D10A1CE0021A00E7A983 /* taco.png in Resources */,
-				6E1651811CDBFC7400004D3D /* organe.png in Resources */,
-				6E55D13F1CE012E600E7A983 /* sombrero.png in Resources */,
 				6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */,
-				6E55D1401CE012E600E7A983 /* sombrero@2x.png in Resources */,
 				6E077B4B1D1A334A003E231B /* antiGun@2x.png in Resources */,
 				6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */,
 				6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */,
@@ -677,7 +600,6 @@
 				6E55D15B1CE01BAD00E7A983 /* coins.png in Resources */,
 				6E0D28231CE94633003A13F5 /* trumpquote7.mp3 in Resources */,
 				6E16517E1CDBFC7400004D3D /* musicNoteFix@2x.png in Resources */,
-				6E0232181CE2F31100472856 /* cactus.png in Resources */,
 				6E2AD51D1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png in Resources */,
 				6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */,
 				6E0D280B1CE93792003A13F5 /* joystick.png in Resources */,
@@ -685,25 +607,20 @@
 				6E0D28061CE92798003A13F5 /* trumpQuote2.mp3 in Resources */,
 				6E0D282B1CE94633003A13F5 /* trumpquote16.mp3 in Resources */,
 				6E16518C1CDBFC7400004D3D /* spark.png in Resources */,
-				6E0D28111CE94230003A13F5 /* mexicanNew@2x.png in Resources */,
-				6EAAEB341CE8100500070F36 /* trumpPoncho.png in Resources */,
 				6E55D1431CE013AE00E7A983 /* money.png in Resources */,
 				6E0D28281CE94633003A13F5 /* trumpquote13.mp3 in Resources */,
 				6E1651831CDBFC7400004D3D /* pauseButton.png in Resources */,
 				6E55D11C1CE0073500E7A983 /* trumpFace@2x.png in Resources */,
 				6E077B5B1D1A3F9D003E231B /* alien@2x.png in Resources */,
 				6E02320F1CE2EF5300472856 /* desert_night.png in Resources */,
-				6E0D282F1CE95AFF003A13F5 /* blueBut.png in Resources */,
 				6E55D14C1CE0170700E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E750D871D092761006A0AAD /* kabob@2x.png in Resources */,
 				6E0D281F1CE94633003A13F5 /* trumpquote3.mp3 in Resources */,
 				6E0232231CE2F79700472856 /* explosion.mp3 in Resources */,
-				6E02321F1CE2F68200472856 /* burritoTest@2x.png in Resources */,
 				6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */,
 				6E1651611CDBFC7400004D3D /* gunFlip@2x.png in Resources */,
 				6E55D11B1CE0073500E7A983 /* trumpFace.png in Resources */,
 				6E0D282D1CE958AF003A13F5 /* greenButton_burned.png in Resources */,
-				6E55D10C1CE0023700E7A983 /* taco@2x.png in Resources */,
 				6E9959331D1E235300C3E6EF /* splashScreenFIXED5.jpeg in Resources */,
 				6EE92D7B1D1F4CD3008C806D /* weThePeeps@2x.png in Resources */,
 				6E0D28051CE92798003A13F5 /* trumpQuote1.mp3 in Resources */,
@@ -715,40 +632,29 @@
 				6E02320D1CE2EEE400472856 /* desert_day.png in Resources */,
 				6E55D1441CE013AE00E7A983 /* money@2x.png in Resources */,
 				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,
-				6E55D12C1CE0104600E7A983 /* maracas@2x.png in Resources */,
-				6E55D1541CE019CE00E7A983 /* chanclas@2x.png in Resources */,
 				6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */,
 				6E16519D1CDBFC7400004D3D /* whiteMusicNote@2x.png in Resources */,
 				6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */,
-				6E55D10E1CE0025500E7A983 /* taco@3x.png in Resources */,
 				6E16513F1CDBFC7400004D3D /* blue.png in Resources */,
-				6E55D12B1CE0104600E7A983 /* maracas.png in Resources */,
 				6EE92D7F1D1F7422008C806D /* hillar@2x.png in Resources */,
 				6E077B5F1D1A4507003E231B /* taxes@2x.png in Resources */,
 				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
 				6E0D28261CE94633003A13F5 /* trumpquote11.mp3 in Resources */,
-				6E55D1241CE00E5200E7A983 /* burrito@2x.png in Resources */,
 				6E55D1131CE0052400E7A983 /* trumpFace.png in Resources */,
 				6E55D0FE1CDFF0E100E7A983 /* menuSong.mp3 in Resources */,
 				6E55D1141CE0052400E7A983 /* trumpFace@2x.png in Resources */,
 				6E0D28291CE94633003A13F5 /* trumpquote14.mp3 in Resources */,
-				6E55D1231CE00E5200E7A983 /* burrito.png in Resources */,
 				6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */,
 				6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */,
 				6EBCC97C1CDBF69100EAE7A8 /* Main.storyboard in Resources */,
 				6E0D28211CE94633003A13F5 /* trumpquote5.mp3 in Resources */,
 				6E16517D1CDBFC7400004D3D /* musicNote@2x.png in Resources */,
-				6E55D1331CE011EA00E7A983 /* poncho.png in Resources */,
 				6E077B591D1A3C7F003E231B /* gavel@2x.png in Resources */,
-				6E0232211CE2F6A700472856 /* burritoTest.png in Resources */,
 				6E5C179F1D1F995C006730FA /* trumpUni@2x.png in Resources */,
-				6E02321D1CE2F59600472856 /* burritTest@2x.png in Resources */,
 				6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */,
 				6E0D280D1CE937A0003A13F5 /* dpad.png in Resources */,
 				6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */,
 				6EFB26FD1CEBBD48001313DD /* moustache.png in Resources */,
-				6E55D1341CE011EA00E7A983 /* poncho@2x.png in Resources */,
-				6EAAEB331CE8100500070F36 /* trumpPoncho@2x.png in Resources */,
 				6E077B4F1D1A3403003E231B /* obama.png in Resources */,
 				6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */,
 				6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */,
@@ -756,8 +662,6 @@
 				6E077B511D1A3538003E231B /* policeNoBG@2x.png in Resources */,
 				6E0232121CE2F1A400472856 /* brick wall.png in Resources */,
 				6E1651901CDBFC7400004D3D /* turqois.png in Resources */,
-				6E55D1531CE019CE00E7A983 /* chanclas.png in Resources */,
-				6E0232191CE2F31100472856 /* cactus@2x.png in Resources */,
 				6E0D28021CE903F9003A13F5 /* moustache@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1063,8 +967,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1086,8 +990,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cyrus Behroozi (6YRR84HQ57)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
