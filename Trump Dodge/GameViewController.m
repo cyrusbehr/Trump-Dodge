@@ -46,6 +46,9 @@
 //@synthesize bannerIsVisible;
 - (void)viewDidLoad
 {
+
+  
+  [NSThread sleepForTimeInterval:(2)];
   [super viewDidLoad];
   
   self.interstitial = [self createAndLoadInterstitial];

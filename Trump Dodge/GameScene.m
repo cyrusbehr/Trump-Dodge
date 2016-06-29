@@ -480,11 +480,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   //title label
   
   gameTitleLabel = [[UILabel alloc]init];
-  gameTitleLabel.text = [NSString stringWithFormat:@"Trumpa Dodge"];
-  gameTitleLabel.textColor = [UIColor whiteColor];
-  gameTitleLabel.font = [UIFont systemFontOfSize:55];
-  [gameTitleLabel setShadowColor:[UIColor blackColor]];
-  [gameTitleLabel setShadowOffset:CGSizeMake(2, 2)];
+  gameTitleLabel.text = [NSString stringWithFormat:@"TRUMPA DODGE"];
+  gameTitleLabel.textColor = [UIColor redColor];
+  [gameTitleLabel setShadowColor:[UIColor whiteColor]];
+  gameTitleLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:65];
   [gameTitleLabel sizeToFit];
   [gameTitleLabel setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.center.y*0.5)];
   
@@ -495,6 +494,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
 }//touchesBegan-----------------------------------------------------------------------------------------------------------
+
+
 
 -(int)getRanNum: (int) boundary{
   
