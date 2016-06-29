@@ -18,7 +18,6 @@
 		6E0232251CE2FB8D00472856 /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232241CE2FB8D00472856 /* cash.mp3 */; };
 		6E0232281CE2FCF100472856 /* moneyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E0232261CE2FCF100472856 /* moneyExplosion.sks */; };
 		6E077B4B1D1A334A003E231B /* antiGun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E077B4A1D1A3349003E231B /* antiGun@2x.png */; };
-		6E077B4F1D1A3403003E231B /* obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E077B4E1D1A3403003E231B /* obama.png */; };
 		6E077B511D1A3538003E231B /* policeNoBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E077B501D1A3538003E231B /* policeNoBG@2x.png */; };
 		6E077B531D1A3798003E231B /* hairbrush@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E077B521D1A3798003E231B /* hairbrush@2x.png */; };
 		6E077B591D1A3C7F003E231B /* gavel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E077B581D1A3C7F003E231B /* gavel@2x.png */; };
@@ -89,9 +88,9 @@
 		6E63F68D1D22EDF200100177 /* Republicanlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E63F68C1D22EDF200100177 /* Republicanlogo@2x.png */; };
 		6E63F68F1D22EED000100177 /* marcRubio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E63F68E1D22EED000100177 /* marcRubio@2x.png */; };
 		6E63F6931D22EF7600100177 /* hairspray.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E63F6921D22EF7600100177 /* hairspray.png */; };
+		6E63F6951D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E63F6941D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg */; };
 		6E750D871D092761006A0AAD /* kabob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D861D092761006A0AAD /* kabob@2x.png */; };
 		6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E750D8E1D092AEA006A0AAD /* ak@2x.png */; };
-		6E9959331D1E235300C3E6EF /* splashScreenFIXED5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */; };
 		6EBCC96E1CDBF69100EAE7A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC96D1CDBF69100EAE7A8 /* main.m */; };
 		6EBCC9711CDBF69100EAE7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9701CDBF69100EAE7A8 /* AppDelegate.m */; };
 		6EBCC9741CDBF69100EAE7A8 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9731CDBF69100EAE7A8 /* GameScene.m */; };
@@ -102,6 +101,7 @@
 		6EBCC9811CDBF69100EAE7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */; };
 		6EBCC98C1CDBF69100EAE7A8 /* Trump_DodgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC98B1CDBF69100EAE7A8 /* Trump_DodgeTests.m */; };
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
+		6EBE4B491D2386CB0049E1F1 /* obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE4B481D2386CB0049E1F1 /* obama.png */; };
 		6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */; };
 		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
@@ -144,7 +144,6 @@
 		6E0232241CE2FB8D00472856 /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
 		6E0232261CE2FCF100472856 /* moneyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = moneyExplosion.sks; path = ../moneyExplosion.sks; sourceTree = "<group>"; };
 		6E077B4A1D1A3349003E231B /* antiGun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "antiGun@2x.png"; sourceTree = "<group>"; };
-		6E077B4E1D1A3403003E231B /* obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama.png; sourceTree = "<group>"; };
 		6E077B501D1A3538003E231B /* policeNoBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "policeNoBG@2x.png"; sourceTree = "<group>"; };
 		6E077B521D1A3798003E231B /* hairbrush@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hairbrush@2x.png"; sourceTree = "<group>"; };
 		6E077B581D1A3C7F003E231B /* gavel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gavel@2x.png"; sourceTree = "<group>"; };
@@ -214,9 +213,9 @@
 		6E63F68C1D22EDF200100177 /* Republicanlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Republicanlogo@2x.png"; sourceTree = "<group>"; };
 		6E63F68E1D22EED000100177 /* marcRubio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marcRubio@2x.png"; sourceTree = "<group>"; };
 		6E63F6921D22EF7600100177 /* hairspray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hairspray.png; sourceTree = "<group>"; };
+		6E63F6941D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TrumpaDodgeSplashScreen.jpeg; sourceTree = "<group>"; };
 		6E750D861D092761006A0AAD /* kabob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kabob@2x.png"; sourceTree = "<group>"; };
 		6E750D8E1D092AEA006A0AAD /* ak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ak@2x.png"; sourceTree = "<group>"; };
-		6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashScreenFIXED5.jpeg; sourceTree = "<group>"; };
 		6EBCC9691CDBF69100EAE7A8 /* Trump Dodge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trump Dodge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC96D1CDBF69100EAE7A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EBCC96F1CDBF69100EAE7A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,6 +235,7 @@
 		6EBCC9921CDBF69100EAE7A8 /* Trump DodgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trump DodgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trump_DodgeUITests.m; sourceTree = "<group>"; };
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EBE4B481D2386CB0049E1F1 /* obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama.png; sourceTree = "<group>"; };
 		6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = toupeAnnimation.sks; sourceTree = "<group>"; };
 		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
@@ -332,6 +332,7 @@
 		6EBCC96C1CDBF69100EAE7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E63F6941D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg */,
 				6E5C179E1D1F995C006730FA /* trumpUni@2x.png */,
 				6E63F6881D22ED6000100177 /* bernie@2x.png */,
 				6E63F68E1D22EED000100177 /* marcRubio@2x.png */,
@@ -340,13 +341,12 @@
 				6E63F6861D22ED0500100177 /* taxes@2x.png */,
 				6EE92D781D1F4CB7008C806D /* cnn@2x.png */,
 				6EE92D7A1D1F4CD3008C806D /* weThePeeps@2x.png */,
-				6E9959321D1E235300C3E6EF /* splashScreenFIXED5.jpeg */,
 				6E63F6921D22EF7600100177 /* hairspray.png */,
 				6E077B5A1D1A3F9D003E231B /* alien@2x.png */,
 				6E077B581D1A3C7F003E231B /* gavel@2x.png */,
 				6E077B521D1A3798003E231B /* hairbrush@2x.png */,
 				6E077B501D1A3538003E231B /* policeNoBG@2x.png */,
-				6E077B4E1D1A3403003E231B /* obama.png */,
+				6EBE4B481D2386CB0049E1F1 /* obama.png */,
 				6E077B4A1D1A3349003E231B /* antiGun@2x.png */,
 				6E0983C61D160AB600BDA956 /* hilary@2x.png */,
 				6E750D8E1D092AEA006A0AAD /* ak@2x.png */,
@@ -586,12 +586,14 @@
 				6E077B531D1A3798003E231B /* hairbrush@2x.png in Resources */,
 				6E55D14F1CE0185100E7A983 /* TrumpwithWings.png in Resources */,
 				6E750D8F1D092AEA006A0AAD /* ak@2x.png in Resources */,
+				6EBE4B491D2386CB0049E1F1 /* obama.png in Resources */,
 				6E0D28251CE94633003A13F5 /* trumpquote10.mp3 in Resources */,
 				6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */,
 				6E0D28271CE94633003A13F5 /* trumpquote12.mp3 in Resources */,
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E077B4B1D1A334A003E231B /* antiGun@2x.png in Resources */,
+				6E63F6951D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg in Resources */,
 				6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */,
 				6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */,
 				6E63F6891D22ED6000100177 /* bernie@2x.png in Resources */,
@@ -623,7 +625,6 @@
 				6E55D11B1CE0073500E7A983 /* trumpFace.png in Resources */,
 				6E0D282D1CE958AF003A13F5 /* greenButton_burned.png in Resources */,
 				6E63F6871D22ED0500100177 /* taxes@2x.png in Resources */,
-				6E9959331D1E235300C3E6EF /* splashScreenFIXED5.jpeg in Resources */,
 				6EE92D7B1D1F4CD3008C806D /* weThePeeps@2x.png in Resources */,
 				6E0D28051CE92798003A13F5 /* trumpQuote1.mp3 in Resources */,
 				6E0232131CE2F1A400472856 /* brick wall@2x.png in Resources */,
@@ -655,7 +656,6 @@
 				6E63F68F1D22EED000100177 /* marcRubio@2x.png in Resources */,
 				6E14DE331CE578BB009C81CF /* trumpToupe.png in Resources */,
 				6EFB26FD1CEBBD48001313DD /* moustache.png in Resources */,
-				6E077B4F1D1A3403003E231B /* obama.png in Resources */,
 				6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */,
 				6E55D14B1CE0170700E7A983 /* TrumpwithWings.png in Resources */,
 				6E0D282A1CE94633003A13F5 /* trumpquote15.mp3 in Resources */,

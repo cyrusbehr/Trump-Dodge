@@ -1199,7 +1199,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     [self showAd];
     numDeaths = 0;
-    threshold = [self getRanNum:3]+1;
+    threshold = [self getRanNum:2]+1;
     
   }
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
