@@ -61,6 +61,7 @@
 		6E1651901CDBFC7400004D3D /* turqois.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1651211CDBFC7400004D3D /* turqois.png */; };
 		6E16519D1CDBFC7400004D3D /* whiteMusicNote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E16512E1CDBFC7400004D3D /* whiteMusicNote@2x.png */; };
 		6E1A28351D1607EC001E41FF /* democrat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1A28341D1607EC001E41FF /* democrat@2x.png */; };
+		6E1D32BD1D2CB28C002AC327 /* explosionFixed2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E1D32BC1D2CB28C002AC327 /* explosionFixed2.sks */; };
 		6E23DA3D1CE9766B00CF2F0E /* trumpquote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */; };
 		6E2AD51D1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */; };
 		6E2AD51F1CED915D00030B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */; };
@@ -103,7 +104,6 @@
 		6EBCC9971CDBF69100EAE7A8 /* Trump_DodgeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCC9961CDBF69100EAE7A8 /* Trump_DodgeUITests.m */; };
 		6EBE4B491D2386CB0049E1F1 /* obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE4B481D2386CB0049E1F1 /* obama.png */; };
 		6EC5E5AE1CE57967009C98B4 /* toupeAnnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */; };
-		6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */; };
 		6EDC6FD21CE300050041E63D /* ExplosionAnimation.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */; };
 		6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDF7AAA1CE981E8003C336D /* moneyBag.png */; };
 		6EE92D791D1F4CB7008C806D /* cnn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EE92D781D1F4CB7008C806D /* cnn@2x.png */; };
@@ -188,6 +188,7 @@
 		6E1651211CDBFC7400004D3D /* turqois.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turqois.png; sourceTree = "<group>"; };
 		6E16512E1CDBFC7400004D3D /* whiteMusicNote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteMusicNote@2x.png"; sourceTree = "<group>"; };
 		6E1A28341D1607EC001E41FF /* democrat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "democrat@2x.png"; sourceTree = "<group>"; };
+		6E1D32BC1D2CB28C002AC327 /* explosionFixed2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionFixed2.sks; sourceTree = "<group>"; };
 		6E23DA3C1CE9766B00CF2F0E /* trumpquote4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trumpquote4.mp3; sourceTree = "<group>"; };
 		6E2AD51C1CED8C4000030B16 /* LaunchScreenFinalUpdatedCartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenFinalUpdatedCartoon.png; sourceTree = "<group>"; };
 		6E2AD51E1CED915D00030B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -237,7 +238,6 @@
 		6EBCC9981CDBF69100EAE7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EBE4B481D2386CB0049E1F1 /* obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama.png; sourceTree = "<group>"; };
 		6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = toupeAnnimation.sks; sourceTree = "<group>"; };
-		6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation2.sks; sourceTree = "<group>"; };
 		6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionAnimation.sks; sourceTree = "<group>"; };
 		6EDF7AAA1CE981E8003C336D /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
 		6EE92D781D1F4CB7008C806D /* cnn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cnn@2x.png"; sourceTree = "<group>"; };
@@ -315,10 +315,10 @@
 				6EBCC9781CDBF69100EAE7A8 /* GameViewController.m */,
 				6EBCC97A1CDBF69100EAE7A8 /* Main.storyboard */,
 				6EBCC97D1CDBF69100EAE7A8 /* Assets.xcassets */,
+				6E1D32BC1D2CB28C002AC327 /* explosionFixed2.sks */,
 				6E0232261CE2FCF100472856 /* moneyExplosion.sks */,
 				6EDC6FD11CE300050041E63D /* ExplosionAnimation.sks */,
 				6EC5E5AD1CE57967009C98B4 /* toupeAnnimation.sks */,
-				6EC5E5B11CE57EC3009C98B4 /* ExplosionAnimation2.sks */,
 				6EBCC97F1CDBF69100EAE7A8 /* LaunchScreen.storyboard */,
 				6E0D28071CE93780003A13F5 /* Joystick.h */,
 				6E0D28081CE93780003A13F5 /* Joystick.m */,
@@ -593,6 +593,7 @@
 				6E1651451CDBFC7400004D3D /* bulletSmall@2x.png in Resources */,
 				6E55D1501CE0185100E7A983 /* TrumpwithWings@2x.png in Resources */,
 				6E077B4B1D1A334A003E231B /* antiGun@2x.png in Resources */,
+				6E1D32BD1D2CB28C002AC327 /* explosionFixed2.sks in Resources */,
 				6E63F6951D2351B300100177 /* TrumpaDodgeSplashScreen.jpeg in Resources */,
 				6E0D28241CE94633003A13F5 /* trumpquote8.mp3 in Resources */,
 				6EDF7AAB1CE981E8003C336D /* moneyBag.png in Resources */,
@@ -636,7 +637,6 @@
 				6E55D1001CDFFE1800E7A983 /* menuSong.mp3 in Resources */,
 				6E0D28221CE94633003A13F5 /* trumpquote6.mp3 in Resources */,
 				6E16519D1CDBFC7400004D3D /* whiteMusicNote@2x.png in Resources */,
-				6EC5E5B21CE57EC3009C98B4 /* ExplosionAnimation2.sks in Resources */,
 				6E16513F1CDBFC7400004D3D /* blue.png in Resources */,
 				6EBCC97E1CDBF69100EAE7A8 /* Assets.xcassets in Resources */,
 				6E0D28261CE94633003A13F5 /* trumpquote11.mp3 in Resources */,

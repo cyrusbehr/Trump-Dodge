@@ -37,6 +37,8 @@ int initialrotMax = 100;
 int lives = 0;
 int numDeaths = 0;
 int threshold = 2;
+int lifeScore = 0;
+
 
 BOOL gunIsOnScreen;
 BOOL ponchoIsOnScreen;
@@ -62,6 +64,7 @@ BOOL isMute = FALSE;
 BOOL movingUp;
 BOOL ponchoEffectBool = TRUE;
 BOOL canGetFirstLife = TRUE;
+BOOL canGetLife = TRUE;
 
 
 @implementation GameScene{
@@ -141,7 +144,7 @@ BOOL canGetFirstLife = TRUE;
   SKSpriteNode *gun;
   NSTimer *gunSpawnTimer;
   SKSpriteNode *gunTestingPoint;
-  SKSpriteNode *angelPenguin;
+  SKSpriteNode *angelTrump;
   NSTimer *updateCollideBoolTimer;
   AVAudioPlayer *woodSound;
   AVAudioPlayer *leaveSound;
@@ -152,6 +155,9 @@ BOOL canGetFirstLife = TRUE;
   NSTimer *fadeTimer;
   Joystick *joystick;
   CADisplayLink *velocityTick;
+  NSTimer *canGetLifeTimer;
+  NSTimer *resetPlus1ButtonTimer;
+  
   
 }
 
@@ -416,6 +422,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [bestScore setCenter:CGPointMake(self.view.frame.size.width*0.5-10, self.view.frame.size.height*0.19)];
   [self.view addSubview:bestScore];
   score = 0;
+  lifeScore = 0;
   
   //add main layer (use for holding other nodes)
   mainLayer = [[SKNode alloc] init];
@@ -440,11 +447,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:hero];
   
   
-  angelPenguin = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings@2x"];
-  [mainLayer addChild:angelPenguin];
-  //angelPenguin.xScale = 0.25;
-  //angelPenguin.yScale = 0.25;
-  angelPenguin.alpha = 0;
+  angelTrump = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings@2x"];
+  [mainLayer addChild:angelTrump];
+  //angelTrump.xScale = 0.25;
+  //angelTrump.yScale = 0.25;
+  angelTrump.alpha = 0;
   
   
   
@@ -751,7 +758,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
   canGetFirstLife = TRUE;
   lives = 0;
-  angelPenguin.alpha = 0;
+  angelTrump.alpha = 0;
   gunIsOnScreen = FALSE;
   if(!isMute){
     //genteMusicIsPlaying = TRUE;
@@ -768,20 +775,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   bestScore.textColor = [UIColor whiteColor];
   
   //change this to 200
-  if(score<-1){
-    isSausage = TRUE;
-    hero.texture = [SKTexture textureWithImageNamed:@"theSaus"];
-    hero.size = hero.texture.size;
-    hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
-    hero.physicsBody.dynamic=YES;
-    hero.physicsBody.friction=NO;
-    hero.physicsBody.allowsRotation=NO;
-    hero.physicsBody.categoryBitMask = heroCategory;
-    hero.physicsBody.contactTestBitMask = enemyCategory;
-    hero.physicsBody.collisionBitMask = 0;
-    hero.physicsBody.usesPreciseCollisionDetection = YES;
-    
-  }else{
+  
     isSausage = FALSE;
     hero.texture = [SKTexture textureWithImageNamed:characterName];
     hero.size = hero.texture.size;
@@ -793,7 +787,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     hero.physicsBody.contactTestBitMask = enemyCategory;
     hero.physicsBody.collisionBitMask = 0;
     hero.physicsBody.usesPreciseCollisionDetection = YES;
-  }
+  
   
   if(fishSpawnBool==FALSE){
     [fish removeFromParent];
@@ -822,6 +816,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [start setAlpha:1];
   hero.position = CGPointMake(self.frame.size.width*0.5, self.frame.size.height*0.5);
   score=0;
+  lifeScore = 0;
   [mainTimer invalidate];
   [gameTimer invalidate];
   [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
@@ -855,6 +850,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)addToScore{
   score+=1;
+  lifeScore+=1;
   
 }//addToScore-----------------------------------------------------------------------------------------------------------
 
@@ -947,10 +943,17 @@ static inline CGVector radiansToVector(CGFloat radians){
     //14
   }
   
-  if(!(score==0)&&(score>1000)&&(canGetFirstLife==TRUE)){
+  if(!(lifeScore==0)&&(lifeScore>300)&&(canGetLife==TRUE)){
+  
+    [self resetLifeScore];
     lives++;
+    canGetLife = FALSE;
+    canGetLifeTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateCanGetLife) userInfo:nil repeats:NO];
+    if (canGetFirstLife){
+      [self runAngelTrump];
+    }
     canGetFirstLife=FALSE;
-    [self showExtraLife];
+    [self showExtraLifelabel];
   }
   
   //delayTime
@@ -1027,7 +1030,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     [pigSound play];
   }
   
-  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"ExplosionAnimation2" ofType:@"sks"];
+  NSString *explosionPath2 = [[NSBundle mainBundle] pathForResource:@"explosionFixed2" ofType:@"sks"];
   SKEmitterNode *explosion2 = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath2];
   explosion2.position = position;
   [mainLayer addChild:explosion2];
@@ -1114,6 +1117,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)tick{
   clockTime +=1;
+
 }//tick-----------------------------------------------------------------------------------------------------------
 
 
@@ -1204,7 +1208,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   //[restartBut setBackgroundImage:[UIImage imageNamed:@"turqois"] forState:UIControlStateNormal];
   
   genteMusicIsPlaying = TRUE;
-  angelPenguin.alpha = 0;
+  angelTrump.alpha = 0;
   lives = 0;
   
   characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
@@ -1250,6 +1254,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   [self addExplosion:fish.position];
   score+=175;
+  lifeScore+=175;
   
   if(score<1000){
     plus100Button.center = CGPointMake(self.view.frame.size.width*0.5+118, self.view.frame.size.height*0.03+18);
@@ -1512,8 +1517,10 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void)didCollideWithNonLethal{
   lives--;
+  if (lives == 0){
   [self removeExtraLife];
-   CGPoint deadPos = hero.position;
+  }
+  CGPoint deadPos = hero.position;
   [self addBomb:deadPos];
   [powerUp removeFromParent];
   [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
@@ -1539,23 +1546,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   collideBool = TRUE;
 }
 
--(void)showExtraLife{
+-(void)showExtraLifelabel{
   plus1lifeButton.alpha = 1;
-  SKAction *angelPenguinAction;
-  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
-    angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.83) duration:3.5]]];
-    
-  }else{
-    angelPenguinAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.75) duration:3.5]]];
-  }
-  [angelPenguin runAction:angelPenguinAction];
   plus1lifebuttonTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(fadePlus1LifeLabel) userInfo:nil repeats:NO];
 }
 -(void)removeExtraLife{
-  SKAction *angelPenguinAction = [SKAction fadeOutWithDuration:1];
-  [angelPenguin runAction:angelPenguinAction];
+  SKAction *angelTrumpAction = [SKAction fadeOutWithDuration:1];
+  [angelTrump runAction:angelTrumpAction];
 }
 
 -(void)fadePlus1LifeLabel{
@@ -1564,7 +1561,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   plus1lifeButton.transform = CGAffineTransformMakeScale(2,2);
   [plus1lifeButton setAlpha:0];
   [UIView commitAnimations];
+  resetPlus1ButtonTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(resetPlus1LifeButton) userInfo:nil repeats:NO];
 }
+
+-(void)resetPlus1LifeButton{
+  plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
+}
+
 
 -(void)playQuote{
   
@@ -1641,5 +1644,24 @@ static inline CGVector radiansToVector(CGFloat radians){
   ponchoEffectBool = TRUE;
 }
 
+-(void)updateCanGetLife{
+  canGetLife = TRUE;
+}
 
+-(void)runAngelTrump{
+  SKAction *angelTrumpAction;
+  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
+    angelTrumpAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
+                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.83) duration:3.5]]];
+    
+  }else{
+    angelTrumpAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
+                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.75) duration:3.5]]];
+  }
+  [angelTrump runAction:angelTrumpAction];
+}
+
+-(void)resetLifeScore{
+  lifeScore = 0;
+}
 @end

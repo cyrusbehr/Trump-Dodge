@@ -17,6 +17,7 @@
 {
   long highScore;
   int score;
+  
 }
 
 
