@@ -466,16 +466,16 @@ static inline CGVector radiansToVector(CGFloat radians){
   powerUp.physicsBody.usesPreciseCollisionDetection = YES;
   
   lifeLabel = [[UILabel alloc]init];
+  lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
   lifeLabel.textColor = [UIColor redColor];
-  lifeLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:20];
-  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
-    [lifeLabel setCenter:CGPointMake(self.frame.size.width*0.25+75,self.frame.size.height*0.83)];
-  }else{
-    [lifeLabel setCenter:CGPointMake(self.frame.size.width*0.25+75,self.frame.size.height*0.75)];
-  }
-
-  [self.view addSubview:lifeLabel];
+  lifeLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:35];
+    [lifeLabel sizeToFit];
+  [lifeLabel setCenter:CGPointMake(self.view.frame.size.width*0.37, self.view.center.y*0.35)];
   lifeLabel.alpha = 0;
+  [self.view addSubview:lifeLabel];
+ 
+  
+  
   
   //title label
   
@@ -931,7 +931,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     //14
   }
   
-  if(!(lifeScore==0)&&(lifeScore>300)&&(canGetLife==TRUE)){
+  if(!(lifeScore==0)&&(lifeScore>1000)&&(canGetLife==TRUE)){
   
     [self resetLifeScore];
     lives++;
@@ -939,11 +939,10 @@ static inline CGVector radiansToVector(CGFloat radians){
     canGetLifeTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateCanGetLife) userInfo:nil repeats:NO];
     if (canGetFirstLife){
       [self runAngelTrump];
-    }else{
-      lifeLabel.alpha = 1;
-      lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
-      [lifeLabel sizeToFit];
-      }
+    }
+    lifeLabel.alpha = 1;
+    lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
+    [lifeLabel sizeToFit];
     canGetFirstLife=FALSE;
     [self showExtraLifelabel];
   }
@@ -1508,8 +1507,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   lives--;
   if (lives == 0){
     canGetFirstLife = TRUE;
-  [self removeExtraLife];
     lifeLabel.alpha = 0;
+  [self removeExtraLife];
+  }else{
+    lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
   }
   CGPoint deadPos = hero.position;
   [self addBomb:deadPos];
