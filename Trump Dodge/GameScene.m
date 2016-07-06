@@ -75,7 +75,6 @@ BOOL canGetLife = TRUE;
   AVAudioPlayer *sheepSound;
   AVAudioPlayer *pigSound;
   NSTimer *updateMusicTransitionBoolTimer;
-  UILabel *characterSelected;
   UIButton *pigButton;
   NSTimer *adDelayTime;
   AVAudioPlayer *goldClink;
@@ -134,7 +133,7 @@ BOOL canGetLife = TRUE;
   UILabel *gameTitleLabel;
   SKSpriteNode *fishBone;
   SKAction *fadeOut;
-  UILabel *tauntLabel;
+
   UIButton *soundButton;
   NSString *characterName;
   SKAction *instructionAnimation;
@@ -157,6 +156,7 @@ BOOL canGetLife = TRUE;
   CADisplayLink *velocityTick;
   NSTimer *canGetLifeTimer;
   NSTimer *resetPlus1ButtonTimer;
+  UILabel *lifeLabel;
   
   
 }
@@ -272,22 +272,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   shareButton.layer.borderWidth = 2;
   
   
-  characterSelected = [[UILabel alloc]init];
-  characterSelected.textColor = [UIColor whiteColor];
-  characterSelected.font = [UIFont systemFontOfSize:25];
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-  [characterSelected setAlpha:0];
   
 
   [self.view addSubview:pauseScreen];
   [self.view addSubview:restartBut ];
   [self.view addSubview:shareButton];
-  
-  [self.view addSubview:characterSelected];
-  
-  
   
   [shareButton setAlpha:0];
   [pauseScreen setAlpha:0];
@@ -321,10 +310,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self.view addSubview:plus1lifeButton ];
   [plus1lifeButton setAlpha:0];
   plus1lifeButton.enabled = NO;
-  
-  
-  
-  
+ 
   
   //rotationLabel & speedTimeLabel & plus100 Button
   rotationLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5-25, 200, 50)];
@@ -335,6 +321,8 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self.view addSubview:rotationLabel ];
   [rotationLabel setAlpha:0];
   rotationLabel.enabled = NO;
+  
+  
   
   plus100Button = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5+32, self.view.frame.size.height*0.03-5, 200, 50)];
   [plus100Button setBackgroundColor:[UIColor clearColor]];
@@ -379,15 +367,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   start.titleLabel.font = [UIFont systemFontOfSize:30];
   [self.view addSubview:start];
   
-  //tauntLabel
-  tauntLabel = [[UILabel alloc]init];
-  tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to play as Trump!"];
-  tauntLabel.textColor = [UIColor yellowColor];
-  tauntLabel.font = [UIFont systemFontOfSize:20];
-  [tauntLabel sizeToFit];
-  [tauntLabel setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.3)];
-  [tauntLabel setAlpha:0];
-  [self.view addSubview:tauntLabel];
+  
+  
+ 
   
   AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
   
@@ -483,6 +465,17 @@ static inline CGVector radiansToVector(CGFloat radians){
   powerUp.physicsBody.collisionBitMask = 0;
   powerUp.physicsBody.usesPreciseCollisionDetection = YES;
   
+  lifeLabel = [[UILabel alloc]init];
+  lifeLabel.textColor = [UIColor redColor];
+  lifeLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:20];
+  if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
+    [lifeLabel setCenter:CGPointMake(self.frame.size.width*0.25+75,self.frame.size.height*0.83)];
+  }else{
+    [lifeLabel setCenter:CGPointMake(self.frame.size.width*0.25+75,self.frame.size.height*0.75)];
+  }
+
+  [self.view addSubview:lifeLabel];
+  lifeLabel.alpha = 0;
   
   //title label
   
@@ -588,8 +581,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   }];;
   
   
-  
-  tauntLabel.alpha = 0;
   
   [self loadScore];
   clockTime = 0;
@@ -754,7 +745,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 
 -(void) restartGame{
   //  [self requestAd];
-  
+  lifeLabel.alpha = 0;
   plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
   canGetFirstLife = TRUE;
   lives = 0;
@@ -768,9 +759,6 @@ static inline CGVector radiansToVector(CGFloat radians){
     //}
   }
   
-  tauntLabel.text = [NSString stringWithFormat:@"Score above 200 to get your %@ back next round!", characterName];
-  [tauntLabel sizeToFit];
-  [tauntLabel setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.3)];
   isPaused = FALSE;
   bestScore.textColor = [UIColor whiteColor];
   
@@ -804,8 +792,8 @@ static inline CGVector radiansToVector(CGFloat radians){
     [bestScore setAlpha:0];
     
   }
-  if(isSausage==TRUE)
-    tauntLabel.alpha = 1;
+ 
+  
   
   
   // NSLog(@"game restarted");
@@ -951,7 +939,11 @@ static inline CGVector radiansToVector(CGFloat radians){
     canGetLifeTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateCanGetLife) userInfo:nil repeats:NO];
     if (canGetFirstLife){
       [self runAngelTrump];
-    }
+    }else{
+      lifeLabel.alpha = 1;
+      lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
+      [lifeLabel sizeToFit];
+      }
     canGetFirstLife=FALSE;
     [self showExtraLifelabel];
   }
@@ -1211,10 +1203,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   angelTrump.alpha = 0;
   lives = 0;
   
-  characterSelected.text = [NSString stringWithFormat:@"%@ selected", characterName];
-  [characterSelected sizeToFit];
-  [characterSelected setCenter:CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.67)];
-  
+ 
   collideBool = TRUE;
   
   [bestScore sizeToFit];
@@ -1518,7 +1507,9 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)didCollideWithNonLethal{
   lives--;
   if (lives == 0){
+    canGetFirstLife = TRUE;
   [self removeExtraLife];
+    lifeLabel.alpha = 0;
   }
   CGPoint deadPos = hero.position;
   [self addBomb:deadPos];
