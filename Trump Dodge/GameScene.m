@@ -1514,11 +1514,25 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)didCollideWithNonLethal{
   lives--;
   [self removeExtraLife];
+   CGPoint deadPos = hero.position;
+  [self addBomb:deadPos];
+  [powerUp removeFromParent];
+  [mainLayer enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
+  [mainLayer enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
+  [mainLayer enumerateChildNodesWithName:@"gunTestingPoint" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
+  [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
+    [node removeFromParent];
+  }];
   collideBool = FALSE;
   updateCollideBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColideBool) userInfo:nil repeats:NO];
-  CGPoint deadPos = hero.position;
   [self addFeathers:deadPos];
-  
+
   
 }
 
