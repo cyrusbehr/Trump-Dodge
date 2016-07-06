@@ -948,7 +948,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   if(!(score==0)&&(score>1000)&&(canGetFirstLife==TRUE)){
-    //change this to 3000 or 4000
     lives++;
     canGetFirstLife=FALSE;
     [self showExtraLife];
