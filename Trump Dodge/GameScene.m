@@ -1,5 +1,5 @@
 
-
+//to fold all functions --> command alt shift left
 
 
 #import "GameScene.h"
@@ -133,7 +133,7 @@ BOOL canGetLife = TRUE;
   UILabel *gameTitleLabel;
   SKSpriteNode *fishBone;
   SKAction *fadeOut;
-
+  
   UIButton *soundButton;
   NSString *characterName;
   SKAction *instructionAnimation;
@@ -160,9 +160,6 @@ BOOL canGetLife = TRUE;
   
   
 }
-
-
-
 static inline CGVector degreesToVector(CGFloat degrees){
   //use this method for converting from degrees to vector form
   CGVector vector;
@@ -180,13 +177,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   return vector;
 }
 
-
 -(void)didMoveToView:(SKView *)view {
   
   //sound initialization
   
   
-  [self playQuote]; 
+  [self playQuote];
   
   [self JoystickInit];
   
@@ -272,8 +268,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   shareButton.layer.borderWidth = 2;
   
   
-  
-
   [self.view addSubview:pauseScreen];
   [self.view addSubview:restartBut ];
   [self.view addSubview:shareButton];
@@ -310,7 +304,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [self.view addSubview:plus1lifeButton ];
   [plus1lifeButton setAlpha:0];
   plus1lifeButton.enabled = NO;
- 
+  
   
   //rotationLabel & speedTimeLabel & plus100 Button
   rotationLabel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width*0.5-100, self.view.frame.size.height*0.5-25, 200, 50)];
@@ -369,7 +363,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   
- 
+  
   
   AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
   
@@ -406,14 +400,9 @@ static inline CGVector radiansToVector(CGFloat radians){
   score = 0;
   lifeScore = 0;
   
-  //add main layer (use for holding other nodes)
   mainLayer = [[SKNode alloc] init];
   
-  //hero node
   [self addChild:mainLayer];
-  
-  
-  //testing
   
   characterName = @"trumpFace";
   hero = [SKSpriteNode spriteNodeWithImageNamed:characterName];
@@ -428,17 +417,10 @@ static inline CGVector radiansToVector(CGFloat radians){
   hero.physicsBody.usesPreciseCollisionDetection = YES;
   [mainLayer addChild:hero];
   
-  
   angelTrump = [SKSpriteNode spriteNodeWithImageNamed:@"TrumpwithWings@2x"];
   [mainLayer addChild:angelTrump];
-  //angelTrump.xScale = 0.25;
-  //angelTrump.yScale = 0.25;
   angelTrump.alpha = 0;
-  
-  
-  
-  //fish node
-  
+
   fish = [SKSpriteNode spriteNodeWithImageNamed:@"money"];
   fish.physicsBody = [SKPhysicsBody bodyWithTexture:fish.texture size:fish.texture.size];
   fish.physicsBody.dynamic=YES;
@@ -469,11 +451,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
   lifeLabel.textColor = [UIColor redColor];
   lifeLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:35];
-    [lifeLabel sizeToFit];
+  [lifeLabel sizeToFit];
   [lifeLabel setCenter:CGPointMake(self.view.frame.size.width*0.37, self.view.center.y*0.35)];
   lifeLabel.alpha = 0;
   [self.view addSubview:lifeLabel];
- 
+  
   
   
   
@@ -493,15 +475,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   
-}//touchesBegan-----------------------------------------------------------------------------------------------------------
-
-
+}
 
 -(int)getRanNum: (int) boundary{
   
   return (arc4random()%boundary);
-}//getRanNum-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(void)spawnEnemies{
   
@@ -562,8 +541,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   enemy.name = @"enemy";
   
   
-}//spawnEnemies-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(IBAction)startGame:(id)sender{
   //NSLog(@"start game");
@@ -616,8 +594,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   pause.layer.borderColor = [UIColor whiteColor].CGColor;
   pause.layer.borderWidth = 2;
   
-}//startGame-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(void)update:(CFTimeInterval)currentTime {
   
@@ -653,7 +630,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     }
   }
   
-}//updateTime-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)pauseGame{
   
@@ -703,7 +680,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   [restartBut setAlpha:1];
   
-}//pauseGame-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)resumeGame{
   if(!isMute){
@@ -735,13 +712,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   mainTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(addToScore) userInfo:nil repeats:YES];
   gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
   
-}//resumeGame-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)stopTimer{
   [enemyTime invalidate];
   [gunSpawnTimer invalidate];
   
-}//stopeTimer-----------------------------------------------------------------------------------------------------------
+}
 
 -(void) restartGame{
   //  [self requestAd];
@@ -764,17 +741,17 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   //change this to 200
   
-    isSausage = FALSE;
-    hero.texture = [SKTexture textureWithImageNamed:characterName];
-    hero.size = hero.texture.size;
-    hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
-    hero.physicsBody.dynamic=YES;
-    hero.physicsBody.friction=NO;
-    hero.physicsBody.allowsRotation=NO;
-    hero.physicsBody.categoryBitMask = heroCategory;
-    hero.physicsBody.contactTestBitMask = enemyCategory;
-    hero.physicsBody.collisionBitMask = 0;
-    hero.physicsBody.usesPreciseCollisionDetection = YES;
+  isSausage = FALSE;
+  hero.texture = [SKTexture textureWithImageNamed:characterName];
+  hero.size = hero.texture.size;
+  hero.physicsBody = [SKPhysicsBody bodyWithTexture:hero.texture size:hero.texture.size];
+  hero.physicsBody.dynamic=YES;
+  hero.physicsBody.friction=NO;
+  hero.physicsBody.allowsRotation=NO;
+  hero.physicsBody.categoryBitMask = heroCategory;
+  hero.physicsBody.contactTestBitMask = enemyCategory;
+  hero.physicsBody.collisionBitMask = 0;
+  hero.physicsBody.usesPreciseCollisionDetection = YES;
   
   
   if(fishSpawnBool==FALSE){
@@ -792,7 +769,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     [bestScore setAlpha:0];
     
   }
- 
+  
   
   
   
@@ -816,7 +793,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer enumerateChildNodesWithName:@"gunTestingPoint" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
-
+  
   [mainLayer enumerateChildNodesWithName:@"gun" usingBlock:^(SKNode *node, BOOL *stop) {
     [node removeFromParent];
   }];
@@ -834,13 +811,13 @@ static inline CGVector radiansToVector(CGFloat radians){
   speedTime = initialspeedTime;
   delayTime=initialdelayTime;
   
-}//restartGame-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)addToScore{
   score+=1;
   lifeScore+=1;
   
-}//addToScore-----------------------------------------------------------------------------------------------------------
+}
 
 -(void) didFinishUpdate{
   
@@ -864,7 +841,7 @@ static inline CGVector radiansToVector(CGFloat radians){
       gunIsOnScreen = FALSE;
     }
   }];
-
+  
   
   [mainLayer enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
     if ((node.position.x > self.frame.size.width*2)||(node.position.x<-700) || (node.position.y > self.frame.size.height*2)||(node.position.y<-700)) {
@@ -932,7 +909,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
   
   if(!(lifeScore==0)&&(lifeScore>1000)&&(canGetLife==TRUE)){
-  
+    
     [self resetLifeScore];
     lives++;
     canGetLife = FALSE;
@@ -985,7 +962,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   
-}//didFinishUpdate-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)addBomb: (CGPoint) position{
   
@@ -996,7 +973,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   SKAction *removeExposion = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
   [explosion runAction:removeExposion];
-}//addBomb------------------------------------------------------------------------------------------
+}
 
 -(void)addFeathers: (CGPoint) position{
   if (soundEnabled==TRUE) {
@@ -1013,8 +990,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *removeExposion2 = [SKAction sequence:@[[SKAction waitForDuration:10],[SKAction removeFromParent]]];
   [explosion2 runAction:removeExposion2];
   
-}//addFeathers-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(void)addBacon: (CGPoint) position{
   if (soundEnabled==TRUE) {
@@ -1028,7 +1004,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *removeExposion2 = [SKAction sequence:@[[SKAction waitForDuration:10],[SKAction removeFromParent]]];
   [explosion2 runAction:removeExposion2];
   
-}//
+}
 
 -(void)addExplosion: (CGPoint) position{
   NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"moneyExplosion" ofType:@"sks"];
@@ -1037,45 +1013,44 @@ static inline CGVector radiansToVector(CGFloat radians){
   [mainLayer addChild:explosion];
   SKAction *removeExposion = [SKAction sequence:@[[SKAction waitForDuration:4],[SKAction removeFromParent]]];
   [explosion runAction:removeExposion];
-}//addExplosion-----------------------------------------------------------------------------------------------------------
-
-
+}
 
 -(void)fadeSpeedTimeLabel{
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationDuration:3];
   [speedTimeLabel setAlpha:0];
   [UIView commitAnimations];
-}//fadeSpeedTimeLabel-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)fadeRotationLabel{
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationDuration:3];
   [rotationLabel setAlpha:0];
   [UIView commitAnimations];
-}//fadeRotaitonLabel-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)fadeDelayTimeLabel{
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationDuration:3];
   [delayTimeLabel setAlpha:0];
   [UIView commitAnimations];
-}//fadeDelatTimeLabel-----------------------------------------------------------------------------------------------------------
+}
 
 -(void) fadePlus100Button{
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationDuration:3];
   [plus100Button setAlpha:0];
   [UIView commitAnimations];
-}//fadePluse100Button-----------------------------------------------------------------------------------------------------------
+}
 
-//UPDATE BOOLIANS-----------------------------------------------------------------------------------------------------------
 -(void)updateForRotLab{
   rotLab = TRUE;
 }
+
 -(void)updatespeedTimeBOOL{
   speedTimeBOOL=TRUE;
 }
+
 -(void)updatetimeConstantBool{
   timeConstantBool=TRUE;
 }
@@ -1083,6 +1058,7 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)updateDelaytimeBool{
   delayTimeBool=TRUE;
 }
+
 -(void)updatefishSpawnBool{
   fishSpawnBool=TRUE;
   [fish removeFromParent];
@@ -1097,20 +1073,15 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void) updateFishTimerBool{
   fishDelayTimeBool=TRUE;
 }
+
 -(void)updatePowerUpdelayTimeBool{
   powerUpDelayTime = TRUE;
 }
 
-
-//UPDATE BOOLIANS-----------------------------------------------------------------------------------------------------------
-
-
-
 -(void)tick{
   clockTime +=1;
-
-}//tick-----------------------------------------------------------------------------------------------------------
-
+  
+}
 
 - (void) didCollideWithMonster{
   collideBool = FALSE;
@@ -1128,7 +1099,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [pause setAlpha:0];
   gameOverDelay = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
   
-}//didCollideWithMonster-----------------------------------------------------------------------------------------------------------
+}
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
@@ -1181,7 +1152,7 @@ static inline CGVector radiansToVector(CGFloat radians){
     
     
   }
-}//didBeginContact-----------------------------------------------------------------------------------------------------------
+}
 
 -(void)gameOver{
   if((clockTime%14==0) || (clockTime%25==0) || (clockTime%40==0) || (clockTime%50==0)){
@@ -1202,7 +1173,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   angelTrump.alpha = 0;
   lives = 0;
   
- 
+  
   collideBool = TRUE;
   
   [bestScore sizeToFit];
@@ -1223,14 +1194,12 @@ static inline CGVector radiansToVector(CGFloat radians){
   [shareButton setAlpha:1];
   
   //NSLog(@"game over");
-}//gameOver--------------------------------------------------------------------------------------------------------
+}
 
 -(void)removeFish{
   [fish removeFromParent];
   
-}//removeFist-----------------------------------------------------------------------------------------------------------
-
-
+}
 
 -(void)didCollideWithFish{
   if (soundEnabled==TRUE) {
@@ -1254,8 +1223,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   [plus100Button setAlpha:0.9];
   plus100ButtonFadeTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(fadePlus100Button) userInfo:nil repeats:NO];
   
-}//didCollideWithFish-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(void)didCollideWithPowerUp{
   if(soundEnabled==TRUE){
@@ -1280,12 +1248,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   
   
   gunIsOnScreen = FALSE;
-
+  
   
   //NSLog(@"did collide with powerup method was run!");
   
-}//didCollideWithPowerUp-----------------------------------------------------------------------------------------------------------
-
+}
 
 -(IBAction)runShareGame:(id)sender{
   
@@ -1296,10 +1263,8 @@ static inline CGVector radiansToVector(CGFloat radians){
     GameViewController *myViewController = (GameViewController *)vc;
     [myViewController shareGame];
   }
-}//runShareGame------------------------------------------------------------------------------------------------
+}
 
-
-//UPDATE AND SAVE BEST SCORE-----------------------------------------------------------------------------------------------------------
 -(void)changeScore:(int)Newscore{
   highScore = Newscore;
   bestScore.text = [NSString stringWithFormat:@"Best: %ld",highScore];
@@ -1315,8 +1280,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   bestScore.text = [NSString stringWithFormat:@"Best: %ld",highScore];
   
 }
-
-//UPDATE AND SAVE BEST SCORE-----------------------------------------------------------------------------------------------------
 
 -(void)handleNotification: (NSNotification* )notification{
   if ([notification.name isEqualToString:@"pauseGame"] && (gameOverBool==FALSE) && (hasBegan == TRUE) && (isPaused == FALSE)) {
@@ -1340,7 +1303,6 @@ static inline CGVector radiansToVector(CGFloat radians){
     }
   }
 }
-
 
 -(void)toggleSound{
   if(soundEnabled==TRUE){
@@ -1367,14 +1329,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   [[NSNotificationCenter defaultCenter] postNotificationName:@"showAd" object:nil]; //Sends message to viewcontroller to show ad.
 }
 
-//-(void)requestAd{
-//  [[NSNotificationCenter defaultCenter] postNotificationName:@"requestAd" object:nil];
-//
-//}
-
-
-
-
 -(void)updateMusicTranstionBool{
   musicTransitionBool = TRUE;
 }
@@ -1382,8 +1336,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(int)getRandomBool{
   return [self getRanNum:2];
 }
-
-
 
 -(void)spawnGun{
   
@@ -1449,6 +1401,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   //2
   
 }
+
 -(void)spawnBullet{
   //NSLog(@"%d",gunIsOnScreen);
   
@@ -1508,7 +1461,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   if (lives == 0){
     canGetFirstLife = TRUE;
     lifeLabel.alpha = 0;
-  [self removeExtraLife];
+    [self removeExtraLife];
   }else{
     lifeLabel.text = [NSString stringWithFormat:@"X%d",lives];
   }
@@ -1530,7 +1483,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   collideBool = FALSE;
   updateCollideBoolTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColideBool) userInfo:nil repeats:NO];
   [self addFeathers:deadPos];
-
+  
   
 }
 
@@ -1542,6 +1495,7 @@ static inline CGVector radiansToVector(CGFloat radians){
   plus1lifeButton.alpha = 1;
   plus1lifebuttonTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(fadePlus1LifeLabel) userInfo:nil repeats:NO];
 }
+
 -(void)removeExtraLife{
   SKAction *angelTrumpAction = [SKAction fadeOutWithDuration:1];
   [angelTrump runAction:angelTrumpAction];
@@ -1559,7 +1513,6 @@ static inline CGVector radiansToVector(CGFloat radians){
 -(void)resetPlus1LifeButton{
   plus1lifeButton.transform =CGAffineTransformMakeScale(1,1);
 }
-
 
 -(void)playQuote{
   
@@ -1598,10 +1551,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   }
 }
 
-
-// Joystick Code
-//
-
 -(void)JoystickInit{
   
   SKSpriteNode *jsThumb = [SKSpriteNode spriteNodeWithImageNamed:@"joystick"];
@@ -1623,7 +1572,6 @@ static inline CGVector radiansToVector(CGFloat radians){
   return self;
 }
 
-
 -(void)joystickMovement
 {
   if (joystick.velocity.x != 0 || joystick.velocity.y != 0)
@@ -1644,11 +1592,11 @@ static inline CGVector radiansToVector(CGFloat radians){
   SKAction *angelTrumpAction;
   if ((int)[[UIScreen mainScreen] bounds].size.width == 480){
     angelTrumpAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.83) duration:3.5]]];
+                                               [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.83) duration:3.5]]];
     
   }else{
     angelTrumpAction = [SKAction sequence:@[   [SKAction moveTo:hero.position duration:0],[SKAction fadeAlphaTo:0.95 duration:0.2],
-                                                 [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.75) duration:3.5]]];
+                                               [SKAction moveTo:CGPointMake(self.frame.size.width*0.25,self.frame.size.height*0.75) duration:3.5]]];
   }
   [angelTrump runAction:angelTrumpAction];
 }
